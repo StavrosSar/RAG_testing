@@ -1,7 +1,0 @@
-και ολο το σετ 20 ερωτησεων:
-& "C:\Users\ssar\AppData\Local\anaconda3\python.exe" -m src.eval --retriever tfidf / bm25 
-
-για την δικη μου ερωτηση: & "C:\Users\ssar\AppData\Local\anaconda3\python.exe" -m src.eval --retriever bm25 --k 5 --query "Wahts is the AC Voltage?" 
-
-για να τρεξω το API: & "C:\Users\ssar\AppData\Local\anaconda3\python.exe" -m unicorn src.api:app --reload
-και μπαινω στο http://127.0.0.1:8000/docs 
