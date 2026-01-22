@@ -1,0 +1,57 @@
+# --------------------
+# Python
+# --------------------
+__pycache__/
+*.py[cod]
+*.pyo
+
+# --------------------
+# Virtual environments
+# --------------------
+venv/
+.env/
+.venv/
+conda/
+env/
+
+# --------------------
+# Jupyter / IPython
+# --------------------
+.ipynb_checkpoints/
+
+# --------------------
+# OS / Editor noise
+# --------------------
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# --------------------
+# Logs & caches
+# --------------------
+*.log
+.cache/
+
+# --------------------
+# Data artifacts (generated)
+# --------------------
+data_processed/*.pkl
+data_processed/*.npz
+
+# If you ever regenerate chunks automatically, keep this:
+# (comment out if chunks.jsonl is required for submission)
+# data_processed/chunks.jsonl
+
+# --------------------
+# Secrets
+# --------------------
+.env
+*.key
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local notes / scratch data
+data_test_notes/
+notes for rag
