@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+pydantic
+scikit-learn
+numpy
+rank-bm25
+tqdm

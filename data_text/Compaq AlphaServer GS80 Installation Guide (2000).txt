@@ -1,0 +1,1002 @@
+AlphaServer GS80
+Installation Guide
+OrderNumber: EK-GSR80-IN.A01
+ThismanualdiscussestheinstallationofCompaqAlphaServer
+GS80systems.
+CompaqComputerCorporation
+
+FirstPrinting,October2000
+©2000CompaqComputerCorporation.
+COMPAQ,theCompaqlogo,andAlphaServerRegisteredinU.S.PatentandTrademarkOffice.
+OpenVMSandTru64aretrademarksofCompaqInformationTechnologiesGroup,L.P.
+Portionsofthesoftwareare©copyrightCimetricsTechnology. Linuxisaregisteredtrademarkof
+LinusTorvaldsinseveralcountries.UNIXisaregisteredtrademarkofTheOpenGroupintheU.S.
+andothercountries. Allotherproductnamesmentionedhereinmaybetrademarksoftheirrespective
+companies.
+Allotherproductnamesmentionedhereinmaybetrademarksoftheirrespectivecompanies.
+Compaqshallnotbeliablefortechnicaloreditorialerrorsoromissionscontainedherein.The
+informationinthisdocumentissubjecttochangewithoutnotice.
+FCCNotice
+Thisequipmentgenerates,uses,andmayemitradiofrequencyenergy.Theequipmenthasbeentype
+testedandfoundtocomplywiththelimitsforaClassAdigitaldevicepursuanttoPart15ofFCC
+rules,whicharedesignedtoprovidereasonableprotectionagainstsuchradiofrequencyinterference.
+Operationofthisequipmentinaresidentialareamaycauseinterferenceinwhichcasetheuserathis
+ownexpensewillberequiredtotakewhatevermeasuresmayberequiredtocorrecttheinterference.
+Anymodificationstothisdevice—unlessexpresslyapprovedbythemanufacturer—canvoidthe
+user’sauthoritytooperatethisequipmentunderpart15oftheFCCrules.
+Modifications
+TheFCCrequirestheusertobenotifiedthatanychangesormodificationsmadetothisdevicethatare
+equipment.
+Cables
+notexpresslyapprovedbyCompaqComputerCorporationmayvoidtheuser'sauthoritytooperatethe
+ConnectionstothisdevicemustbemadewithshieldedcableswithmetallicRFI/EMIconnectorhoods
+inordertomaintaincompliancewithFCCRulesandRegulations.
+TaiwaneseNotice
+
+JapaneseNotice
+CanadianNotice
+ThisClassAdigitalapparatusmeetsallrequirementsoftheCanadianInterference-CausingEquipment
+Regulations.
+AvisCanadien
+CetappareilnumériquedelaclasseArespectetouteslesexigencesduRèglementsurlematériel
+brouilleurduCanada.
+EuropeanUnionNotice
+ProductswiththeCEMarkingcomplywithboththeEMCDirective(89/336/EEC)andtheLow
+VoltageDirective(73/23/EEC)issuedbytheCommissionoftheEuropeanCommunity.
+CompliancewiththesedirectivesimpliesconformitytothefollowingEuropeanNorms(inbracketsare
+theequivalentinternationalstandards):
+EN55022(CISPR22)-ElectromagneticInterference
+EN50082-1(IEC801-2,IEC801-3,IEC801-4)-ElectromagneticImmunity
+EN60950(IEC950)-ProductSafety
+Warning!
+ThisisaClassAproduct. Inadomesticenvironmentthisproductmaycauseradiointerferencein
+whichcasetheusermayberequiredtotakeadequatemeasures.
+Achtung!
+DiesesisteinGerätderFunkstörgrenzwertklasseA. InWohnbereichenkönnenbeiBetriebdieses
+GerätesRundfunkstörungenauftreten,inwelchenFällenderBenutzerfürentsprechende
+Gegenmaßnahmenverantwortlichist.
+Attention!
+CeciestunproduitdeClasseA. Dansunenvironnementdomestique,ceproduitrisquedecréerdes
+interférencesradioélectriques,ilappartiendraalorsàl'utilisateurdeprendrelesmesuresspécifiques
+spécifiquesappropriées.
+
+Contents
+Preface.......................................................................................................................vii
+Chapter 1 Overview
+1.1 TheSystem............................................................................................1-2
+1.2 GS80BlockDiagram.............................................................................1-4
+1.3 GS80PhysicalDiagram........................................................................1-5
+1.4 Cabinets................................................................................................1-6
+Chapter 2 Installation
+2.1 PreparingforSystemInstallation........................................................2-2
+2.2 InstallingtheSystem............................................................................2-4
+2.3 JoiningExpanderCabinet....................................................................2-6
+Chapter 3 System Power-Up
+3.1 ControlPanelKeyswitch.......................................................................3-2
+3.2 InstallingtheSystemManagementConsole........................................3-4
+3.3 PoweringUptheSystem.......................................................................3-5
+3.4 Q-VETInstallationVerification..........................................................3-14
+3.4.1 InstallingQ-VET.................................................................................3-16
+3.4.2 RunningQ-VET...................................................................................3-17
+3.4.3 ReviewingResultsoftheQ-VETRun.................................................3-20
+3.4.4 De-InstallingQ-VET...........................................................................3-22
+Index
+Examples
+3–1 Power-UpDisplay.................................................................................3-5
+Figures
+1–1 AGS80System......................................................................................1-2
+v
+
+1–2 GS80BlockDiagram(Two-DrawerSystem).........................................1-4
+1–3 GS80PhysicalDiagram(Two-DrawerSystem)....................................1-5
+2–1 GS80SystemInstallationandCableConnections...............................2-4
+2–2 JoiningExpanderCabinet....................................................................2-6
+3–1 OperatorControlPanel.........................................................................3-2
+Tables
+1 AlphaServerGS80Documentation.......................................................viii
+1–1 CabinetModelsandPowerRequirements............................................1-6
+2–1 ExpanderCabinetJoiningKitRequiredforInstallation.....................2-2
+3–1 KeyswitchFunctionsontheControlPanel...........................................3-3
+vi
+
+Preface
+Intended Audience
+ThismanualtellshowtoinstallandpowerupAlphaServerGS80systems. Itis
+intendedforinstallationandserviceprofessionals.
+Document Structure
+Thismanualusesastructureddocumentationdesign. Topicsareorganizedinto
+smallsections,usuallyconsistingoftwofacingpages. Mosttopicsbeginwithan
+abstractthatprovidesanoverviewofthesection,followedbyanillustrationor
+example. Thefacingpagecontainsdescriptions,procedures,andsyntax
+definitions.
+Thismanualhasthreechapters.
+• Chapter1,Overview,providesaconceptualintroductiontothesystem.
+• Chapter2,Installation,describeshowtoinstallthesystemcabinetand
+theexpandercabinet.
+• Chapter3,SystemPower-Up,describeshowtopowerupthesystemand
+whentoboottheoperatingsystem.
+vii
+
+Documentation Titles
+Table 1 AlphaServer GS80 Documentation
+Title OrderNumber
+QA–6GAAA–G8 AlphaServerGS80/160/320DocumentationKit
+EK–GS320–UG AlphaServerGS80/160/320User’sGuide
+EK–GS320–RM AlphaServerGS80/160/320FirmwareReferenceManual
+EK–GSPAR–RM AlphaServerGS80/160/320GettingStartedwithPartitions
+EK–GS320–IN AlphaServerGS160/320InstallationGuide
+EK–GSR80–IN AlphaServerGS80InstallationGuide
+AG–RKSWB–BE AlphaServerGS80/160/320UserInformationCD(HTMLfiles)
+AG–RLVJA–BE AlphaServerGS80/160/320UserInformationCD(translations)
+QA–6GAAB–G8 AlphaServerGS80/160/320ServiceDocumentationKit
+EK–GS320–SV AlphaServerGS80/160/320ServiceManual
+EK–GS320–RM AlphaServerGS80/160/320FirmwareReferenceManual
+AG–RKSZ*–BE AlphaServerGS80/160/320ServiceInformationCD
+EK–GSCON–IN AlphaServerGS80/160/320SystemManagementConsole
+InstallationandUser’sGuide
+EK–GS320–UP AlphaServerGS160/320UpgradeManual
+EK–GSR80–UP AlphaServerGS80UpgradeManual
+EK–GS320–SP AlphaServerGS80/160/320SitePreparation
+Information on the Internet
+VisittheCompaqWebsiteatwww.compaq.com/alphaserver/site_index.htmlfor
+servicetoolsandmoreinformationabouttheAlphaServerGS80system.
+viii
+
+Chapter 1
+Overview
+TheAlphaServerGS80systemsformthelowendofthefamilyofhigh-
+performanceserverplatformsGS80/160/320designedforenterprise-level
+applications. LiketheGS160/320systems,theGS80systemsaredistinguished
+bytheirversatilityandhighdegreeofexpandability.
+ThischaptergivesanoverviewoftheGS80systemwithablockdiagramanda
+physicaldiagram. Section1.4givesalistofthesystemandexpandercabinets
+withtheirpowerrequirements.
+Overview 1-1
+
+1.1 The System
+The GS80 systems come in two Alpha configurations: one-drawer or
+two-drawer. Each drawer is designed into a single quad building
+block (QBB) consisting of up to four microprocessors. Figure 1–1
+showsaGS80system.
+Figure 1–1 A GS80 System
+COMPAQ
+AlphaServer GS80
+LA75Companion Printer digital
+PK-0635-99
+1-2 AlphaServerGS80InstallationGuide
+
+TheGS80systemiscontainedinasinglecabinet. Itisadrawer-basedsystem
+consistingofoneortwodrawers. EachdrawercontainsoneQBBwithupto
+fourCPUmodulesanduptofourmemorymodules.Inatwo-drawersystema
+distributionboardconnectsthetwoQBBsthroughtheirglobalports.
+ThesystemcabinetoftheGS80alsocontainsthepowersuppliesand
+accommodatesonePCIbox,astorageshelf(optional),andtheOCP(operator
+controlpanel). AnexpandercabinetcanhouseadditionalPCIboxesand
+storageshelves.
+Systemexpansionisachievedinthreeways:
+• Addingastoragedevicetothesingle-drawersystem
+• Addingaseconddrawertoasingledrawersystem
+• AddinganexpandercabinettoaccommodateanyadditionalI/Odevices
+Chapter2ofthismanualdiscussestheadditionofanexpandercabinettothe
+GS80systemcabinet.Theadditionofaseconddrawerisdiscussedinthe
+AlphaServerGS80UpgradeManual(EK-GSR80-UP).
+Overview 1-3
+
+1.2 GS80 Block Diagram
+Figure 1–2 shows a block diagram of a two-drawer GS80 system. A
+distribution board makes the interconnect between the two drawers
+(QBBs)throughtheirglobalports.
+Figure 1–2 GS80 Block Diagram (Two-Drawer System)
+Modem
+System Drawer 1
+PCI Box
+CPU MEM CPU MEM
+Standard
+I/O SCM I/O Switch GP
+MEM CPU MEM CPU
+System
+Management PCI Box Distribution
+Console System Drawer 2 Board
+CPU MEM CPU MEM
+PCI Box
+I/O Switch GP
+MEM CPU MEM CPU
+PCI Box PK-0630-98
+1-4 AlphaServerGS80InstallationGuide
+
+1.3 GS80 Physical Diagram
+Figure 1–3 shows the physical diagram of a two-drawer GS80 system
+withaPCIboxandanoptionalstorageunit.
+Figure 1–3 GS80 Physical Diagram (Two-Drawer System)
+Operator
+Control
+Panel
+Storage
+(optional)
+PCI Box
+System Drawer 1
+System Drawer 2
+Power Supplies
+AC Input Boxes
+PK1280
+Overview 1-5
+
+1.4 Cabinets
+Table1–1showsthemodelnumberofcabinetsandpowerrequirementsfor
+GS80systemsoperatinginvariouselectricalenvironments.
+Table 1–1 Cabinet Models and Power Requirements
+CabinetModel PowerRequirement
+SystemCabinetH9A20-CA
+115-127V
+(U.S./Canada)
+SystemCabinetH9A20-CB 200-240V
+(Europe)
+SystemCabinetH9A20-CC
+200-240V
+(U.S./Canada/Japan)
+ExpanderCabinetH9A20-AA
+115-127V
+(U.S./Canada)
+ExpanderCabinetH9A20-AB
+200-240V
+(Europe)
+ExpanderCabinetH9A20-AC
+200-240V
+(U.S./Canada/Japan)
+1-6 AlphaServerGS80InstallationGuide
+
+Chapter 2
+Installation
+Thebasesystemisenclosedinasinglecabinet. Itcontainsoneortwodrawers,
+theoperatorcontrolpanel,ACinputboxes,powersupplies,a14-slotPCIbox
+assembly(BA54A),andaPCIboxmountingandaccessorykit(CK-BA54A). It
+mayalsocontainanoptionalstorageunit.
+TheexpandercabinetisusedforadditionalPCIboxesandstorageshelves.
+TheinstallationoftheGS80systeminvolvesthefollowingtasks:
+• PreparingforSystemInstallation
+• InstallingtheSystem
+• JoiningExpanderCabinet
+Installation 2-1
+
+2.1 Preparing for System Installation
+The site must be properly prepared for the system to be installed.
+Make surethatyouhavethetoolsneededfortheinstallation. Waitfor
+any condensation on the metal surfaces to evaporate before powering
+up the system. Table 2–1 gives the joining kit required for the
+installationofanexpandercabinet.
+Table 2–1 Expander Cabinet Joining Kit Required for Installation
+JoiningKit PartNumber
+Expandercabinettosystemcabinet 70-40120-02
+2-2 AlphaServerGS80InstallationGuide
+
+Beforeyoustartanyinstallationprocedure:
+1. Ensurethatthesiteisproperlypreparedtoinstallthesystem. Refertothe
+AlphaServerGS80/160/320SitePreparationforsystemspecificationsand
+requirements.
+2. EnsurethatyouhavethejoiningkitgiveninTable2–1fortheinstallation.
+3. Rollsystemcabinetsoffpallets.
+4. Removeallprotectivepackaging.
+Youarenowreadytoassemblethesystem.
+Afteryouhavefinishedinstallingthesystem,handtheshippingbracketstothe
+customertokeepforlateruse. Shippingbracketsarerequiredformovingthe
+system.
+WARNING:Beforeyoupowerupthesystem,inspectthemodulesfor
+anyvisiblesignofwatercondensationontheheatsinks,DC-to-DC
+converters,andtheCPUs. Duetothelargemassofthesystem,
+condensationmayoccurduringtransferfromacoldtoawarm
+environment. Allowtimeforthecondensationtoevaporate
+completely. DONOT powerthesystemupifyounoticeanyindication
+ofcondensation.
+Installation 2-3
+
+2.2 Installing the System
+Install the system in the predetermined location. If an expander
+cabinet is to be added, join the system cabinet and the expander
+cabinetbeforeconnectingthesystemtothemainACpowersource.
+Figure 2–1 GS80 System Installation and Cable Connections
+Power
+Signals
+48V/48RTN
+Vaux/VauxRTN
+Fan Power
+/Signals
+To Main AC Power Source
+PK3217
+2-4 AlphaServerGS80InstallationGuide
+
+Unpackthesystemcabinetandremovetheorangeshippingbrackets.
+Positionthesystemcabinetatthepredeterminedlocation.Releasethetiewraps
+ontheCSBcableandhosecablesthatarecoiledandattachedtothesideofthe
+cabinetforlaterrouting.
+Allcableconnectionsbetweencomponentsofthesystemaremadeatthe
+factory. Theseconnectionsinclude(seeFigure2–1):
+• Powersignals
+• 48V/48RTN;Vaux/VauxRTN
+• FanPower/Signals
+• CSBcable
+• ThehosecablefromthelocalI/Oriserportstotheremoterisersinthe
+PCIbox
+Tocompletetheinstallationofthesystem,allyouneedtodoistoconnectthe
+powercablesfromtheACinputboxestothemainACpowersource.Ifan
+expandercabinetistobeadded,jointheexpandercabinettothesystemcabinet
+asexplainedinSection2.3beforemakingtheACpowerconnection.
+Installation 2-5
+
+2.3 Joining Expander Cabinet
+Join the expander cabinet to the system cabinet as shown in Figure 2–
+2.
+Figure 2–2 Joining Expander Cabinet
+Expander
+4
+Cabinet
+3
+System
+Cabinet
+3
+Rear
+3
+3
+System
+Cabinet
+Expander
+Cabinet
+1 2
+PK3216
+2-6 AlphaServerGS80InstallationGuide
+
+Toaddanexpandercabinet,proceedasfollows:
+1. Rolltheexpandercabinetflushalo(cid:1)ngthesideofthesystemcabinetleaving
+aminimumgapbetweencabinets .
+(cid:2)
+2. Aligncabinetheightsbyadjustingthelevelingfeet .
+3. Oncetheexpandercabinetisalignedwiththesystemcabinet,usethefour
+screwsandtheAllenwrenchsuppli(cid:3)edwiththeexpandercabinettosecure
+thecabinetstogetheratallcorners .
+4. Connect(cid:4)thesystemgroundwirefromtheexpandercabinettothesystem
+cabinet . Foreachadditionalexpandercabinet,daisychainasystem
+groundwire.
+5. Makehostconnections(PCIbox,storage)andtheCSBconnection. These
+connectionsareconfigurationdependent.
+Thiscompletestheinstallationofanexpandercabinet.Youcannowmake
+powerconnectionsfromtheACinputboxestothemainACpowersource. Next,
+youmustpowerupthesystemasexplainedinChapter3.
+Installation 2-7
+
+Chapter 3
+System Power-Up
+Thischaptertellshowtopowerupthesystemandwhathappensupon
+power-up. Sectionsinclude:
+• ControlPanelKeyswitch
+• InstallingtheSystemManagementConsole
+• PoweringUptheSystem
+• Q-VETInstallationVerification
+SystemPower-Up 3-1
+
+3.1 Control Panel Keyswitch
+The operator control panel (OCP) keyswitch has three positions: Off,
+On,andSecure. Figure3–1showstheOCPkeyswitch.
+Figure 3–1 Operator Control Panel
+Off On Secure
+PK-0621A-99
+3-2 AlphaServerGS80InstallationGuide
+
+Table3–1explainsthefunctionsselectedbythekeyswitch.
+Table 3–1 Keyswitch Functions on the Control Panel
+KeyswitchPosition Function
+Off Systemispoweredoffandcannotbe
+poweredonremotely.
+On Systemispoweredonandcanbe
+remotelypoweredonorpoweredoff.
+Secure Systemispoweredonandcannotbe
+remotelypoweredonoroff.
+RefertotheAlphaServerGS80/160/320User’sGuideortheAlphaServer
+GS80/160/320ServiceManualforfunctionaldescriptionsofallcontrolpanel
+components.
+SystemPower-Up 3-3
+
+3.2 Installing the System Management Console
+Beforeyoupowerupthesystem,youmustinstallthesystem
+managementconsole(SMC). Stepstobefollowedininstallingthe
+SMCarelistedbelow.TheprocedurestoinstalltheSMCarefully
+detailedintheAlphaServerGS80/160/320SystemManagementConsole
+InstallationandUser’sGuide.
+StepstoInstalltheSMC
+1. SetuptheSMCPC.
+2. InstalltheSMCterminalserverintheGS160/320system.
+3. Connecttheterminalservertothepowersource.
+4. TurncircuitbreakersonbutkeepthekeyswitchonOff.
+5. CablethePCtotheterminalserverandsetupparameters.
+6. Verifycommunicationfromtheconsoletothesystemcontrolmanager.
+Youarenowreadytopowerupthesystem.
+WARNING: Beforeyoupowerupthesystem,inspectthemodules
+foranyvisiblesignofwatercondensationontheheatsinks,DC-to-DC
+converters,andtheCPUs. Duetothelargemassofthesystem,
+condensationmayoccurduringtransferfromacoldtoawarm
+environment. Allowtimeforthecondensationtoevaporate
+completely. DONOT powerthesystemupifyounoticeanyindication
+ofcondensation.
+3-4 AlphaServerGS80InstallationGuide
+
+3.3 Powering Up the System
+Topowerupthesystem,firstturnthecircuitbreakersinallcabinets
+on,thensetthekeyswitchontheOCPtotheOnposition.Example3–1
+showsasampleconsoledisplayonpower-up. SeetheAlphaServer
+GS80/160/320ServiceManualortheAlphaServerGS80/160/320User’s
+Guideforexplanationsofthepower-updisplay.
+Example 3–1 Power-Up Display
+SCM_E0> power on
+Powering on PCI Box 0
+Powering on PCI Box 1
+QBB-0 Powering ON
+~I~ Testing OCP Switch- passed
+Power ON Phase INIT
+QBB-1 Powering ON
+QBB-2 Powering ON
+QBB-3 Powering ON
+~I~ SCM powered via PBM
+SCM_E0>
+QBB0 now Testing Step-0
+QBB1 now Testing Step-0
+QBB2 now Testing Step-0
+QBB3 now Testing Step-0
+~I~ SCMe1 non-csb member while it tests & initializes its
+Shared RAM
+SCM_E0> .
+~I~ QBB0/PSM30 SysEvent: QBB_INIT_CD1 Reg0:7AB3
+Reg1:3FFF (test-0) (fmask/fts:8f)
+.
+~I~ QBB1/PSM31 SysEvent: QBB_INIT_CD1 Reg0:7AB3
+Reg1:3FFF (test-0) (fmask/fts:8f)
+~I~ QBB2/PSM32 SysEvent: QBB_INIT_CD1 Reg0:768F
+Reg1:0FFF (test-0) (fmask/fts:8f)
+~I~ QBB3/PSM33 SysEvent: QBB_INIT_CD1 Reg0:768F
+Reg1:0FFF (test-0) (fmask/fts:8f)
+SystemPower-Up 3-5
+
+Testing SIO Shared RAM(please wait)
+Initializing shared ram
+Shared RAM Initialized
+Powering ON H-Switch
+SCM_E0>
+~I~ HSW4/HPM40 SysEvent: HS_INIT_CD1 Reg0:000F
+Reg1:D581
+Phase 0
+~I~ Enable HS Links: 0f
+~I~ QbbConf(gp/io/c/m)=0000bbff Assign=0f SQbb0=00 PQbb=00
+SoftQbbId=0000ba98
+~I~ SysConfig: 00 00 00 00 00 00 00 00 07 1f 07 9f 37 3f
+37 9f
+SCM_E0>
+~I~ HSW4/HPM40 SysEvent: LINK0_ON Reg0:000F
+Reg1:D581
+~I~ HSW4/HPM40 SysEvent: LINK1_ON Reg0:010F
+Reg1:D581
+SCM_E0>
+~I~ HSW4/HPM40 SysEvent: LINK2_ON Reg0:030F
+Reg1:D581
+SCM_E0>
+~I~ HSW4/HPM40 SysEvent: LINK3_ON Reg0:070F
+Reg1:D581
+SCM_E0> ............
+QBB0 now Testing Step-1
+QBB1 now Testing Step-1
+QBB2 now Testing Step-1
+QBB3 now Testing Step-1
+QBB0 now Testing Step-3
+QBB1 now Testing Step-3
+QBB2 now Testing Step-3
+QBB3 now Testing Step-3..
+QBB0 now Testing Step-5
+QBB1 now Testing Step-5
+QBB2 now Testing Step-4
+QBB3 now Testing Step-4
+QBB2 Step(s)-4 5 Tested
+QBB3 Step(s)-4 5 Tested
+Phase 1
+3-6 AlphaServerGS80InstallationGuide
+
+QBB0 IO_MAP0: 0000A0C001333333
+QBB1 IO_MAP1: 0000A1C101333333
+QBB2 IO_MAP2: 0000000000000003
+QBB3 IO_MAP3: 0000000000000003
+~I~ QbbConf(gp/io/c/m)=0000bbff Assign=0f SQbb0=00 PQbb=00
+SoftQbbId=0000ba98
+~I~ SysConfig: 00 00 00 00 00 00 00 00 07 1f 07 9f 37 3f
+37 9f
+SCM_E0> .
+QBB0 now Testing Step-7
+QBB1 Step(s)-5 6 Tested
+QBB2 Step(s)-5 6 Tested
+QBB3 Step(s)-5 6 Tested
+QBB0 now Testing Step-9..
+QBB0 now Testing Step-A.
+QBB0 now Testing Step-7
+QBB0 now Testing Step-9..
+QBB0 now Testing Step-A.
+QBB0 now Testing Step-8
+QBB0 now Testing Step-9..
+QBB0 now Testing Step-A.
+QBB0 now Testing Step-B.
+Phase 2
+QBB0 IO_MAP0: 0000A0C001333333
+QBB1 IO_MAP1: 0000A1C101333333
+QBB2 IO_MAP2: 0000000000000003
+QBB3 IO_MAP3: 0000000000000003
+~I~ QbbConf(gp/io/c/m)=0000bbff Assign=0f SQbb0=00 PQbb=00
+SoftQbbId=0000ba98
+~I~ SysConfig: 00 00 00 00 00 00 00 00 07 1f 07 9f 37 3f
+37 9f
+SCM_E0>
+QBB0 now Testing Step-C
+QBB1 now Testing Step-C
+QBB2 now Testing Step-C
+QBB3 now Testing Step-C..
+SystemPower-Up 3-7
+
+Phase 3
+~I~ QbbConf(gp/io/c/m)=0000bbff Assign=0f SQbb0=00 PQbb=00
+SoftQbbId=0000ba98
+~I~ SysConfig: 00 00 00 00 00 00 00 00 07 1f 07 9f 37 3f
+37 9f
+SCM_E0> .
+QBB0 now Testing Step-D
+QBB1 now Testing Step-D
+QBB2 now Testing Step-D
+QBB3 now Testing Step-D....
+QBB0 IO_MAP0: 0000A0C001333333
+QBB1 IO_MAP1: 0000A1C101333333
+QBB2 IO_MAP2: 0000000000000003
+QBB3 IO_MAP3: 0000000000000003
+Phase 4
+~I~ QbbConf(gp/io/c/m)=0000bbff Assign=0f SQbb0=00 PQbb=00
+SoftQbbId=0000ba98
+QBB0 unloading console across port0 from PCI Box-0
+Console COM1 from master PCI Box-0
+~I~ SysConfig: 00 00 00 00 00 00 00 00 07 1f 07 9f 37 3f
+37 9f
+Retrieving FRU information for Shared RAM...(please wait)
+SCM_E0> .
+QBB3 now Testing Step-E
+QBB0 now Testing Step-E
+QBB1 now Testing Step-E
+QBB2 now Testing Step-E..
+Power On Complete
+Returning to system COM1 port
+System Primary QBB0 : 0
+System Primary CPU : 0 on QBB0
+Par hrd/csb CPU Mem IOR3 IOR2 IOR1 IOR0 GP QBB Dir PS
+Temp
+QBB# 3210 3210 (pci_box.rio) Mod BP Mod 321
+(:C)
+(-) 0/30 PPPP P--P --.- --.- P0.1 P0.0 P P P P-P
+28.0
+3-8 AlphaServerGS80InstallationGuide
+
+(-) 1/31 PPPP --PP --.- --.- P1.1 P1.0 P P P P-P
+32.0
+(-) 2/32 PPPP P--P --.- --.- --.- --.- P P P -PP
+29.0
+(-) 3/33 PPPP ---P --.- --.- --.- --.- P P P -PP
+30.0
+HSwitch Type Cables 7 6 5 4 3 2 1 0 Temp(:C)
+HPM40 4-port - - - - P P P P 32.0
+PCI Rise1-1 Rise1-0 Rise0-1 Rise0-0 RIO PS Temp
+Cab 7 6 5 4 3 2 1 7 6 5 4 3 2 1 1 0 21 (:C)
+10 - - L - - - - - - - - L - S * * PP 35.0
+11 - - - - - - - - - - - - - S * * PP 34.5
+OpenVMS PALcode V1.80-1, Tru64 UNIX PALcode V1.74-1
+system = QBB 0 1 2 3 + HS
+QBB 0 = CPU 0 1 2 3 + Mem 0 3 + Dir + IOP + PCA 0 1 +
+GP (Hard QBB 0)
+QBB 1 = CPU 0 1 2 3 + Mem 0 1 + Dir + IOP + PCA 0 1 +
+GP (Hard QBB 1)
+QBB 2 = CPU 0 1 2 3 + Mem 0 3 + Dir + IOP + PCA +
+GP (Hard QBB 2)
+QBB 3 = CPU 0 1 2 3 + Mem 0 + Dir + IOP + PCA +
+GP (Hard QBB 3)
+micro firmware version is T5.5
+shared RAM version is 1.4
+hose 0 has a standard I/O module
+starting console on CPU 0
+initialized idle PCB
+initializing semaphores
+initializing heap
+initial heap 300c0
+memory low limit = 1fc000
+heap = 300c0, 1ffc0
+initializing driver structures
+initializing idle process PID
+initializing file system
+initializing timer data structures
+SystemPower-Up 3-9
+
+lowering IPL
+CPU 0 speed is 731 MHz
+create dead_eater
+create poll
+create timer
+create powerup
+access NVRAM
+QBB 0 memory, 3 GB
+QBB 1 memory, 3 GB
+QBB 2 memory, 3 GB
+QBB 3 memory, 1 GB
+total memory, 10 GB
+copying PALcode to 10bffe0000
+copying PALcode to 20bffe0000
+copying PALcode to 303ffe0000
+probe I/O subsystem
+probing hose 0, PCI
+probing PCI-to-ISA bridge, bus 1
+bus 1, slot 0 -- dva -- Floppy
+bus 0, slot 1 -- pka -- QLogic ISP10x0
+bus 0, slot 3 -- ewa -- DE500-BA Network Controller
+bus 0, slot 15 -- dqa -- Acer Labs M1543C IDE
+probing hose 1, PCI
+probing hose 2, PCI
+probing hose 3, PCI
+bus 0, slot 5 -- pkb -- QLogic ISP10x0
+probing hose 8, PCI
+probing PCI-to-ISA bridge, bus 1
+bus 1, slot 0 -- dvb -- Floppy
+bus 0, slot 1 -- pkc -- QLogic ISP10x0
+bus 0, slot 15 -- dqb -- Acer Labs M1543C IDE
+probing hose 9, PCI
+probing hose 10, PCI
+probing hose 11, PCI
+starting drivers
+entering idle loop
+starting console on CPU 1
+initialized idle PCB
+initializing idle process PID
+lowering IPL
+CPU 1 speed is 731 MHz
+create powerup
+starting console on CPU 2
+initialized idle PCB
+initializing idle process PID
+lowering IPL
+3-10 AlphaServerGS80InstallationGuide
+
+CPU 2 speed is 731 MHz
+create powerup
+starting console on CPU 3
+initialized idle PCB
+initializing idle process PID
+lowering IPL
+CPU 3 speed is 731 MHz
+create powerup
+starting console on CPU 4
+initialized idle PCB
+initializing idle process PID
+lowering IPL
+CPU 4 speed is 731 MHz
+create powerup
+starting console on CPU 5
+initialized idle PCB
+initializing idle process PID
+lowering IPL
+CPU 5 speed is 731 MHz
+create powerup
+entering idle loop
+starting console on CPU 6
+initialized idle PCB
+initializing idle process PID
+lowering IPL
+CPU 6 speed is 731 MHz
+create powerup
+starting console on CPU 7
+initialized idle PCB
+initializing idle process PID
+lowering IPL
+CPU 7 speed is 731 MHz
+create powerup
+starting console on CPU 8
+initialized idle PCB
+initializing idle process PID
+lowering IPL
+CPU 8 speed is 731 MHz
+create powerup
+starting console on CPU 9
+initialized idle PCB
+initializing idle process PID
+lowering IPL
+CPU 9 speed is 731 MHz
+create powerup
+starting console on CPU 10
+SystemPower-Up 3-11
+
+initialized idle PCB
+initializing idle process PID
+lowering IPL
+CPU 10 speed is 731 MHz
+create powerup
+starting console on CPU 11
+initialized idle PCB
+initializing idle process PID
+lowering IPL
+CPU 11 speed is 731 MHz
+create powerup
+starting console on CPU 12
+initialized idle PCB
+initializing idle process PID
+lowering IPL
+CPU 12 speed is 731 MHz
+create powerup
+starting console on CPU 13
+initialized idle PCB
+initializing idle process PID
+lowering IPL
+CPU 13 speed is 731 MHz
+create powerup
+starting console on CPU 14
+initialized idle PCB
+initializing idle process PID
+lowering IPL
+CPU 14 speed is 731 MHz
+create powerup
+entering idle loop
+starting console on CPU 15
+initialized idle PCB
+initializing idle process PID
+lowering IPL
+CPU 15 speed is 731 MHz
+create powerup
+initializing GCT/FRU at 1fc000
+initializing pka pkb pkc ewa dqa dqb
+environment variable mopv3_boot created
+version X5.8-4667 May 4 2000 02:24:27
+AlphaServer Console X5.8-4667, built on May 4 2000 at 02:24:27
+P00>>>
+TheSRMconsoleprompt(P00>>>) isdisplayedattheendofpower-up.
+3-12 AlphaServerGS80InstallationGuide
+
+Thiscompletesthepower-upinitialization/testingsequence.Theoperating
+systemcanbebootedandinstalledfromtheSRMconsoleprompt.
+FollowinstructionsgivenintheAlphaServerGS80/160/320User’sGuideto:
+• Setbootoptions
+• BootandinstallTru64UNIX
+• BootandinstallOpenVMS
+YoucannowrunQ-VETtoverifythesysteminstallation(Section3.4).
+SystemPower-Up 3-13
+
+3.4 Q-VET Installation Verification
+RunthelatestQ-VETreleasedversiontoverifythesystem
+installation.
+CompaqrecommendsrunningthelatestQ-VETreleasedversiontoverifythat
+hardwareonTru64UNIXandOpenVMSsystemsisinstalledcorrectlyandis
+operational. Q-VETistheQualificationVerifierExerciserToolthatisusedby
+CompaqProductEngineerstoexercisesystemsunderdevelopment. Q-VET
+doesnotverifytheoperatingsystemconfiguration.
+Ifthesystemhasbeenpartitioned,Q-VETmustbeinstalledandrun
+separatelyoneachpartitiontoverifythecompleteinstallation. Compaq
+AnalyzemustbeinstalledontheoperatingsystempriortorunningQ-VET.
+YoumustalwaysobtainthelatestrevisionofQ-VETfromtheQ-VETWeb
+site—thelatestQ-VETrelease,information,ReleaseNotesanddocumentation
+arelocatedathttp://chump2.mro.cpqcorp.net/qvet/. Q-VETisnotFISedon
+newsystemsorincludedonthequarterlyfirmwareCD.(Itisdistributedonthe
+ToolsUnpluggedCDathttp://phxmcs.phx.dec.com/mcstools_request.htm,but
+thatversionmaynotbethelatest.)
+CAUTION:
+DonotinstalltheDigitalSystemVerificationSoftware(DECVET)onGS80,
+GS160, orGS320systems.
+Non-IVPQ-VETscriptsverifydiskoperationforsomedriveswith"write
+enabled"techniques.TheseareintendedforEngineeringand
+ManufacturingTest.RunONLYIVPscriptsonsystemsthatcontain
+customerdataoranyotheritemsthatmustnotbewrittenover. Seethe
+Q-VETDiskTestingPolicyNoticeontheQ-VETWebsitefordetails.All
+Q-VETIVPscriptsuseReadOnlyand/orFileI/Ototestharddrives.
+Floppyandtapedrivesarealwayswritetestedandshouldhavescratch
+mediainstalled.
+Q-VETshouldbeusedtoverifyanewsysteminstallationpriortoconfiguring
+thesystemintoaclusterorconnectinganysharedstoragedevices
+containingcustomerdata.
+Q-VETistobeusedbyQ-VETknowledgeableCompaqServicePersonnelonly.
+3-14 AlphaServerGS80InstallationGuide
+
+Q-VETmustbede-installeduponcompletionofsysteminstallation
+verification.Donotleavethissoftwareatacustomersite;misusemay
+resultinlossofcustomerdata.
+SwaporPagefileSpace
+Thesystemmusthaveadequateswapspace(onTru64UNIX)orPageFile
+space(onOpenVMS)forproperQ-VEToperation. Youcansetthisupeither
+beforeorafterQ-VETinstallation.
+Duringinitialization,Q-VETwilldisplayamessageindicatingtheminimum
+amountofswap/pagefileneeded,ifitdeterminesthatthesystemdoesn'thave
+enough. Youcanthenreconfigurethesystem.
+Ifyouwishtoaddresstheswap/pagefilesizebeforerunningQ-VET,seethe
+Swap/PagefileEstimatesontheQ-VETWebsite.
+SystemPower-Up 3-15
+
+3.4.1 Installing Q-VET
+TheproceduresforinstallationofQ-VETdifferbetweenoperating
+systems. YoumustinstallCompaqAnalyzeandQ-VEToneach
+partitioninthesystem.
+TCP/IP(onTru64UNIX)orDecNet_PhaseIV(onOpenVMS)shouldbe
+configuredbeforeinstallingQ-VET.
+CompaqAnalyzemustbeinstalledoneachpartition. Q-VETwillnotstartif
+CompaqAnalyzeisnotinstalled.
+InstallandrunQ-VETfromtheSYSTEMaccountonVMSandtheroot
+accountonUNIX. Followtheinstructionslistedunderyouroperatingsystem
+toinstallQ-VET. RemembertoinstallQ-VETineachpartition.
+Tru64UNIX
+1. Copythekittarfile(QVET_Vxxx.tar)toyoursystem.
+2. IfthisisnotanewinstallcheckforoldQ-VETkits(orDECVETkits)via
+thefollowingcommand.
+setld -i | grep VET
+NotethenamesofanylistedkitssuchasOTKBASExxxetc.
+Removethekitswiththecommand
+setld -d kit1_name kit2_name kit3_name
+3. Besurethatthereisnodirectorynamedoutput.Ifsomovetoanother
+directoryorremovetheoutputdirectory.
+rm -r output
+4. Untarthe kitwiththecommand
+tax xvf QVET_Vxxx.tar
+5. Installthekitwiththecommand
+setld -l output
+6. Duringtheinstall,ifyouintendtousetheGUIyoumustselectthe
+optionalGUIsubset(QVETXOSFxxx).
+7. TheQ-VETinstallationwillsizeyoursystemfordevicesandmemory. It
+alsorunsqvet_tune. Youshouldanswer'y'tothequestionsthatareasked
+aboutsettingparameters. Ifyoudonot,youmayhavetroublerunningQ-
+3-16 AlphaServerGS80InstallationGuide
+
+VET. Aftertheinstallationcompletes,youshoulddeletetheoutput
+directorywithrm -r output. Youcanalsodeletethekittarfile.
+8. YoumustrebootthesystembeforestartingQ-VET.
+9. OnrebootyoucanstartQ-VetGUIviavet&oryoucanrunnonGUI
+(CommandLine)viavet -nw
+OpenVMS
+1. DeleteanyQVETAXPxxx.AorQVETAXPxxx.EXEfilefromthecurrent
+directory.
+2. Copytheself-extractingkitimagefile(QVETAXPxxx.EXE)tothecurrent
+directory.
+3. Itishighlyrecommended,butnotrequired,thatyoupurgethesystemdisk
+beforeinstallingQ-VET.Thiswillfreeupspacethatmaybeneededfor
+PageFileexpansionduringtheAUTOGENphase. $purge
+sys$sysdevice:[*…]*.*
+4. Extractthekitsavesetwiththecommand$run QVETAXPxxx.EXEand
+verifythatthekitsavesetwasextractedbycheckingforthe"Successful
+decompression"message.
+5. Use@sys$update:vmsinstalfortheQ-VETinstallation. The
+installationwillsizeyoursystemfordevicesandmemory. Youshould
+chooseallthedefaultanswersduringtheQ-VETinstallation. Thiswillrun
+theIVP,tunethesystemandreboot. Duringtheinstall,ifyoudonot
+intendtousetheGUI,youcananswernotothequestion"Doyouwantto
+installQ-VETwiththeDECwindowsMotifinterface?"
+6. AftertheinstallationcompletesyoushoulddeletetheQVETAXP0xx.Afile
+andtheQVETAXPxxx.EXEfile.
+7. OnrebootyoucanstartQ-VETGUIvia$vetorthecommandinterfacevia
+$vet/int=char
+SystemPower-Up 3-17
+
+3.4.2 Running Q-VET
+YoumustrunQ-VEToneachpartitioninthesystemtoverifythe
+completeinstallation.
+CompaqrecommendsthatyoureviewtheTestingNotessectionoftheRelease
+NotesbeforerunningQ-VET.
+FollowtheinstructionslistedunderyouroperatingsystemtorunQ-VETin
+eachpartition. ChoosetheLongIVPscriptratherthantheShortone.
+Tru64UNIX
+GraphicalInterface 1. FromtheMainMenu,selectIVP, Load Script and
+select LongIVP (theIVPtestswillthenloadintothe
+Q-VETprocesswindow).
+2. ClicktheStartAllbuttontobeginIVPtesting.
+Command-Line > vet -nw
+Q-Vet_setup> execute .Ivp.scp
+Interface
+Q-Vet_setup> start
+Notethatthereisa"."infrontofthescriptname,andthat
+commandsarecasesensitive.
+3-18 AlphaServerGS80InstallationGuide
+
+OpenVMS
+GraphicalInterface 1. FromtheMainMenu,selectIVP, Load Script and
+select LongIVP (theIVPtestswillthenloadintothe
+Q-VETprocesswindow).
+2. ClicktheStartAllbuttontobeginIVPtesting.
+Command-Line $ vet /int=char
+Q-Vet_setup> execute ivp.vms
+Interface
+Q-Vet_setup> start
+Notethatcommandsarecasesensitive.
+Note:AquickIVPscriptisprovidedforasimpleverificationofdevicesetup.It
+isselectablefromtheGUI IVPmenu,andthescriptiscalled.Ivp_short.scp
+(ivp_short.vms).Thisscriptwillrunfor15minutesandthenterminatewith
+aSummarylog.TheshortscriptmayberunpriortotheLongIVPscriptif
+desired,butnotinplaceoftheLongIVPscript,whichisthefullIVPtest.
+TheLongIVPwillrununtiltheslowestdevicehascompletedonepass
+(typically4to10hours).ThisiscalledaCycleofTesting.
+SystemPower-Up 3-19
+
+3.4.3 Reviewing Results of the Q-VET Run
+AfterrunningQ-VET,checktheresultsoftherunbyreviewingthe
+SummaryLog.
+IfyourunQ-VETasinstructed,Q-VETwillterminatetestingaftertheslowest
+testhascompletedonepassandproduceaSummaryfile. Thetermination
+messagewilltellyouthenameandlocationofthisfile. Allexerciserprocesses
+areterminatedautomaticallywhentheRunTimeexpiresormanuallyviathe
+Terminatecommand. Afterallexercisersreport"Idle",theSummaryLogis
+producedcontainingQ-VET-specificresultsandstatusesaswellassystemlog
+entriesderivedfromCompaqAnalyze.
+1. Amessagewillbedisplayedshowingthenumberofsystem
+eventsappendedtotheSummaryLog:
+"xx entries have been appended to the summary file"
+2. Iftherearemorethan0appendages,thefollowingadditional
+messageisdisplayed.
+"You MUST review these for Errors."
+Ifthenumberisgreaterthan0,theymustbereviewedfor
+errors.
+3. IftherearenoQ-VETerrors,nosystemeventappendages,and
+testingrantothespecifiedcompletiontime,thefollowingmessage
+willbedisplayed.
+"Q-VET Tests Complete: Passed"
+3-20 AlphaServerGS80InstallationGuide
+
+4. Forautomatictestruncompletions,therearetwomorepossible
+outcomes:
+•
+Iftherewerenoexercisererrors,buttherewereother
+errorsorsignificanteventsintheSummaryLogthat
+mustbereviewed,thefollowingmessageappears:
+"Q-VET Tests Complete: Warning"
+•
+Ifoneormoreexercisershaderrors,thismessage
+appears:
+"Q-VET Tests Complete: Fail"
+SystemPower-Up 3-21
+
+3.4.4 De-Installing Q-VET
+Theproceduresforde-installationofQ-VETdifferbetweenoperating
+systems. Youmustde-installQ-VETfromeachpartitioninthesystem.
+Youmustde-installQ-VETfromeachpartition. Failuretodosomayresultin
+thelossofcustomerdataatalaterdateifQ-VETismisused.
+Followtheinstructionslistedunderyouroperatingsystemtode-installQ-VET
+fromapartition. Theqvet_uninstallprogramswillremovetheQ-VET
+suppliedtoolsandrestoretheoriginalsystemtuning/configurationsettings.
+Tru64UNIX
+1. Stop,Terminate,andExit fromQ-VETtesting.
+2. Delete(rm)anyQ-VETkitfile(QVET_Vxxx.tar).
+3. Note:logfilesareretainedin/usr/field/tool_logs
+4. Executetheprogram qvet_uninstall
+5. Rebootthesystem.YouMUSTrebootinanycase,evenifQ-VETistobe
+reinstalled.
+OpenVMS
+1. Stop,Terminate,andExitfromanyQ-VETtesting.
+2. DeleteQVETAXP0xx.AandQVETAXPxxx.EXEiftheyarestillonthe
+system.
+3. Executetheprogram @sys$manager:qvet_uninstall.com
+4. Note:logfilesareretainedinsys$specific:[sysmgr.tool_logs]
+5. Rebootthesystem.YouMUSTrebootinanycase,evenifQ-VETistobe
+reinstalled.
+3-22 AlphaServerGS80InstallationGuide
+
+Index
+C Keyswitchfunctions,3-3
+Cabinets,1-6
+P
+Controlpanelkeyswitch,3-1,3-2
+Powerrequirements,1-6
+D Power-up,3-5
+Power-updisplay,3-5
+De-installingQ-VET,3-22
+Q
+E
+QBB,1-2
+Expandercabinetinstallation,2-6
+Q-VETinstallationverification,3-14
+Expandercabinetjoiningkit,2-2
+Q-VETresultsreview,3-20
+G
+R
+GS80blockdiagram,1-4
+RunningQ-VET,3-18
+GS80physicaldiagram,1-5
+GS80systeminstallation,2-4
+S
+I SMC,3-4
+Systemmanagementconsole,3-4
+InstallingQ-VET,3-16
+K
+Keyswitch,3-1,3-2
+Index-1

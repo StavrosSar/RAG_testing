@@ -1,0 +1,3770 @@
+Tru64 UNIX
+Master Index
+Part Number: AA-RH94B-TE
+August 2000
+Product Version: Tru64 UNIX Version 5.1 or higher
+This book contains index entries for the most commonly used manuals in
+the Compaq Tru64™ UNIX documentation set.
+Compaq Computer Corporation
+Houston, Texas
+
+©2000 Compaq Computer Corporation
+COMPAQ, the Compaq logo, Compaq Insight Manager, DE Cnet, TruCluster, and VAX Registered in U.S.
+Patent and Trademark Office. OpenVMS and Tru64 are trademarks of Compaq Information Technologies
+Group, L.P.
+Microsoft, Windows, and Windows NT are trademarks of Microsoft Corporation. Motif, OSF/1, UNIX, and
+X/Open are trademarks of The Open Group. All other product names mentioned herein may be trademarks
+of their respective companies.
+Confidential computer software. Valid license from Compaq required for possession, use, or copying.
+Consistent with FAR 12.211 and 12.212, Commercial Computer Software, Computer Software
+Documentation, and Technical Data for Commercial Items are licensed to the U.S. Government under
+vendor’s standard commercial license.
+Compaq shall not be liable for technical or editorial errors or omissions contained herein. The information
+in this document is subject to change without notice.
+THE INFORMATION IN THIS PUBLICATION IS PROVIDED “AS IS” WITHOUT WARRANTY OF ANY
+KIND. THE ENTIRE RISK ARISING OUT OF THE USE OF THIS INFORMATION REMAINS WITH
+RECIPIENT. IN NO EVENT SHALL COMPAQ BE LIABLE FOR ANY DIRECT, CONSEQUENTIAL,
+INCIDENTAL, SPECIAL, PUNITIVE, OR OTHER DAMAGES WHATSOEVER (INCLUDING WITHOUT
+LIMITATION, DAMAGES FOR LOSS OF BUSINESS PROFITS, BUSINESS INTERRUPTION OR LOSS
+OF BUSINESS INFORMATION), EVEN IF COMPAQ HAS BEEN ADVISED OF THE POSSIBILITY
+OF SUCH DAMAGES AND WHETHER IN AN ACTION OF CONTRACT OR TORT, INCLUDING
+NEGLIGENCE.
+The limited warranties for Compaq products are exclusively set forth in the documentation accompanying
+such products. Nothing herein should be construed as constituting a further or additional warranty.
+
+About This Manual
+The Master |ndex provides an index for the most commonly used books in
+the Compaq Tru64™ UNIX documentation set. Books with index entries in
+the Master Index are listed in Table 1.
+Audience
+This book is for anyone who needs to access information about the Tru64
+UNIX operating system. It can help you find a specific topic in the
+documentation set by pointing you to the location in the book where the
+topic is discussed.
+New and Changed Features
+Beginning with this release, you can search the HTML version of the Master
+Index using a keyword search. To open the keyword search page, click on the
+“Search the Master Index” subentry under Master Index in the General User
+Documents list in the Online Documentation Library.
+To perform a keyword search, enter the word or phrase you want tofind. The
+search function searches the entire Master Index for matches, and displays
+the results. When you click on an entry in the search results, the target book
+opens in its own window. In most cases, the book opens to the place in the
+text that is indicated by the entry.
+Conventions
+In the printed and PDF versions of the Master Index, each master index
+page reference is preceded by an abbreviated book title. For example, the
+following entry points to page 3-2 in the book Sharing Software on a Local
+Area Network:
+installation
+RIS software subset, SharingSW 3-2
+Table 1 maps the abbreviated title for each book to its complete book title.
+The HTML version of the Master Index does not contain page numbers.
+Instead, the abbreviated book title appears as a hot link. Clicking on this
+link takes you either to the beginning of the book being referenced or, in
+many cases, to the actual location of the information in the book. Most
+entries also provide section numbers, to help you further refine your search.
+About This Manual iii
+
+Table 1: Book Title Abbreviations
+Abbreviation Book Title
+AdvF SAdmin AdvFS Administration
+AsmLangGde Assembly Language Programmer's Guide
+AsynchronousT M Asynchronous Transfer Mode
+CallingStandard Calling Standard for Alpha Systens
+CDE Companion CDE Companion
+CLangRef Compaq C Language Reference Manual
+ClusTechOver TruCluster Server Technical Overview
+CommandShellGde Command and Shell User’s Guide
+CPML Compaq Portable Mathematics Library
+DocOverview Documentation Overview
+InstallGde Installation Guide
+InstallGdeAdvTop Installation Guide — Advanced Topics
+InternatProg Writing Software for the International Marke
+KernelDebug Kernd Debugging
+KernelModules Writing Kernd Modules
+LicenseM anage Software License Managenent
+NetAdmin Network Administration
+NetProgGde Network Programmer's Guide
+OncRpcProgram Programming with ONC RPC
+POSI XThreads Guide to the POSIX Threads Library
+Prestoserve Guide to Prestoserve
+ProdkitGde Guide to Preparing Product Kits
+ProgGde Programmer’s Guide
+ProgSupTools Programming Support Tools
+Realtime Guide to Realtime Programming
+Security Security
+SharingSW Sharing Softwareo n a Local Area Network
+StorageM anager Logical Storage Manage
+SysConfigSup System Configuration Supplement: OEM Platforms
+SystemAdmin Systen Administration
+iv About This Manual
+
+Table 1: Book Title Abbreviations (cont.)
+Abbreviation Book Title
+SystemTune System Configuration and Tuning
+TechOver Technical Overview
+XWinSysE nv X Window Systen Environment
+Reader’s Comments
+Compaq welcomes any comments and suggestions you have on this and
+other Tru64 UNIX manuals.
+You can send your comments in the following ways:
+Fax: 603-884-0120 Attn: UBPG Publications, ZK 03-3/Y3 2
+Internet electronic mail: readers comment@zk3.dec.com
+A Reader’s Comment form is located on your system in the following
+location:
+/usr/doc/readers_comment.txt
+Mail:
+Compaq Computer Corporation
+UBPG Publications Manager
+ZK O3-3/Y 32
+110 Spit Brook Road
+Nashua, NH 03062-2698
+A Reader’s Comment form is located in the back of each printed manual.
+The form is postage paid if you mail it in the United States.
+Please include the following information along with your comments:
+The full title of the book and the order number. (The order number is
+printed on the title page of this book and on its back cover.)
+The section numbers and page numbers of the information on which
+you are commenting.
+The version of Tru64 UNIX that you are using.
+If known, the type of processor that is running the Tru64 UNIX software.
+The Tru64 UNIX Publications group cannot respond to system problems
+or technical support inquiries. Please address technical questions to your
+local system vendor or to the appropriate Compaq technical support office.
+Information provided with the software media explains how to send problem
+reports to Compaq.
+About This Manual v
+
+Index
+Numbers
+acctprcl1 command, SystenAdmin
+10-28
+6bone acctprc2 command, SystenAdmin
+address assignment, NetAdmin 3-10 10-29
+connecting to, NetAdmin 3-33
+acknowledged connectionless
+mode service
+A in DLPI, Ne&tProgGde 2-6
+ACLs
+abnormal_termination function, administering, Security 11-1
+ProgGde 11-13 programming, Security 21-1
+using, Security 5-1
+access to files, CommandShd|Gde
+5-1 acos routine, CPML B-1, CPML-5
+account, SystenAdmin 7-9 acosd routine, CPML B-1, CPML-5
+adding automatically, acosh routine, CPML B-2, CPML-6
+SystenAdmin 7-15
+Acrobat Reader, | nstallGde 8-4
+adding manually, SystenAdmin
+7-28 active CPUs
+administration methods, changing the number of,
+SystenAdmin 7-6 LicenseM anage 2-18
+administration with C2, Security 9-1
+active page list, TechOver 5-6
+command-line utilities,
+activity license, LicenseVManage 1-5
+SystenAdmin 7-8
+SysMan Menu, SystenAdmin 7-7 acucap file, NeAdmin 6-31
+accounting, SystenAdmin 10-2 adapter,
+See network interface
+acctcms command, SystenAdmin
+10-27 address
+acctcom command, SystenAdmin for 6bone testing, NetAdmin 3-10
+10-24 IPv6, NeAdmin 3-2
+address autoconfiguration
+acctdisk command, SystenAdmin
+10-33 DHCP v6, Ne&tAdmin 3-9
+stateful, Ne&tAdmin 3-9
+acctdusg command, SystenAdmin
+stateless, N&tAdmin 3-8
+10-32
+address family
+acctmerg command, SystenAdmin
+specifying for DLI, NetProgGdeE-15
+10-39
+address format
+Index—1
+
+assembly language, AsmLangGde AdvFS clone fileset, AdvF SAdmin
+2-12 1-24
+address prefix, Ne&Admin 3-8 AdvFS file domain, AdvF SAdmin 1-7
+configuring volume for,
+Address Resolution Protocol,
+StorageM anager 4-15
+See ARP
+AdvFS fileset, AdvF SAdmin 1-18
+address space
+tuning, SystenTune 5-6 AdvFS GUI, AdvF SAdmin 6-1
+adduser utility, SystenAdmin AdvFS optimization,
+7-15, 7-28 AdvF SAdmin 4-1
+administering a cluster, AdvFS quota, AdvF SAdmin 2-1
+ClusTechOver 9-2 AdvFS troubleshooting,
+administering accounts and AdvF SAdmin 5-1
+groups, SystenAdmin 7-1 AdvFS with LSM, AdvF SAdmin 1-29
+administering file systems, AES
+SystenAdmin 6-1 application-level interface
+administering hardware, requirements, ProgGde 1-2
+SystenAdmin 5-1 alias
+administration utilities, default cluster, ClusTechOver 6-4
+SystenAdmin A-1 alignment
+Advanced File System, bit-field alignment, ProgGde 2-6
+See AdvFS data type alignment, ProgGde 2-5
+Advanced Printing Services, Alpha 21264 PCI/ISA
+SystenAdmin 8-2 single-board computer,
+SysConfigSup 1-1
+Advanced Printing Software,
+SystenAdmin 8-20 Alpha hardware architecture
+documentation, Kernd Debug 1-1
+Advanced Server for UNIX,
+See ASU Alpha PCIASA (DMCC)
+single-board computer,
+AdvFS, TechOve 4-3
+SysConfigSup 1-1
+configuring, AdvF SAdmin 1-1
+converting from UFS, Alpha system
+AdvF SAdmin C-1 Tru64 UNIX calling standard for,
+CallingStandard 1-1
+converting to UFS, AdvF SAdmin
+C-13 Alpha VME 2100 system
+displaying, SystenTune 9-20 configuring, SysConfigSup 2-2
+documentation for separately restrictions, SysConfigSup 1-14
+licensed utilities,
+Alpha VME single-board
+DocOverview 1-11
+computer, SysConfigSup 2-2,
+improving performance,
+2-28
+SystenTune 9-12
+configuring UNIVERSE II-based,
+AdvFS backup, AdvF SAdmin 3-1 SysConfigSup 2-28
+Index—2
+
+configuring VI P/VIC-based, DLI, TechOver 6-10
+SysConfigSup 2-2 DLPI, TechOver 6-10
+requirements and restrictions, sockets, NetProgGde 1-3, 4-6,
+SysConfigSup 1-10 TechOver 6-10
+STREAMS, Ne&ProgGde 1-3, 5-6,
+ANSI C Standard, CLangRd xiv
+TechOver 6-10
+conformance summary, CLangRef
+WPI, InternatProg A-1
+B-1
+XTI, NetProgGde 1-1, 3-4,
+ANSI standards
+TechOver 6-10
+application development
+archive file
+considerations, ProgGde 1-2
+determining section sizes,
+application ProgGde 2-25
+accessing from Front Panel, dumping selected parts of,
+CDE Companion 3-1
+ProgGde 2-24
+and RSVP, Ne&ProgGde 7-8
+Archiver graphical interface,
+debugging, SystemTune 11-1
+SystenAdmin 9-5
+enabling the display,
+CDE Companion 5-2 archiving services, SystenAdmin 9-1
+improving performance,
+ARP, TechOver 3-17
+SystenTune 11-4
+arp command, NetAdmin 16-4
+integrated into CDE,
+CDECompanion 5-3 as command, ProgGde 2-3
+profiling, SystaenTune 11-1
+ASCII codeset, CommandShdlGde
+running across the network,
+C-2
+CDE Companion 5-2
+ASCII equivalence table,
+application development
+CLangRef C-1
+phases of, ProgGde 1-1
+Asian languages
+Application Environment
+codesets that support,
+Specification,
+CommandShdlGdeC-2
+SeeAES
+documentation for working in,
+application-level protocol, DocOverview 4-9
+TechOver 3-3
+asin routine, CPML B-2, CPML-7
+Application Manager,
+asind routine, CPML B-2, CPML-7
+CDECompanion 4-1,
+asinh routine, CPML B-2, CPML-8
+SystenAdmin 1-11
+accessing, CDE Companion 3-1 assembly language
+organizing applications, assembler directives,
+CDECompanion 4-5 AsmLangGde 5-1
+floating-point instruction set,
+application program
+AsmLangGd4e- 1
+porting to XTI, NetProgGde 3-33
+rewriting for XTI, NetProgGde 3-36 instruction set summary,
+AsmLangGdeA-1
+application programming
+interface, TechOver 6-10
+Index-—3
+
+lexical conventions, AsmLangGde device driver interface,
+2-1 AsynchronousTM 3-1
+main instruction set, error codes, AsynchronousTM 2-2
+AsmLangGde 3-1 features, AsynchronousTM 2-1
+programming considerations, flow control, AsynchronousTM 9-1
+AsmLangGde 6-1 global data structures,
+AsynchronousTM 2-14
+assigning program numbers,
+header files, AsynchronousTM 2-1
+OncRpcProgram 1-5
+locking macros, AsynchronousT M
+Associated Products CD-ROMs 2-9
+documentation for separately
+managing connections,
+licensed products, AsynchronousTM 6-1
+DocOverview 1-11 managing signaling, NetAdmin 4-26
+ASU, SystenAdmin 7-9, TechOver 7-1 managing the environment,
+documentation for, DocOverview NetAdmin 4-25
+1-11 Module Management Interface,
+AsynchronousTM 7-1
+asynchronous I/O
+preparing for configuration,
+realtime, Realtime 7-1
+NetAdmin 4-7
+Asynchronous Transfer Mode, queuing guidelines,
+SeeATM AsynchronousTM 8-1
+signaling module interface,
+at command, SystenAdmin 3-4
+AsynchronousTM 4-1
+atan routine, CPML B-3, CPML-9
+troubleshooting, N&Admin 15-23
+atan2 routine, CPML B-3, CPML-10 verifying kernel options,
+NetAdmin 4-6
+atand routine, CPML B-3, CPML-9
+verifying subsets are installed,
+atand2 routine, CPML B-3, NetAdmin 4-6
+CPML-10
+ATM address
+atanh routine, CPML B-4, CPML-11 adding, AsynchronousTM 5-8
+ATM, NetAdmin 4-1 deleting, AsynchronousTM 5-9
+architecture, AsynchronousTM 1-1 ATM address structure,
+cells, AsynchronousTM 2-3 Seeatm_addr structure
+CMM routines, AsynchronousTM
+A-1 ATM Configuration application,
+configuring, NetAdmin 4-15 NetAdmin 4-15
+configuring with CLIP, Ne&tAdmin ATM environment, Ne&Admin 4-1
+4-17
+ATM subsystem
+configuring with IP switching,
+interfaces, AsynchronousT M 1-3
+NetAdmin 4-22
+types of circuits, AsynchronousT M
+configuring with LANE,
+2-13
+NetAdmin 4-20
+Connection Management Module, atmarp command, N eAdmin 4-26
+AsynchronousTM 1-3 atmconfig command
+convergence module interface, and PVCs, AsynchronousTM 2-6
+AsynchronousTM 5-1
+atmelan command, Ne&Admin 4-27
+Index—4
+
+atmhosts file attribute table
+editing for CLIP, N&tAdmin 4-17 entry, Kernd Modules 3-2
+editing for LANE, NetAdmin 4-21 get request, Kernd Modules 3-4
+atmifmp command, Ne&Admin 4-27 set request, KernelM odules 3-6
+: : attribute-value pairs
+atmsig se command, NeAdmin 4-26 :i nstall.cdf fi. le, Install GdeAdvTop
+atm_addr structure, A-2
+AsynchronousTM 2-17 .
+: attributes
+atm_cause_info structure, managing, SystenTune 3-10
+AsynchronousTM 2-39
+audit subsystem, Security 10-1
+atm_cmi_addr union,
+authentication
+AsynchronousTM 5-10
+of dient, OncRpcProgram 2-20
+atm_cvg_params structure,
+AsynchronousTM 5-11 authentication database
+integrity, Security 12-1
+sal ebien cana oats programming, Security 17-1
+nchronous -
+a autofsd daemon, NetAdmin 10-2
+atm_esi structure, error messages, NetAdmin D-10
+AsynchronousTM 2-37
+autofsmount command,
+ATM_FREE macro, NetAdmin B-5
+AsynchronousTM 2-9 error messages, NetAdmin D-10
+ATM_MALLOC macro, automount command, Ne&Admin
+AsynchronousTM 2-8 B-5
+atm_mmi_path structure, automount daemon, Ne&Admin 10-2
+AsynchronousTM 7-3 error messages, Ne&tAdmin D-6
+atm_ppa structure, starting with SysMan Menu,
+AsynchronousTM 2-35 NetAdmin 10-9
+atm_queue_param structure, automount map, NetAdmin 9-27,
+AsynchronousTM 3-7 10-2, B-1
+atm_sig params structure, availability
+AsynchronousTM 4-5 configuring, SystemTune 2-15
+disk, SystaenTune 2-17
+atm_uni_call_ie structure,
+network, SystenTune 2-18
+AsynchronousTM 2-30
+power, SystenTune 2-18
+atm_vc structure,
+AsynchronousTM 2-14 availability license,
+LicenseM anage 1-4
+atm_vc_services structure,
+awk utility, ProgSupTools 2-1
+AsynchronousTM 2-21
+AXPvme single-board computer
+atm_vc_stats structure,
+configuring, SysConfigSup 2-2
+AsynchronousTM 5-9
+requirements and restrictions,
+Atom tools, ProgGde 9-1 SysConfigSup 1-13
+Index—5
+
+booting
+from CD-ROM, InstallGde 6-4
+RIS dient, SharingSW 5-1
+BOOTP
+background process, and DHCP, NetAdmin 5-20
+CommandShdlGde 6-6
+bootpd daemon, TechOver 3-28
+bandwidth management
+Border Gateway Protocol,
+network, NetProgGde 7-1
+See BGP
+basic regular expression,
+Bourne shell, CommandShalGde
+ProgSupTools 1-2
+7-1, 81
+bcheckrc script, SystenAdmin .logout script, CommandShelGde
+3-2, 3-7 7-24
+Berkeley Internet Name Domain, redirecting errors,
+See BIND, DNS CommandSheG!de 6-4
+Bessel function, CPML CPML-12 bridging drivers
+BSD drivers to STREAMS
+BGP, TechOver 3-5
+protocol stack, NetProgGde 8-9
+big-endian STREAMS driver to sockets
+byte ordering, AsmLangGde 1-2 protocol stack, NetProgGde 8-2
+BIND, TechOver 3-32 broadcast RPC, OncRpcProgram
+SeealsoDNS 2-21, 3-17
+supplementary documentation
+broadcasting and determining
+for, DocOverview 3-8
+network configuration,
+binlogd daemon, SystenAdmin NetProgGde 4-48
+12-3, 12-14
+BSD driver
+binmail utility, N¢Admin 13-38 bridging to STREAMS protocol
+stack, NetProgGde 8-9
+block, CLangRef 2-2
+BSD socket, NeProgGde 4-31
+boot, SystenAdmin 2-6
+and network addresses,
+genvmunix, SystenAdmin 2-7
+NetProgGde 4-32
+boot command sequence
+buffer cache, SystenTune 6-1
+during full installation,
+InstallGde 6-45 buffer size
+calculating in DLI, Ne&ProgGde
+boot disk
+E-20
+creating alternate,
+increasing for TCP sockets,
+StorageM anager 3-11
+Ne&ProgGdeC-2
+boot disk failure
+building a kernel
+recovery from, StorageMl anager 6-23
+during installation, | nstallGde 6-24
+boot timeline, Kernd Modules 4-1
+building a program,
+dispatch point, Kend Modules 4-3
+Seelex program, make utility,
+bootable tape, SystenAdmin 9-5,
+yacc program
+9-30
+built-in function
+Index—6
+
+pragma counterpart, ProgGde 3-15 converting to CDE format,
+CDECompanion 10-6
+byte ordering
+big-endian, AsmLangGde 1-2 call,
+littleendian, AsmLangGde 1-2 Seeincoming call
+supported by Tru64 UNIX,
+call chain, CallingStandard 7-2
+ProgGde 2-4
+call-graph profiling, ProgGde 8-5
+call stack
+Cc
+of user program, examining in
+crash dump, Kernd Debug 2-8
+C compiler, ProgGde 2-1
+callback
+C extensions, common, CLangRef and RPC, OncRpcProgram 3-31
+D-1 using, KerndModules 4-2
+C function, CLangRef 5-1 caller process, OncRpcProgram 1-1
+C language syntax summary, calling conventions
+CLangRef A-1 assembly language, AsmLangGde
+6-1
+C lexicon, CLangRef 1-1
+calling standard
+C preprocessor, ProgGde 2-9
+call chain, CallingStandard 7-1
+C shell, CommandShd!Gde 7-1, 8-1
+data manipulation,
+.logout script, CommandShed|Gde
+CallingStandard 4-1
+7-24
+event processing,
+redirecting errors, CallingStandard 5-1
+CommandShalGde 6-5
+flow control, CallingStandard 3-1
+C2 security configuration, procedure descriptors,
+Security F-1 CallingStandard 8-1
+procedure invocations,
+CAA, ClusTechOver 5-1
+CallingStandard 7-1
+cabs routine, CPML B-4, CPML-13 stack limits, CallingStandard 6-1
+cache collision, data callrpc routine, OncRpcProgram 3-2
+avoiding, ProgGde 8-12
+canonical address
+cache misses, data and Token Ring drivers,
+profiling for, ProgGde 8-12 NetProgGdeD-2
+cache thrashing cat command, CommandShed!Gde3-5
+preventing, ProgGde 8-12
+CBR, AsynchronousTM 2-13
+cache usage
+CBR circuit
+improving with cord, ProgGde F-4
+reserving resources,
+CalComp DrawingBoard AsynchronousTM 5-4
+configuring, SystenAdmin D-2
+cbrt routine, CPML B-4, CPML-14
+Calendar
+cc command
+accessing, CDECompanion 3-1
+Index—7
+
+compilation control options, CDSL, ClusTechOver 2-8,
+ProgGde 2-12 ProdKitGde 2-5, SystenAdmin
+default behavior, ProgGde 2-12 6-11
+-g and -O options for profiling,
+ceil routine, CPML B-5, CPML-17
+ProgGde 8-4
+cell
+ccos routine, CPML B-4, CPML-15
+receiving, AsynchronousTM 3-2
+cd command, CommandShed!Gde 3-1
+century
+CD-ROM, building a setting, SystenAdmin 2-21
+consolidated firmware,
+cexp routine, CPML B-5, CPML-18
+ProdKitGdeA-1
+CFS, ClusTechOver 2-4
+CD-ROM File System,
+See CDFS changes to the documentation
+set, DocOverview 1-3
+CDE, CDECompanion 1-1
+changing
+administration graphical
+directories, CommandShdlGd4e- 3
+interfaces, SystenAdmin 1-11
+identity, CommandShdlGde 5-17
+Application Manager,
+owners of files and directories,
+SystenAdmin 1-11
+CommandShdlGde 5-20
+Front Panel, CDECompanion 1-2
+permissions, CommandShel Gde5-4
+logging in, CDECompanion 1-1
+your shell, CommandSheGlde 7-4
+managing desktop and
+applications, CDE Companion chap-secrets file, N&¢&Admin 6-14
+1-3
+character
+security, Security 4-1
+creating and using a user-defined,
+workspaces, CDE Companion 1-3
+InternatProg 6-17
+CDE desktop,
+character set, CLangRef 1-3,
+See desktop
+InternatProg 1-2
+CDE documentation set, coded, InternatProg 2-2
+CDECompanion 1-4
+Chinese,
+online viewing with Netscape
+See Asian languages
+Navigator, CDECompanion 1-5
+chmod command,
+CDE online help, CDE Companion
+CommandShelGde 5-4,
+1-6
+5-8
+CDE reference pages,
+Cl, SystenAdmin C-1
+CDECompanion 1-7
+configuration, SystenAdmin C-1
+using the man command,
+CDECompanion 1-8 circuit
+types of, AsynchronousTM 2-13
+CDE window list, CDE Companion
+3-11 Classical IP,
+See CLIP
+CDF, SharingSW 7-1, TechOver 2-2
+client
+CDFS, ProdKitGd4-e7 , 5-13, A-1,
+authentication, OncRpcProgram
+A-2, SystemAdmin 6-2
+2-20
+cdiv routine, CPML B-5, CPML-16
+Index-8
+
+programming with rpcgen, enhanced security in, Security G-1
+OncRpcProgram 2-19 installation, ClusTechOver 9-1
+versions of, OncRpcProgram 3-27 LSM support, ClusTechOver 2-14
+Memory Channel, ClusTechOver 7-1
+client handle used by rpcgen,
+supported file systems,
+OncRpcProgram 2-7
+ClusTechOver 2-2
+client/server interaction,
+cluster alias, ClusTechOver 6-1
+NetProgGde 4-8
+default, ClusTechOver 6-4
+CLIP, Ne&Admin 4-2
+cluster application availability,
+configuring with ATM, NetAdmin
+See CAA
+4-17
+managing the environment, cluster file system,
+NetAdmin 4-26 See CFS
+planning configuration with ATM,
+cluster member, ClusTechOver 3-2
+NetAdmin 4-9
+cluster quorum, ClusTechOver 3-1
+clock
+calculating, ClusTechOver 3-4
+realtime, Realtime 6-1
+disk, ClusTechOver 3-6
+setting system, SystenAdmin 2-21
+cmul routine, CPML B-6, CPML-20
+Clock application
+accessing, CDE Companion 3-1 cmx exerciser, SystenAdmin 11-41
+clog routine, CPML B-5, CPML-19 code page, PC, I nternatProg 2-5
+cloned installation, codeset, | nternatProg 2-2
+InstallGdeAdvTop 6-1 Unicode, CommandShdlGde C-2
+defined, I nstallGde 1-2 codeset conversion, | nternatProg
+cloned system configuration, 6-38, TechOver 10-7
+InstallGdeAdvTop 7-1
+coexistence of STREAMS and
+cloning a disk, SystenAdmin 5-72 sockets, NeProgGde 8-1
+cluster collation, CommandShelGde C-3
+administration, ClusTechOver 9-2 command entry aids
+CFS, ClusTechOver 2-4 filters, CommandShedGde 7-6
+cluster application availability
+grouping commands,
+(CAA), ClusTechOver 5-1 CommandShadlGde 7-6
+clusterwide file systems, list quoting, CommandShdlGde 7-6
+ClusTechOver 2-1 pipes, CommandShdlGde 7-6
+connection manager,
+running multiple commands,
+ClusTechOver 3-1 CommandShedlGde 7-6
+context-dependent symbolic link
+commands
+(CDSL), ClusTechOver 2-8
+cat, CommandShed!Gde 3-5
+device request dispatcher,
+cd, CommandSheal Gde 3-1
+ClusTechOver 2-7
+In, CommandSheG!de 3-13, 3-15
+distributed lock manager (DLM),
+lpq, CommandShdlGde 3-10, 3-12
+ClusTechOver 8-1
+lpr, CommandShdlGde 3-10
+Index-9
+
+lprm, CommandShe!Gde3- 10, 3-13 conditional compilation,
+Is, CommandSheGlde 3-2 CLangRef 8-7
+mkdir, CommandShel Gde 3-1
+config.cdf file, | nstallGdeAdvTop 7-1
+more, CommandSheGlde 3-5
+configuration
+page, CommandShd!Gde 3-5
+device names, SystenAdmin 5-40
+passwd, CommandShd!Gde 1-6,
+1-8 DMS environment, SharingSW 11-9
+kernel, SystenAdmin 4-1
+pg, CommandShed!Gde 3-5
+kernel subsystem, SystenAdmin 4-1
+using, CommandShedlGde 1-4
+yppasswd, CommandShdlGde 1-6 network interface, NeAdmin 2-13
+comment configuration checklist, TechOve
+2-8
+assembly language, AsmLangGde
+2-1 configuration cloning,
+common C extensions, CLangRe InstallGdeAdvTop 7-1
+D-1 configuration description file,
+common desktop environment, See CDF
+See CDE configuration file
+adding devices to, SystenAdmin
+common file,
+4-20
+See header file
+entries, SystaenAdmin 4-32
+communication bridge, TechOver
+keywords, SystenAdmin 4-32
+3-24
+configure routine, Kend Modules
+Compag Insight Manager, 2-1
+SystenAdmin 1-29, TechOver 2-20
+configuring a volume for a file
+Compaq Portable Mathematics system, StorageManager 4-14
+Library,
+connection,
+See CPML
+See also PPP, SLIP
+comparing files, accepting, AsynchronousTM 6-4
+CommandShGede 3-23
+accepting on a socket, Ne&tProgGde
+compilation option 4-24
+-S option, AsmLangGde 6-14 activating, AsynchronousTM 4-2
+controlling aging of,
+compilation unit, CLangRe 2-3
+AsynchronousTM 6-6
+completion handling, ProgGde 11-5 deleting, AsynchronousTM 4-3
+complex lock, Kernd Modules 8-1 making in ATM, AsynchronousTM
+declaring data structure, 6-1
+Kernd Modules 8-1 making to socket, NetProgGde 4-23
+initializing, Kernd Modules 8-2 outgoing, AsynchronousTM 6-1
+terminating, Kernd Modules 8-20 point-to-multi point,
+AsynchronousTM 6-1
+computer virus,
+point-to-point, AsynchronousTM 6-1
+CommandShe!Gde 5-21
+receiving notification of,
+condition variable, POS| XThreads AsynchronousTM 5-7
+2-30, 4-3 releasing, AsynchronousTM 4-3, 6-7
+Index—10
+
+reporting a failure, queuing guidelines,
+AsynchronousTM 4-3 AsynchronousTM 8-3
+requesting endpoint information, receiving exception notification,
+AsynchronousTM 5-6 AsynchronousTM 5-2
+security considerations, Security 3-1 registering with CMM,
+tearing down, AsynchronousTM 5-5 AsynchronousTM 5-1
+requesting interface parameters,
+Connection Management
+AsynchronousTM 5-3
+Module, AsynchronousTM 1-3
+reserving resources,
+connection manager, AsynchronousTM 5-4
+ClusTechOver 3-1 structures, AsynchronousTM 5-9
+connection mode service unregistering with CMM,
+in DLPI, N@&ProgGde2-5 AsynchronousTM 5-3
+connection-oriented application conversion of data types,
+program examples, Ne&tProgGde B-2 CLangRef 6-27
+sample header files, NetProgGde copying a directory,
+B-33
+Command|S!G dhe e4- 8
+writing, NetProgGde 3-22
+copying a disk, SystenAdmin 5-72
+connectionless application
+copying a file, CommandShd!Gde
+program examples, NetProgGde
+3-18
+B-18
+to another host,
+sample header files, NetProgGde
+CommandShe!Gde 12-1
+B-33
+writing, NetProgGde 3-30 copysign routine, CPML B-6,
+CPML-21
+connectionless mode service
+in DLPI, NetProgGd2e- 5 cord utility, ProgGde F-4
+consolidated firmware CD-ROM cos routine, CPML B-6, CPML-22
+building, ProdKitGdAe- 1
+cosd routine, CPML B-6, CPML-22
+constant, CLangRef 1-13
+cosh routine, CPML B-7, CPML-23
+and rpcgen, OncRpcProgram 2-24
+cot routine, CPML B-7, CPML-24
+assembly language, AsmL angGde
+2-2 cotd routine, CPML B-7, CPML-24
+constant bit rate, cp command, CommandShdlGde
+See CBR 3-18
+context-dependent symbolic link, cpio command, SystenAdmin 9-5
+See CDSL
+CPML, CPML 1-1
+controlling access, data types, CPML 1-2
+CommandShe!Gde 5-1 entry-point names, CPML B-1
+exceptional arguments, CPML 1-4
+convergence module
+floating-point values, CPML A-1
+flow control, AsynchronousTM 9-3
+MMI, AsynchronousTM 7-7
+Index—11
+
+IEEE Standard 754 explanation of output from,
+considerations, CPML Kernd Debug A-1
+1-6 crashdc utility, Kaend Debug 2-44
+routines, CPML 2-1
+X/Open Portability Guide creating a directory,
+CommandShdlGd4e- 2
+considerations, CPML 1-7
+creating a volume,
+cpow routine, CPML B-7, CPML-25
+StorageManager 4-1
+CPU
+for secondary swap,
+improving performance,
+StorageM anager 4-14
+SystenTune 7-8
+with concatenated plex,
+monitoring, SystenTune 7-1
+StorageM anager 4-7
+performance, SystemTune 2-4
+crontab command, SystenAdmin
+crash data collection, 3-14
+Kernd Debug 2-44, A-1
+.cshrc file, CommandSheGlde 8-2
+crash dump, SystenAdmin 12-16,
+.cshrc login script,
+14-1
+CommandSheaGlde 7-16
+crash dump analysis, Kend Debug
+modifying for System V habitat,
+1-1
+CommandShdlGde 9-2
+collecting data with crashdc,
+csin routine, CPML B-8, CPML-26
+Kernd Debug 2-44
+examples of, Kernd Debug 4-1 csqrt routine, CPML B-8, CPML-27
+for SMP systems, Kernd Debug 4-9
+Curses library, | nternatProg 4-1,
+guidelines for, KendDebug 4-1
+TechOver 10-9
+specifying location of loadable
+modules for, Kernd Debug 2-4 Custom Setup utility, | nstallGde 7-4
+viewing user program stack, customization
+Kernd Debug 2-8 workstation environment,
+crash dump file XWinSysE nv 2-1
+analyzing, KendDebug 1-5 customizing mailx,
+guidelines for analyzing, CommandShdlGde D-1
+Kernd Debug 4-1
+customizing pointer behavior,
+invoking dbx debugger to
+CDECompanion 8-8
+examine, Kernd Debug 2-2
+invoking kdbx debugger to cvt_ftof routine, CPML B-8,
+examine, Kernd Debug 2-12 CPML-28
+using dbx to examine,
+Kernd Debug 4-2
+D
+using kdbx to examine,
+Kernd Debug 4-3
+crash recovery, SystenAdmin 12-16 daemon
+autofsd, NetAdmin 10-2
+crash-data.n file
+automount, NetAdmin 10-2
+explanation of contents,
+binlogd, SystenAdmin 12-3
+Kernd Debug A-1
+bootpd, TechOver 3-28
+crashdc command gated, NetAdmin 2-8, TechOver 3-29
+Index—12
+
+inetd, NetProgGde 4-51, displaying value and format
+OncRpcProgram 2-18, 3-25 of with dbx debugger,
+joind, NeAdmin 5-16 Kernd Debug 2-6
+Ipd, SystenAdmin 8-32 global, AsynchronousTM 2-14
+LSM, StorageVanager 6-7 kernel thread, Kernd Modules 9-5
+mountd, NetAdmin 10-11 module, NetProgGde 5-13
+PC-NFS, NetAdmin 10-8 simple lock, Kernd Modules 7-1
+portmap, Prestoserve 2-10 sockets, NetProgGde 4-16
+pppd, NetAdmin 6-13 STREAMS message, NetProgGde
+prestoctl_svc, Prestoserve 2-11 5-14
+routed, Ne&Admin 2-7 used by kernel thread routines,
+rsvpd, NetProgGde 7-6 Kernd Modules 9-5
+rwhod, NetAdmin 2-6
+data transfer
+syslogd, SystenAdmin 12-2
+in DLI, N&ProgGde E-20
+xntpd, NetAdmin 12-1
+with sockets, NetProgGde 4-26
+data
+data type, CLangRef 3-1
+preserving during installation,
+alignment in structures, ProgGde
+InstallGde 6-40
+2-5
+receiving on a virtual circuit,
+converting, CLangRef 6-27
+AsynchronousTM 5-2
+types supported by Tru64 UNIX,
+recovering, SystenAdmin 9-1
+ProgGde 2-4
+data access, types supported in assembly
+See} DBC, ODBC language, AsmLangGde 2-10
+data cache collision database security
+avoiding, ProgGde 8-12 group, CommandShe!Gde 5-3
+data cache misses Dataless Management Services,
+profiling for, ProgGde 8-12 SeeDMS
+data copying routines, date and time
+Kernd Modules 5-7 setting during installation,
+InstallGde 6-13
+data flow, TechOver 3-23
+date command, SystenAdmin 2-21
+Data Link Interface,
+See DLI date value
+formatting rules in a locale,
+data link interfaces, Ne&tProgGde 2-1
+InternatProg 7-22
+Data Link Provider Interface,
+dbx debugger, ProgGde 5-1,
+See DLPI
+SystenTune 3-17, TechOver 6-3
+data manipulation crash dump analysis with,
+in calling standard for Alpha Kernd Debug 2-2, 4-2, 4-4
+systems, CallingStandard 4-1 debugging kdbx extensions with,
+Kernd Debug 3-36
+data structure
+ATM, AsynchronousTM 2-14 debugging kernel threads with,
+KerndDebug 4-8
+Index—13
+
+displaying call stack of user migrating to CDE applications,
+program after kernel crash CDE Companion 7-6
+with, Kernd Debug 2-8
+default permissions
+displaying preserved message us
+setting with umask,
+buffer with, Kernel Debug 2-10 CommandShelGde5-13
+displaying value and format of J
+variable and data structure deferred mode swapping,
+with, Kernd Debug 2-6 SystenAdmin 3-45
+examining exception frames with, deleting a directory,
+Kernd Debug 2-7 CommandShdlGd4-e1 0
+identifying cause of crash on SMP
+desktop
+system, Kernel Debug 4-9
+navigating, CDECompanion 2-1
+identifying hardware exceptions
+with, Kernd Debug 4-4 desktop session
+kernel debugging flag, managing, CDECompanion 4-1
+" Nebineat ne /dev directory, SystenAdmin 5-40
+ernel debugging with, ; 3 a
+KerndDebug 2-2 Developer’s Documentation Kit,
+syntax for examining dump files, BecQvervien: 129
+Kernd Debug 2-2 development environment,
+DDR, SystenAdmin 5-53 ProgGde 1-1
+ir- a Fe devaidcdei ng to the kernel,
+SystenAdmin 4-20
+debugging the kernel, SystemTune configuring, SystenAdmin 5-40
+a device driver
+debugging tools, ATM structures,
+See also dbx debugger, lint, AsynchronousTM 3-3
+Third Degree interface, AsynchronousTM 3-1
+crashdc utility, Kernd Debug 2-44 MMI, AsynchronousTM 7-6
+dbx debugger, Kernd Debug 2-2 queuing guidelines,
+kdbx debugger, Kernd Debug 2-12 AsynchronousTM 8-1
+kdebug debugger, Kernd Debug 2-37 registering with CMM,
+supported by Tru64 UNIX, AsynchronousTM 3-1
+ProgGde 1-5 unregistering with CMM,
+DECevent event management AsynchronousTM 3-2
+utility, SystenAdmin 12-1 device driver documentation
+declaration, CLangRe 4-1, books in set described,
+OncRpcProgram 2-24 DocOverview 7-1
+DECterm software device mnemonics, SystenAdmin
+escape sequences for ruled lines, B-1
+InternatProg D-1 device name, SystenAdmin 5-40
+DECwindows Motif naming conventions, I nstallGdAe- 1
+migrating to CDE, device pathname
+CDECompanion 6-1 explanation of, SystaenAdmin 8-29
+Index—14
+
+representation in printcap, pragma message, ProgGde 3-20
+SystenAdmin 8-29 pragma optimize, ProgGde 3-25
+pragma pack, ProgGde 3-27
+device request dispatcher,
+pragma pointer_size, ProgGde 3-28
+ClusTechOver 2-7
+pragma use _linkage, ProgGde 3-29
+device security, Security 8-1
+pragma weak, ProgGde 3-30
+device special file, Ne&tProgGde 5-25
+directory, CommandShed!lGde 2-1,
+representation in printcap, 2-7,4-1
+SystenAdmin 8-29 backing up, SystenAdmin 9-1
+device special file names changing owner of,
+converting old-style and CommandShealGde 5-20
+new-style, ProgGde E-1 copying, CommandShGdee l4- 8
+creating, Command|S Gdhe e4- 2
+DHCP, NeAdmin 5-1
+recovering, SystenAdmin 9-1
+and security, NeAdmin 5-19
+removing current,
+configuring a server, NetAdmin 5-12
+CommandShdlGd4-e1 2
+monitoring clients, NetAdmin 5-18
+removing empty,
+planning for configuration,
+CommandShadlG4d-e1 1
+NetAdmin 5-2
+removing more than one,
+troubleshooting, NetAdmin 15-34
+CommandShadlG4d-e1 1
+dia command renaming, CommandShdlGde 4-9
+binary event-logging reports,
+directory permissions,
+SystenAdmin 12-1
+CommandShelGde 5-5,
+dial-in connection, Ne&Admin 6-28 5-10
+dial-out connection, NeAdmin 6-31 dis (object file tool), ProgGde 2-26
+Differences application disk
+comparing files with, availability, SystenTune 2-17
+CDECompanion 5-6 backup, SystenAdmin 9-1
+directive cdoning, SystenAdmin 5-71
+assembler directives, copying, SystenAdmin 5-71
+AsmLangGde 5-1 distributing |/O, SystenTune 8-1
+pragma assert directives, dynamic partitioning during full
+ProgGde 3-2 installation, InstallGd4e- 2
+pragma environment, ProgGde 3-6 high-performance, SystenTune 2-9
+pragma extern_model! directives, high-performance configuration,
+ProgGde 3-7 SystenTune 2-12
+pragma extern_prefix, ProgGde 3-11 LSM, StorageManager 1-2,
+pragma function, ProgGde 3-14 SystenTune 8-4
+pragma inline, ProgGde 3-13 managing, SystenTune 8-1
+pragma intrinsic, ProgGde 3-14 monitoring, SystenAdmin 6-46
+pragma linkage, ProgGde 3-16 monitoring 1/O distribution,
+pragma member_alignment, SystenTune 8-3
+ProgGde 3-19
+Index—15
+
+preserving data on during job status of uucp,
+installation, InstallGde 6-40 CommandShe1Gde 14-25
+RAID, SystenTune 2-14 process information,
+striping, SystenTune 2-13 CommandShe!Gde 6-14
+disk drive variable values,
+CommandShelGd7-e2 1
+testing with diskx, SystenAdmin
+11-28 displaying online reference
+pages, CommandShed!Gde 1-9
+disk group
+managing, StorageM anager 5-5 distributed lock manager,
+See DLM
+disk label, SystenAdmin 5-67, 6-5
+disk partition, SystenAdmin 5-67, distributed naming services,
+6-4 TechOver 3-32
+Seealso BIND, NIS
+on DMS server, SharingSW 10-3
+disk quota, SystenAdmin 6-41 distributed system services
+naming services, TechOver 3-32
+disk space
+time services, TechOver 3-33
+DMS, SharingSW 10-4
+planning, I nstallGdeAdvTop 4-1 distribution media
+reallocating, SystenAdmin 5-67 producing for kernel products,
+RIS, SharingSW 3-3 ProdKitGde 5-8
+producing for user products,
+disk usage, SystenAdmin 5-83
+ProdKitGd4e- 1
+disklabel command, SystenAdmin
+division of privileges,
+5-69
+See DOP
+diskusg command, SystenAdmin
+DLI, NeProgGdeE-1, TechOver 3-25
+10-31
+and accessing the local area
+diskx exerciser, SystenAdmin 11-28 network, NetProgGdeE-3
+dispatch point callback, binding a socket, NetProgGdeE-17
+Kernd Modules 4-1 calculating buffer size,
+Ne&tProgGdeE-20
+dispatch table, OncRpcProgram 2-18
+creating a socket, NetProgGde E-16
+DISPLAY environment variable deactivating a socket, Ne&tProgGde
+setting from different shells, E-21
+CDECompanion 5-3 filling the sockaddr_dl structure,
+Display Manager, TechOve 8-6 NetProgGde E-17
+services, NetProgGde E-2
+displaying a directory,
+setting socket options,
+CommandShelGd4e- 7
+NetProgGde E-16
+displaying information transferring data, Ne&tProgGdeE-20
+command status, using system calls, NetProgGde
+CommandSheGde 6-8 E-15
+differences between files, writing programs, Ne&tProgGde E-14
+CommandShdGlde 3-23
+DLI program
+disk group, StorageManager 4-1
+including higher-level services,
+NetProgGde E-4
+Index—16
+
+DLM, ClusTechOver 8-1 software sharing environment,
+SharingSW 1-2
+DLPI, Ne&ProgGde 2-2, TechOver 3-25
+addressing, NetProgGde 2-6 DMS server, SharingSW 1-1, 9-2
+connection mode service, architecture, SharingSW 9-2
+NetProgGde 2-5 compatibility with client,
+connectionless mode service, SharingSW 11-1
+NetProgGde 2-5 creating DMS environment on,
+local management service, SharingSW 11-1
+NetProgGde 2-4 disk partitions, SharingSW 10-3
+modes of communication, installing operating system on,
+NetProgGde 2-3 SharingSW 10-7
+supported primitives, NetProgGde managing, SharingSW 12-1
+2-8, 8-10 preparing, SharingSW 10-1
+types of service, NetProgGde 2-4 requirements, SharingSW 10-1
+WLS setup, SharingSW 11-12
+DMS, SharingSW 1-1, 9-1,
+TechOver 2-26 DNS, NetAdmin 8-1
+adding software, SharingSW 11-6 configuring a caching-only server,
+disk space planning, SharingSW NetAdmin 8-15
+10-4 configuring a client, NeAdmin 8-20
+installing software, SharingSW 11-2 configuring a forward-only
+root area, SharingSW 9-2 server, NetAdmin 8-16
+setting up a LAN, SharingSW 10-3 configuring a master server,
+setting up NFS, SharingSW 10-3 NetAdmin 8-9
+troubleshooting, SharingSW 13-1 configuring a slave server,
+updating software, SharingSW D-1 NetAdmin 8-13
+configuring a stub server,
+DMS area, SharingSW 1-1, 9-2
+NetAdmin 8-18
+DMS area maintenance, deconfiguring, NetAdmin 8-29
+SharingSW 12-1 enabling authentication,
+DMS client, SharingSW 1-1, 9-2, NetAdmin 8-6, 8-21
+9-5, 12-1 enabling dynamic updates,
+area, SharingSW 9-5 NetAdmin 8-5, 8-12, 8-21
+building an Asian kernel, |Pv6 data format, NeAdmin 3-9
+SharingSW 11-13 IPv6 record type, NetAdmin 3-9
+compatibility with server, named.conf file, NetAdmin H-1
+SharingSW 11-1 resource records, NetAdmin H-1
+preparing, SharingSW 10-1 testing master servers, NetAdmin
+registering, SharingSW 10-7 17-15
+requirements, SharingSW 10-2 testing servers, NetAdmin 17-1
+WLS setup, SharingSW 11-13 troubleshooting, NetAdmin
+15-37, 15-39
+DMS environment, SharingSW
+updating server data files,
+9-3, 12-1
+NetAdmin 8-5, 8-12, 8-30
+configuring, SharingSW 11-9
+on DMS server, SharingSW 11-1
+Index—17
+
+doconfig program, SystenAdmin dump command, SystenAdmin 9-5
+4-20, 4-24, 4-26
+dump file,
+documentation, Seecrash dump file
+Seealso online documentation
+dxaccounts utility, SystenAdmin 7-6
+in printed form, DocOverview 1-8
+dxpresto command
+on line, DocOverview 1-5
+monitoring Prestoserve with,
+Documentation CD-ROM,
+Prestoserve 3-8
+DocOverview 1-5
+mounting, InstallGde 8-2 dxpresto software subset
+installing, Prestoserve 2-1
+documentation kits,
+Dynamic Device Recognition,
+See Developer’s
+See DDR
+Documentation Kit,
+End User Documentation dynamic disk partitioning
+Kit, General User during full installation,
+Documentation Kit, InstallGde 4-2
+Startup Documentation Dynamic Host Configuration
+Kit, System and Protocol,
+Network Management See DHCP
+Documentation Kit, Tru64 dynamically configurable
+UNIX Documentation Kit subsystem
+creating, ProgGdeC-1
+documentation on the World
+Wide Web, DocOverview 1-7
+dodisk shell script, SystenAdmin E
+10-31
+dohash utility, NetAdmin 13-25
+EBM2n and EBM4n single-board
+Domain Name System, computers, SysConfigSup 1-1
+See DNS EBV10 and EBV12 single-board
+computers, SysConfigSup 1-13
+DOP, Security H-1
+EBV14 and EBV16 single-board
+drem routine, CPML B-8, CPML-33
+computers, SysConfigSup 1-10
+driver
+bridging BSD driver toSTREAMS ed editor, CommandShd!GdeB-1
+append (a) subcommand,
+protocol stack, NetProgGde 8-9
+bridging STREAMS driver CommandShdlGdeB-2
+to sockets protocol stack, change (c) subcommand,
+CommandShdlGdeB-20
+NetProgGde 8-2
+Token Ring, Ne&tProgGde D-1 copying lines, CommandShdlGde
+B-23
+driver program
+creating and saving text files,
+compiler system, ProgGde 2-2
+CommandShdlGdeB-2
+dsfcvt* routines, ProgGdeE-1 delete (d) subcommand,
+CommandShdlGdeB-18
+dtmail utility, Ne&Admin 13-38
+deleting a specific line,
+dtsession, CDE Companion 6-2
+CommandShdlGdeB-19
+Index-18
+
+deleting current line, enabling realtime preemption
+CommandShe!Gde B- 18 after full installation, I nstallGde
+deleting multiple lines, 7-10
+CommandShe!Gde B- 19
+encapsulating AdvFS file
+displaying the current line,
+domains, StorageM anager 4-17
+CommandSheGlde B-9
+edit (e) subcommand, End User Documentation Kit,
+CommandS|h!G ede B-7 DocOverview 1-8
+edit (ed) command, endian byte ordering
+CommandS|h!G ede B-7 supported by Tru64 UNIX,
+edit buffer, CommandShdlGdeB-1 ProgGde 2-4
+global (g) operator,
+endpoint
+CommandShe!Gde B-15
+adding, AsynchronousTM 6-4
+insert (i) subcommand,
+creating, AsynchronousTM 5-5
+CommandS|h!G ede B- 22
+dropping, AsynchronousTM 4-3, 5-5
+locating text, CommandShelGde
+requesting connection
+B-12
+state information,
+moving text, CommandShd|Gde
+AsynchronousTM 5-6
+B-19
+requesting information,
+print (p) subcommand,
+AsynchronousTM 4-4
+CommandSheGlde B-3
+quit (q) subcommand, enhanced security
+CommandSheGlde B-6 in a duster, Security G-1
+read (r) subcommand, enumerations and rpcgen,
+CommandS|h!G ede B-8 OncRpcProgram 2-23
+removing characters,
+environment variable,
+CommandShe!Gde B- 16
+CommandS1hG ede 7-13
+substitute (Ss) subcommand,
+CommandShe!Gde B- 13 erf routine, CPML B-9, CPML-34
+using system commands,
+erfc routine, CPML B-9, CPML-34
+CommandS1hG ede B-24
+error
+write (w) subcommand,
+comparison of XTI and sockets,
+CommandS|h!G ede B-4
+NetProgGde 3-39
+editor, CommandShalGde 2-1 in sockets, NetProgGde 4-34
+See also ed editor, emacs in XTI, NetProgGde 3-56
+editor, mule editor, vi logging, SystenAdmin 12-1
+editor logging in STREAMS,
+NetProgGde 5-26
+EGP, TechOver 3-4
+reporting to CMM,
+egrep,
+AsynchronousTM 3-2
+See grep utility solving network problem,
+emacs editor NetAdmin 15-1
+multilingual, | nternatProg 6-40, error message
+TechOver 10-7 autofsd, NetAdmin D-10
+Index—19
+
+autofsmount, NetAdmin D-10 event management, SystenAdmin
+automount, NetAdmin D-6 13-1, 13-24
+mail, NetAdmin F-1 Event Manager, SystenAdmin 13-1
+NFS, NeAdmin D-1
+event processing
+UUCP, NeAdmin E-1
+in calling standard for Alpha
+eSNMP, NeProgGde 1-7, 6-2,
+systems, CallingStandard 5-1
+TechOver 3-25
+EVM, SystemAdmin 13-1
+application interface, NeProgGde
+6-4 exception
+application programming frame-based, ProgGde 11-5
+interface routines, receiving, AsynchronousTM 5-2
+NetProgGde 6-18 structured, ProgGde 11-5
+architecture, NetProgGde 6-3
+exception handling
+components, NetProgGd6e- 2
+application development
+implementing a subagent,
+considerations, ProgGde 11-1
+NetProgGde 6-12
+header files, ProgGde 11-3
+method routine calling interface,
+POSIX Threads, POSI XThreads 5-1
+NetProgGde 6-44
+MIB subtree, NetProgGde 6-6 exception processing
+object tables, NetProgGde 6-8 in calling standard for Alpha
+SNMP versions, NetProgGde 6-4 systems, CallingStandard 5-1
+starting, NetProgGde 6-15 executable program
+stopping, NetProgGde 6-15 creating, ProgGde 2-3, 2-20
+support routines, NetProgGde 6-55 running, ProgGde 2-22
+/etc/kitcap file, ProdKitGd4-e3 , 5-10 exp routine, CPML B-9, CPML-35
+/etc/sysconfigtab file, expm1 routine, CPML B-9, CPML-35
+SystenAdmin 4-14
+exporting a file system, Na&Admin
+Ethernet, TechOver 3-19 10-12
+See also Fast Ethernet,
+exports file, N&Admin 10-11, 10-14
+Gigabit Ethernet
+expression, CLangRef 6-1
+configuring, NetAdmin 2-13
+extended regular expression,
+Ethernet interface,
+ProgSupTools 1-4
+See vb network
+extensible SNMP,
+euro currency symbol,
+See eSNMP
+InternatProg 2-14
+event extensions to kdbx debugger,
+Kernd Debug 2-15
+reporting, SystenAdmin 12-1
+tracking in XTI, Ne&tProgGde 3-14 Exterior Gateway Protocol,
+See EGP
+event logging
+crash recovery, SystaenAdmin 12-16 External Data Representation,
+creating daily files, SystenAdmin See XDR routine
+12-7
+in STREAMS, NetProgGde 5-26
+Index—20
+
+F
+file synchronization
+realtime, Realtime 8-2
+fabs routine, CPML B-10, CPML-36 file system, CommandShd|Gde
+factory installed software, 2-5, SystenAdmin 6-1
+See FIS accelerating writes to, Prestoserve
+3-3
+Fast Ethernet, TechOver 3-19
+checking, SystenAdmin 6-46
+fcntl.h file, N&ProgGde 3-6 configuring volumes for,
+FDDI, TechOver 3-20 StorageM anager 4-14
+corrupted, SystenAdmin 6-46
+configuring, NetAdmin 2-13
+exercising with fsx, SystenAdmin
+fddi_config command, Ne&tAdmin
+11-25
+2-30
+exporting, NetAdmin 10-12
+feedback file free space, SystenAdmin 5-83
+profile-directed optimization, halting export of, N&Admin 10-13
+ProgGde 10-8 monitoring, SystenAdmin 6-46
+monitoring free space,
+FFM, SystenAdmin 6-2
+SystenAdmin 5-84
+fgrep, mounting, SystenAdmin 6-20
+See grep utility replicated, NetAdmin B-9
+Fiber Distributed Data Interface, restoring, InstallGdeAdvTop 3-1
+See FDDI tuning, SystenAdmin 6-49
+file system layout
+file, CommandShd!Gde 2-1, 2-5, 3-1
+customizing during installation,
+backing up, SystenAdmin 9-1
+InstallGde 6-34
+comparing file differences,
+default, InstallGd4e- 2
+CommandSheGlde 3-23
+planning manually,
+including, CLangRef 8-11
+listing contents of subset, InstallGdeAdvTop 4-1
+specifying during installation,
+InstallGde 9-5
+InstallGde 6-26
+recovering, SystenAdmin 9-1
+sorting contents of, file system quota, SystaenAdmin 6-41
+CommandSheaGlde 3-25
+File Transfer Protocol,
+file (object file tool), ProgGde 2-25 See FTP
+file access, CommandShe!Gde 5-1 file type
+file inclusion, CLangRef 8-11 determining, CommandShdlGde
+3-28
+File Manager, CDECompanion 4-1
+accessing, CDE Companion 3-1 File-on-iFl e Mounting File System,
+managing directories and files, See FFM
+CDECompanion 4-1 finger command,
+file name, CommandShe!Gde 2-5 CommandShdlGde 10-2
+file permissions, Finger Protocol (FINGER),
+CommandShedlGde 5-5 TechOver 3-9
+Index—21
+
+finite routine, CPML B-10, CPML-37 sockets, NetProgGde 4-1
+STREAMS, NetProgGde 5-1
+firmware
+updating, | nstallGde 5-6 frexp routine, CPML B-11, CPML-41
+FIS, InstallGde 1-5 Front Panel
+documentation included on, exiting a session, CDE Companion
+DocOverview 1-4 3-1
+pausing a session,
+floating-point instruction set
+CDE Companion 3-1
+assembly language, AsmLangGde
+using, CDE Companion 3-1
+4-1
+fsck command, SystenAdmin 6-46
+floating-point range and processing
+IEEE standard, ProgGde 2-5 fsck program, SystenAdmin 6-20
+floor routine, CPML B-10, CPML-38 fstab file, SystenAdmin 6-20
+flow control fsx exerciser, SystenAdmin 11-25
+convergence module,
+FTP, TechOver 3-7
+AsynchronousTM 9-3
+full installation, | nstallGd4e- 1
+hardware, AsynchronousTM 9-1
+boot commands, I nstallGde 6-45
+in calling standard for Alpha
+building kernel during, InstallGde
+systems, CallingStandard 3-1
+6-24
+software, AsynchronousTM 9-2
+CD-ROM boot procedures,
+fmod routine, CPML B-10, CPML-39
+InstallGde 6-4
+font cache defined, InstallGde 1-2
+tuning size of, InternatProg 6-41 enabling realtime preemption,
+InstallGde 7-10
+font renderer, | nternatProg 6-44
+installingLSM during, InstallGde
+font server, |n ternatProg 6-46 4-3
+fonts installing WLS, InstallGde 4-2
+bitmap fonts for local languages, preinstallation tasks, InstallGde 5-1
+InternatProg 6-46 preserving existing data,
+local-language PostScript, InstallGde 6-40
+InternatProg 6-27 procedures, InstallGde 6-1
+PostScript font renderers for X restarting, I nstallGde 6-43
+applications, InternatProg 6-44 special processing for LSM,
+InstallGde 6-39
+foreground processes,
+system configuration, InstallGde 7-1
+CommandShadlGde 6-6
+user-supplied files,
+foreign language, InstallGdeAdvTop 5-1
+See Asian languages
+function prototype, CLangRd 5-8
+format prefix, Ne&eAdmin 3-8
+functions, CLangRef 5-1
+fp_class routine, CPML B-11, allowed sequence of in XTI,
+CPML-40 NetProgGde 3-20
+frame-based exception handling, comparison of XTI and sockets,
+NetProgGde 3-37
+ProgGde 11-5
+STREAMS, NeProgGde 5-7
+framework
+Index—22
+
+adding to the kernel,
+SystenAdmin 4-20
+G
+hardware exception
+debugging, Kernel Debug 4-4
+gamma routine, CPML CPML-46
+hardware management,
+gated daemon, NetAdmin 2-8, SystenAdmin 5-1
+TechOver 3-29
+header file, CLangRef 1-20, 9-1
+configuring, NetAdmin 2-17
+including, ProgGde 2-9
+gated.conf file, NetAdmin 2-9 sockets, NetProgGde 4-16
+gateways file, Ne¢Admin 2-8 STREAMS, NetProgGde 5-6
+General User Documentation heap memory analyzer
+Kit, DocOverview 1-9 and profiling, ProgGde 8-21
+getty command, SystenAdmin help, CommandShd!Gde 1-9
+2-20, 3-7, 3-8 Help Manager
+gettydefs file, SystenAdmin 3-3 accessing, CDE Companion 3-1
+GID, SystenAdmin 7-10 hiprof,
+Se profiling a program
+Gigabit Ethernet, TechOver 3-19
+host
+GIOC_MMI_GETVERSION
+configuring for | Pv6, NetAdmin 3-29
+command, AsynchronousTM 7-3
+|Pv6 configuration variables,
+GIOC_MMI_PATH command, NetAdmin 3-37
+AsynchronousTM 7-6
+Host Resources MIB, NetAdmin G-1
+global offset table,
+hosts file, NetAdmin 2-11, 2-19
+See GOT
+hosts.equiv file, NeAdmin 2-12, 2-20
+GOT, AsmLangGde 6-2,
+CallingStandard 2-4 HSC
+controller failures, SystenAdmin
+gprof,
+C-2
+Se profiling a program
+host sharing, SystenAdmin C-3
+grep utility, ProgSupTools 1-9 restrictions, SystenAdmin C-3
+group, SystenAdmin 7-1 HTML documentation,
+DocOverview 1-5, I nstallGde 8-1
+group file, CommandShd!Gde5-1,
+SystenAdmin 7-9 hwmogr, SystenAdmin 5-1
+and NIS, NetAdmin 9-25
+hypot routine, CPML B-11,
+CPML-42
+H
+halt command, SystenAdmin 2-30
+hardware ICMP, TechOver 3-17
+Index—23
+
+identifier, CLangRef 1-6 handling in X application,
+assembly language, AsmLangGde InternatProg 5-19
+2-1 starting server for, InternatProg 6-6
+X resource for, InternatProg 6-6
+IEEE floating-point,
+Se floating-point range and input mode (vi editor),
+processing CommandShedlGdeA-9
+ifaccess.conf file, NetAdmin 2-29 input/output multiplexing,
+NetProgGde 4-52
+ifconfig command
+enabling access filtering with, Insight Manager,
+NetAdmin 2-29 See Compag | nsight M anager
+ilogb routine, CPML B-11, CPML-43 install .cdf file, | nstallGdeAdvTop 6-1
+attribute-value pairs,
+IMAP, Ne&Admin 13-24, TechOver
+InstallGdeAdvTop A-1
+3-10
+troubleshooting, NetAdmin 15-73 installation, | nstallGde 1-1
+Se also full installation,
+immediate mode swapping,
+update installation
+SystenAdmin 3-45
+customizing, I nstallGdeAdvTop 5-1
+inactive page list, TechOver 5-6
+installation cloning,
+include file,
+InstallGdeAdvTop 6-1,
+See header file
+SharingSW 7-1
+including files, CLangRef 8-11 attribute-value pairs,
+InstallGdeAdvTop A-1
+incoming call
+accepting, AsynchronousTM 5-8 installation media, | nstallGde 1-5
+receiving, AsynchronousTM 4-2
+installing a cluster, ClusTechOver
+rejecting, AsynchronousTM 5-8 9-1
+inetd daemon, Ne@ProgGde 4-51
+installing the operating system,
+rpcgen support for, InstallGde 1-1
+OncRpcProgram 2-18
+instruction and source line
+using to start an RPC server,
+profiling, ProgGde 8-11
+OncRpcProgram 3-25
+instruction set
+init command, SystenAdmin 2-7,
+assembly language floating-point,
+2-17
+AsmLangGd4e- 1
+init.d directory, SystenAdmin 3-3
+assembly language main
+init.d directory structure, instruction set, AsmLangGde
+SystenAdmin 3-9 3-1
+initialization, SystenAdmin 2-7 instructions
+tasks, SystenAdmin 2-7 disassembling using kdbx,
+Kernd Debug 2-21
+inittab file, SystenAdmin 2-7,
+2-17, 3-2, 3-4, 3-8 interface,
+customizing for LAT, N&Admin 7-9 Seealso network interface
+initdefault entry, SystenAdmin 2-18 ATM, AsynchronousTM 1-3
+input method, | ntevnatProg 6-5 interface parameter
+Index—24
+
+requesting, AsynchronousTM 5-3 internationalization features,
+CDECompanion 9-1
+international software,
+using, CommandShelGdeC-1
+InstallGde C-20
+installing, InstallGdeAdvTop 2-1 Internet,
+See TCP
+internationalization,
+SystenAdmin 3-20, TechOver 10-1 Internet Boot Protocol daemon,
+asort command, | ntevnatProg 6-34 See BOOTP
+CDE clients, InternatProg 6-41
+Internet Control Message Protocol,
+codeset conversion, |n ternatProg
+SeelCMP
+6-38
+creating locales, I nternatProg 7-1 Internet Message Access Protocol,
+Curses library, |n ternatProg 4-1 See|MAP
+file command, | nternatProg 6-40
+Internet Protocol,
+for graphical applications,
+See IP
+InternatProg 6-41
+handling cultural data in Internet Protocol Version 6,
+programs, | nternatProg 2-13 See! Pv6
+handling text presentation and
+InterNIC Registration Services
+input, InternatProg 2-17
+and IP address, NetAdmin 2-4
+implications for software
+interprocess communications,
+development, I nternatProg 1-1
+SeelPC
+mail utilities, |n ternatProg 6-32
+Motif clients, I nternatProg 6-41 interrupt driven socket I/O,
+Motif widget support, NetProgGde 4-55
+InternatProg 5-6
+invocation procedure,
+mule editor, | nternatProg 6-40
+CallingStandard 7-1
+PC code-page format,
+InternatProg 2-5 IP, TechOver 3-2, 3-13
+printing subsystem, | nternatProg IP address, Ne&Admin 2-4
+6-19 and InterNIC Registration
+supported languages, Services, N&tAdmin 2-4
+InternatProg 6-2 obtaining using DNS, NeAdmin
+system administration, 8-31
+InternatProg 6-2
+IP alias, N¢Admin 2-21
+terminal subsystem, | nternatProg
+6-8 IP multicasting, Ne&tProgGde 4-41
+Unicode support, I nternatProg 1-6
+IP router, Ne&Admin 2-9
+user-defined characters,
+configuring system as, NetAdmin
+InternatProg 6-17
+2-18
+working in a native-language
+environment, | nternatProg 6-1 IP switching
+characteristics, NetAdmin 4-4
+X Library, InternatProg 5-7
+X/Open Worldwide Portability configuring with ATM, NetAdmin
+4-22
+Interfaces, InternatProg A-1
+Index—25
+
+J
+planning configuration with ATM,
+NetAdmin 4-13
+ip6rtrd.conf file, Ne&Admin 3-39 jO routine, CPML B-12, CPML-12
+ip6 setup utility, N&Admin 3-29 jl routine, CPML B-12, CPML-12
+IPC J apanese,
+mechanisms used for, ProgGde 1-7 See Asian languages
+iptunnel command, Ne&Admin 3-35 Java
+documentation for, DocOverview 4-6
+IPv4 multicasting, TechOver 3-14
+J) DBC, TechOve 7-2
+IPv6
+6bone network, NetAdmin 3-33 jn routine, CPML B-12, CPML-12
+address autoconfiguration, jobs command, CommandShdlGde
+NetAdmin 3-8 6-8
+addressing, NeAdmin 3-2
+joind daemon, Ne&Admin 5-16
+configuring a host, NetAdmin 3-29
+configuring a router, NetAdmin 3-30
+environment, NetAdmin 3-12 K
+history, NetAdmin 3-1
+information required for
+kdbx debugger, Kernd Debug 2-12
+configuration, NetAdmin 3-17
+command aliases, Kernd Debug 2-15
+planning, Ne&Admin 3-16
+command syntax, Kernd Debug 2-12
+sample configurations, NetAdmin
+3-12 commands, Kernd Debug 2-13
+compiling custom extensions to,
+support required in kernel,
+NetAdmin 3-16 Kernd Debug 3-35
+crash dump analysis with,
+terms, NetAdmin 3-2
+troubleshooting, NetAdmin 15-8 Kernd Debug 4-3, 4-7
+types of addresses, NetAdmin 3-3 debugging extensions to,
+Kerned Debug 3-36
+IPv6 subsystem
+executing extensions to,
+tuning, Ne&Admin 3-40
+Kernd Debug 2-14
+ipv6forwarding attribute, extensions to, Kernd Debug 3-22
+NetAdmin 3-37 identifying hardware exceptions
+with, Kernd Debug 4-4
+ipv6router attribute, Na&Admin 3-37
+library functions for extensions
+isnan routine, CPML B-12, CPML-44 to, KerndDebug 3-2
+ISO 10646 standard, TechOver 10-2 using extensions to, Kernd Debug
+2-15
+ISO codesets, CommandShedlGde C-2
+writing extensions to,
+ISO standards Kernd Debug 3-1
+application development
+kdebug debugger, Kernd Debug
+considerations, ProgGde 1-2
+1-3, 2-37
+invoking, Kernd Debug 2-41
+problems with setup of,
+Kernd Debug 2-42
+requirements for, Kernd Debug 2-38
+Index—26
+
+setting up, Kernd Debug 2-39 using kdbx debugger,
+Kernd Debug 2-12
+kernel
+using kdebug debugger,
+building during installation,
+Kernd Debug 2-37
+InstallGde 6-24
+configuration file entries, kernel-level function
+SystenAdmin 4-32 STREAMS, NetProgGde 5-12
+configuring, SystenAdmin 4-1
+kernel module, Kernd Modules 1-1
+configuring IPv6 routing in,
+attributes, Kernd Modules 3-1
+NetAdmin 3-37
+building, Kernd Modules 10-1
+installing ATM options,
+choosing resources to lock,
+NetAdmin 4-6
+Kernd Modules 6-13
+managing attributes, SystenTune
+developing, Kenda Modules 1-6
+3-10
+dynamically loading,
+preemptive vs. nonpreemptive,
+KerndM odules 10-8
+Realtime 1-4
+initializing, KerndM odules 2-1, 2-4
+rebuilding after using setld,
+making safe in SMP environment
+InstallGde 9-13
+using complex locks,
+static configuration,
+KerndM odules 8-1
+SystenAdmin 4-19
+multithreaded programming,
+tuning, SystenTune 3-10
+KerndM odules 9-1
+verifying ATM options, NeAdmin
+statically linking, KernadM odules
+4-6
+10-6
+vmunix.n file, SystenAdmin 14-3
+kernel product kit, ProdKitGde 5-1
+kernel attribute, SystenTune 3-10
+kit directory structure,
+kernel configuration file ProdKkitGde 5-2
+editing during full installation,
+kernel program
+InstallGde 6-48
+debugging, KendDebug 1-3
+kernel crash
+kernel routine
+displaying call stack of user
+ATM, AsynchronousTM A-1
+program after, KendDebug 2-8
+kernel subsystem
+kernel debugging, KendDebug
+configuring STREAMS drivers,
+1-1, 1-3, TechOver 5-2
+NetProgGde 5-20
+debugging customized tools,
+configuring STREAMS modules,
+Kernd Debug 3-36
+NetProgGde 5-20
+debugging running kernel,
+kernel thread
+KerndDebug 1-3, 2-37
+advantages of using,
+developing customized tools,
+Kernd Modules 9-1
+KerndDebug 3-1
+linking kernel image for, blocking, Kernel Modules 9-10
+Kernd Debug 1-1 creating and starting,
+Kernd Modules 9-6
+using dbx debugger, Kernd Debug
+2-2 setting a timer for current,
+Kernd Modules 9-25
+Index—27
+
+terminating, Kernd Modules 9-19 planning configuration with ATM,
+unblocking, KernelModules 9-17 NetAdmin 4-11
+kernel thread routine language announcement in
+data structures, KernelModules 9-5 programs, | nternatProg 1-4
+keyboard language support
+customizing settings, installing, InstallGdeAdvTop 2-1
+CDECompanion 5-8
+lastcomm command,
+LK-style with PCXAL,
+SystenAdmin 10-30
+CDECompanion 8-5
+LAT, TechOver 3-31
+LK201/LK 401, CDECompanion 8-5
+PC-style with LK 201/LK 401, configuring with latsetup,
+NetAdmin 7-6
+CDECompanion 8-5
+creating your own service,
+window emulation of,
+InternatProg 6-4 NetAdmin 7-17
+dedicated tty device on a terminal,
+Keycaps
+NetAdmin 7-18
+customizing keyboard,
+devices, N&tAdmin 7-6
+CDECompanion 5-9
+gateway service, NeAdmin 7-15
+keyword, CLangRef 1-8 host-initiated connection,
+NetAdmin 7-13
+Korean,
+outgoing connections, NetAdmin
+See Asian languages
+7-14
+Korn shell, CommandShealGde printer setup, NetAdmin 7-10
+7-1, 81 troubleshooting, N&tAdmin 15-64
+.logout script, CommandShd|Gde
+latsetup command, NeAdmin 7-6
+7-24
+redirecting errors, layered applications
+CommandShed!Gde 6-4 documentation for, DocOverview
+1-10
+-kshrc login script,
+CommandShelGde 7-16 layered product kit, ProdKitGde 1-1
+building subsets and control files,
+ProdKitGde 3-1
+L
+directory structure, ProdKitGde 2-1
+producing distribution media,
+ProdKitGd4e-1 , 5-8
+LAN emulation,
+SeeLANE Id command, ProgGde 2-20
+LAN setup for DMS, SharingSW 10-3 Idexp routine, CPML B-13, CPML-45
+LAN setup for RIS, SharingSW 3-4 learp command, Ne&Admin 4-27
+LANE lex program, ProgSupTools 4-1
+characteristics, NetAdmin 4-3
+lexicon, CLangRef 1-1
+configuring with ATM, NetAdmin
+4-20 Igamma routine, CPML B-13,
+CPML-46
+managing the environment,
+NetAdmin 4-27 Igamma_max_float boundary
+value, CPML A-4
+Index—28
+
+libc.so default C library, ProgGde license terms and conditions,
+2-21 LicenseM anage 1-3
+libexc exception library, ProgGde license unit, LicenseManage 1-2
+11-1 License Unit Requirement Table,
+library, See LURT
+See also shared library link
+age, CLangRef 2-11
+ANSI C standard, CLangRef 9-1 i 2 q
+linking programs with, ProgGde linking files, CommandSheG!de 3-13
+2-21 lint
+run-time, ProgGde 2-21 coding problem checker, ProgGde
+TLI, NetProgGde 3-6 6-1
+XTI, Ne&tProgGde 3-6 listing directory contents,
+library call CommandShdGlde 3-2
+sockets, NetProgGde 4-10 lita section, AsmLangGde6-5
+library functions .
+for extensions to kdbx debugger, sie :p anies
+Kernel Debug 3-2 CommandShdlGde 7-11
+library routines using double quotes,
+for writing kdbx extensions, CommandShd!Gde7-12
+Kernd Debug 3-2 using single quotes,
+libtli.a library, N&tProgGde 3-6 CommandShedlGd7-e1 2
+libxti.a library, NetProgGde 3-6 little-endian
+2 byte ordering, AsmLangGde 1-2
+license ;
+activity, LicenseM anage 1-5 LMF, LicenseManage 1-1
+availability, LicaenseManage 1-4 activity license, LicenseM anage 1-5
+canceling, LicenseManage 2-10 availability license,
+deleting, LicenseM anage 2-10 LicenseM anage 1-4
+disabling, LicenseM anage 2-9 commands, LicenseM anage 2-1
+enabling, LicenseM anage 2-9 license-checking function,
+issuing, LicenseManage 2-10 ___ LicenseManage 1-2, 1-9
+loading, LicenseManage 2-6 license database, LicenseM anage
+registering, LicenseM anage 2-2 ; 1-2 if
+unlimited, LicenseV anage 2-2 license terms and conditions,
+unloading, LicenseM anage 2-8 ___ LicenseManage 1-3
+updating, LicenseM anage 2-11 license units, LicenseM anage 1-2
+. . i LURT, LicenseM anage 1-2
+lcense-cnecking function, OSF_USR license, License anage
+LicenseM anage 1-2 525
+license database for LMF, PAAM, LicenseManage 1-6, 2-11
+LicenseM anage 1-1 Imf reference page,
+License Management Facility, LicenseM anage 1-2
+See LMF
+Index—29
+
+Imf utility, LicenseManage 1-2 locking methods
+choosing, Kernel Modules 6-9
+Imfsetup script, LicenseM anage 1-2
+comparing simple and complex
+In command, CommandShelGde locks, Kernd Modules 6-5
+3-13, 3-15
+complex lock, KernelM odules 6-1
+In routine, CPML B-13, CPML-47 simple lock, Kernd Modules 6-1
+Local Area Transport, log routine, CPML CPML-47
+See LAT log10 routine, CPML B-14, CPML-47
+local management service logip routine, CPML B-14, CPML-47
+in DLPI, Ne&ProgGd2e- 4
+log2 routine, CPML B-13, CPML-47
+locale, CommandShd!Gde C-1,
+logarithm
+InternatProg 1-2, SystenAdmin
+ilogb, compute unbiased
+3-16, TechOver 10-3
+component, CPML CPML-43
+binding to program's run-time
+logb, convert to double-precision
+environment, InternatProg 2-21
+floating-point, CPML CPML-48
+building and testing, InternatProg
+7-57 logb routine, CPML B-14, CPML-48
+categories of, CommandShelGde logging in, CommandShe!Gde 1-1,
+C-8
+Security 2-1
+creating, InternatProg 7-1,
+specifying a language,
+TechOver 10-6 CDECompanion 2-7
+determining which locale is set,
+specifying a session,
+CommandShedlGde C-6 CDE Companion 2-8
+effect on date and time format,
+logging out
+CommandShdlGde C-4
+of a session, CommandShdlGde 1-4
+effect on messages,
+CommandShedlGdeC-5 logical partition
+effect on software, configuring, SystenAdmin D-3
+CommandShadlGde C-2
+Logical Storage Manager,
+numeric and monetary format in,
+See LSM
+CommandShelGdeC-5
+setting, InternatProg 6-2 login account, CommandShdlGde
+yes/no response strings, 5-2
+CommandShedlGde C-5 login login script
+localization, modifying for System V habitat,
+See also internationalization CommandShdGde 9-2
+implications for software Login Manager, CDE Companion 2-7
+development, I nternatProg 1-2
+login program, CommandShelGde
+location and area 7-13
+setting during full installation,
+login screen
+InstallGde 6-14
+selecting options, CDE Companion
+lock 1-1
+accessing, CDE Companion 3-1
+login script
+complex, Kernd Modules 8-1
+Index-—30
+
+.cshrc script, CommandShelGde managing objects,
+7-16 StorageM anager 5-1
+-kshrc script, CommandShdGde managing plexes,
+7-16 StorageM anager 5-22
+.login script, CommandShelGde managing subdisks,
+7-16 StorageM anager 5-27
+.profile script, CommandShdlGde managing volumes,
+7-16 StorageM anager 5-14
+monitoring, SystenTune 8-22
+logout script, CommandSheGld e
+performance, SystemTune 2-13
+7-23
+special processing during full
+Ipd daemon, SystenAdmin 8-32 installation, I nstallGde 6-39
+Ipq command, CommandShd|Gde Storage Administrator,
+3-10, 3-12 StorageM anager A-1
+troubleshooting, StorageM anager
+Ipr command, CommandShelGde
+6-1
+3-10
+uninstalling, StorageM anager 6-25
+printing files, CommandShd|Gde
+upgrading, StorageM anager 3-1
+3-10
+verifying initialization,
+Iprm command, StorageM anager 3-6
+CommandSheGlde 3-13 voldiskadm menu interface,
+Iprsetup utility StorageM anager C-1
+running, SystenAdmin 8-17 LSM daemon
+Iptest command, SystenAdmin 8-43 monitoring, StorageVl anager 6-7
+Is command, CommandShedGlde 3-2 LSM interfaces, StorageM anager
+1-14
+LSM, TechOver 2-12
+See also Visual Administrator LSM object hierarchy,
+bootable tape utility and, StorageM anager 1-2
+StorageM anager 3-11n LSM software subset,
+configuring during full StorageM anager 3-3
+installation, I nstallGde
+LURT, LicenseManage 1-2
+4-3
+daemons, StorageM anager 3-7 Ivalue, CLangRef 2-23
+directories, StorageM anager 3-7
+drivers, StorageManager 3-7
+error messages, StorageM anager 7-1
+EVM and, StorageManager 6-1
+files, StorageVlanager 3-7 m4 macro preprocessor,
+improving performance, ProgSupTools 5-1
+SystenTune 8-4, 8-6
+macro, CLangRef 8-1
+initializing, StorageM anager 3-4
+See also m4 macro
+installing, StorageM anager 3-1
+preprocessor
+predefined, CLangRef 8-15
+Index-—31
+
+magic number, ProgGde 2-25 mailq command, Ne&Admin 13-39
+magnetic tape drive mailstats command, Ne&Admin
+testing with tapex, SystenAdmin 13-42
+11-34 mailusradm utility, N&¢Admin
+mail, Ne&Admin 13-1 13-21, 13-25, 13-27
+apes tig. CDE Companions t mailx utility, N¢Admin 13-38
+administering aliases, NéetAdmin commands, CommandShdlGde F-1
+13-40
+escape commands,
+aliases, CommandShe!Gde 11-16 Ea aendcmdlicas ee |
+and DECnet, NetAdmin 13-6 ee
+configuring a dient, N&tAdmin make utility, ProgSupTools 7-1
+13-15 makedbm command, Ne&Admin
+configuring a server, NetAdmin 9-21, 9-22
+13-16
+man command,
+configuring a standalone system, CommandShdiGdei9
+NetAdmin 13-14
+converting to CDE format, manpage,
+CDECompanion 10-1 See reference page
+customizing mail program, mapping table, TechOver 3-17
+CommandSheGlde 11-15
+differences between dtmail and max_float boundary value, CPML
+dxmail, CDECompanion A-1 A-1
+enhancements for Asian memory
+languages, InternatProg 6-32 allocating for ATM,
+error messages, NetAdmin F-1 AsynchronousTM 2-8
+exiting from, CommandShe!Gde configuring, SystenTune 2-5
+11-15 detecting leaks, ProgGde 8-21
+gateway, NetAdmin 13-4 displaying, SystaenTune 6-16
+getting help, CommandShd!Gde exercising with memx,
+11-14 SystemAdmin 11-26
+IMAP, NetAdmin 13-24 increasing, SystemTune 6-24
+internationalization, operation, SystemTun6e- 1
+InternatProg 6-32 paging, SystemTune 6-12
+POP, NeAdmin 13-18 reclaiming pages, SystenTune 6-9
+troubleshooting, NetAdmin requirements, SystenTune 2-5
+15-71, 15-73 shared, SystanTune 6-34
+mail conversion utility, Swap pace SystenTune 2-6
+CDECompanion 10-3 swapping, SystenTune 6-13
+; testing shared memory,
+mail utility, Ne&Admin 13-38 SystemAdmin 11-27
+mailconfig application, N&Admin Memory Channel, ClusTechOver 7-1
+ia a Memory File System,
+Pe Neti faa tenth SeeMFS
+See dtmail utility, mail utility, .
+mailx utility memory locking
+realtime, Realtime 4-1
+Index—32
+
+memory mapped file support, mmap, TechOver 6-9
+See mmap
+MMI
+memory trolling calling conventions,
+model, SystenAdmin 11-19 AsynchronousTM 7-5
+connecting convergence module
+mem«x exerciser, SystenAdmin 11-26
+to, AsynchronousTM 5-3
+message convergence module,
+realtime, Realtime 10-1 AsynchronousTM 7-7
+sending, using write command, creating path, AsynchronousTM 7-2
+CommandShe!Gde 11-21 defining ioctl commands,
+message buffer, preserved AsynchronousTM 7-4
+examining with dbx debugger, device driver, AsynchronousTM 7-6
+KerndDebug 2-10 signaling module,
+AsynchronousTM 7-7
+message catalog
+verifying ioctl version,
+creating source files for,
+AsynchronousTM 7-3
+InternatProg 3-1
+design and maintenance modem
+considerations, | nternatProg guidelines, Ne¢Admin 6-15, 6-27
+3-20 using with SLIP, Ne&Admin 6-3
+editing and translating, modf routine, CPML B-14, CPML-49
+InternatProg 3-15
+Module Management Interface,
+generating from message sources,
+See MMI
+InternatProg 3-16
+monetary value
+message handler (mh), Ne&Admin
+formatting rules in a locale,
+13-38
+InternatProg 7-19
+message queue
+Monitoring Performance History
+realtime, Realtime 10-1
+utility,
+MES, SystenAdmin 6-2, 6-17
+See MPH
+MIB
+monitoring the system,
+Host Resources, NetAdmin G-1
+SystenAdmin 11-1, 11-10,
+MIB subtree SystenTune 3-1
+eSNMP, NetProgGd6e- 6
+more command,
+Microsoft NT RAS server, CommandShelGde 3-5
+NetAdmin 6-23
+Motif, TechOver 8-8
+migration internationalization,
+from DECwindows Motif to CDE, InternatProg 5-4
+CDECompanion 7-1
+Motif graphical user interface
+min_float boundary value, CPML enhancements for native
+A-2 languages, InternatProg 6-41
+widget support, InternatProg 5-6
+mkdir command,
+CommandSheGlde 3-1 mount command, SystenAdmin 6-20
+Index—33
+
+mountd daemon, NetAdmin 10-11 Seesvc.conf file
+mounting a remote file system, name space, CLangRef 2-24
+NetAdmin 10-17
+Name/Finger Protocol,
+mounting the online SeeFinger Protocol (FINGER)
+documentation CD-ROM,
+namei cache
+InstallGde 8-2
+tuning, SystanTune 9-1
+moving a file, CommandShdlGde
+naming services
+3-21
+DNS, Ne&Admin 8-1
+MPH, TechOver 2-22 NIS, NetAdmin 9-1
+mule editor, |n ternatProg 6-40 naming your system
+during installation, InstallGde 6-12
+multicasting, Ne&ProgGde 4-41
+multihead graphic support, national language support,
+TechOver 8-3 SystenAdmin 3-16
+netconfig application, N&Admin
+multilanguage program
+compiling, ProgGde 2-16 2-12
+include files for, ProgGde 2-11 NetRAIN
+multiple adapter support, configuring an interface,
+NetAdmin 2-22
+NetAdmin 2-22, 2-27
+monitoring the interface,
+multiple windows
+NetAdmin 2-27
+managing, CDECompanion 2-4
+Netscape Navigator
+multiplexing, Ne&tProgGde 4-52
+using to view online
+multiprocessor system documentation, I nstallGde 8-2
+enabling unattended reboots,
+netstat command, NeAdmin 2-29,
+InstallGde 7-10
+16-3, A-1
+multithreaded application,
+network
+See also POSIX Threads
+administering, Ne&tAdmin 1-1
+Library
+bandwidth management,
+building, ProgGde 12-11 NetProgGde 7-1
+debugging, POSI XThreads C-1 monitoring, SystenTune 10-1
+developing, KernelModules 9-1, QoS, NetProgGde 7-1
+POSI XThreads 1-1 QoS architecture, Ne&tProgGde 7-2
+developing libraries for, ProgGde QoS component operation,
+12-1 NetProgGde 7-3
+profiling, ProgGde 8-29 reporting problems, NetAdmin 18-1
+multiuser boot, SystenAdmin 2-7 troubleshooting, NetAdmin 15-1,
+16-1
+mutex, POSI XThreads 2-26, 4-3
+tuning, SystenTune 10-6
+vb, SysConfigSup 3-1
+N network adapter,
+Seealso network interface
+name services configuration file, setting mode during installation,
+InstallGde 5-7
+Index—34
+
+network addresses newfs command, SystenAdmin 6-16
+and sockets, NetProgGde 4-32
+nextafter routine, CPML B-15,
+network administration, CPML-50
+NetAdmin 1-1 NFS, NetAdmin 10-1, TechOver 3-8
+network availability, SystenTune and BIND, NetAdmin 10-1
+2-18 and NIS, NetAdmin 10-1
+and superuser mail, NetAdmin
+network configuration
+10-14
+broadcasting and determining,
+autofsd, NetAdmin 10-2
+NetProgGde 4-48
+automount, NetAdmin 10-2
+Network File System, displaying, SystanTune 9-38
+SeeNFS environment, Prestoserve 1-3
+Network Information Service, error messages, NetAdmin D-1
+SeeNIS improving file security, NetAdmin
+10-11
+network installation, monitoring system load,
+InstallGdeAdvTop 1-1
+NetAdmin 10-16
+network interface, Ne&tAdmin 2-1 mounting a remote file system,
+adding an |Pvé6 address to, NetAdmin 10-17
+NetAdmin 3-35 network problems, Prestoserve 1-4
+configuring, NetAdmin 2-13 Prestoserve impact on
+configuring multiple for failover, performance, Prestoserve 1-8
+NetAdmin 2-22 troubleshooting, NetAdmin
+deconfiguring, NetAdmin 2-15 15-47, 15-50
+deleting an | Pv6 address from, tuning, SystenTune 9-40
+NeAdmin 3-36 unmounting a remote file system,
+initializing for |Pv6, Ne&tAdmin 3-34 NetAdmin 10-24
+monitoring, NetAdmin A-1,
+NFS client
+TechOver 3-32
+configuring, NetAdmin 10-9
+multiple in same subnetwork,
+managing, NetAdmin 10-17
+NetAdmin 2-21, 2-27
+mounting a remote file system,
+removing | Pv6 from, NetAdmin 3-35
+NetAdmin 10-17
+network programming problems, Prestoserve 1-5
+environment, TechOver unmounting a remote file system,
+6-10 NetAdmin 10-24
+application programming
+NFS mounted RIS area,
+interfaces, TechOver 6-10
+SharingSW 4-10
+data link interface, TechOver 6-10
+NFS server
+network security, Security 3-1
+configuring, NetAdmin 10-8
+Network Time Protocol, exporting file systems, NetAdmin
+See NTP 10-12
+halting export of file systems,
+networks file, N&Admin 2-12, 2-21
+NetAdmin 10-13
+Index—35
+
+managing, NetAdmin 10-11 Internet time servers, NetAdmin
+monitoring ports, Ne&tAdmin 10-16 12-4
+problems, Prestoserve 1-6 reference clock, NetAdmin 12-4
+troubleshooting, N&Admin 15-56
+NFS setup for DMS, SharingSW 10-3
+ntp command, Ne&Admin 12-10
+nfsconfig application, Ne&Admin
+10-8 ntpdate command, NeAdmin 12-10
+nfsstat command, NetAdmin 10-16 ntpq command, Ne&Admin 12-8
+nint routine, CPML B-15, CPML-51 ntpsetup command, NeAdmin 12-6
+NIS, NetAdmin 9-1 numeric value
+adding groups to a domain, formatting rules in a locale,
+NetAdmin 9-25 InternatProg 7-21
+adding users to a domain,
+NetAdmin 9-23
+O
+changing a password, NetAdmin
+9-31
+databases distributed by, object file
+NetAdmin 9-2 determining section sizes,
+modifying svc.conf, NettAdmin 9-19 ProgGde 2-25
+obtaining map information, disassembling into machine code,
+NetAdmin 9-31 ProgGde 2-26
+security, N&Admin 9-29 dumping selected parts of,
+troubleshooting, NetAdmin ProgGde 2-24
+15-40, 15-44
+object file tools, ProgGde 2-23
+updating maps, NetAdmin 9-25
+object hierarchy
+NIS client
+LSM, StorageManager 1-2
+configuring, NetAdmin 9-17
+managing, NetAdmin 9-31 object tables
+eSNMP, Ne&tProgGde 6-8
+NIS server
+configuring a master server, ODBC, TechOver 7-2
+NetAdmin 9-11 odump (object file tool), ProgGde
+configuring a slave server, 2-24
+NetAdmin 9-15
+OEM platforms, SysConfigSup 1-1
+managing, NetAdmin 9-20
+vb network configuration,
+update scripts, NeAdmin C-1
+SysConfigSup 3-1
+nissetup command, NeAdmin 9-10
+VMEbus configuration,
+nm (object file tool), ProgGde 2-24 SysConfigSup 2-1
+nr interface, Ne&Admin 2-22 ONC RPC,
+See RPC
+nslookup command, Ne&Admin
+8-31, 17-20 online documentation, | nstallGde
+8-1
+NTP
+copying to disk, InstallGde 8-6
+authentication, NeAdmin 12-6
+configuring, NetAdmin 12-6 onlink prefix
+displaying status, N&Admin 12-9 adding a route for, NetAdmin 3-36
+Index—36
+
+Open Shortest Path First, page command,
+See OSPF CommandShedlGde 3-5
+OpenMP directive, ProgGde 13-1 page faulting, SystenTune 6-7
+OpenVMS paging, SystenTune 6-12
+enabling display, CDE Companion PAK, LicenseManage 1-6
+5-3 fields on, LicenseManage 1-7e
+operating system obtaining, LicenseManage 1-6
+list of fixes for, DocOverview 5-2 sample PAK license fields,
+overview of, CommandShdlGde 1-1 LicenseM anage 1-7e
+operating system processes, PALcode
+CommandShdlGde 6-1 instruction Summaries,
+AsmLangGde D-1
+operator, CLangRef 1-9, 6-1
+pap-secrets file, N&¢&Admin 6-14
+optimization
+compilation options, ProgGde 2-20 parallel processing
+profile-directed, ProgGde 10-8, F-2 OpenMP directives, ProgGde 13-1
+techniques, ProgGde 10-1 preOpenMP style, ProgGde D-1
+with -om and cord, ProgGdeF-1 passwd command,
+with spike, ProgGde 10-6
+CommandShelGde 1-6
+options passwd file, SystenAdmin 7-9
+XTI, NetProgGde 3-43
+and NIS, NetAdmin 9-23
+options file, N&Admin 6-20, 6-26 password, CommandShalGde 1-6,
+orderly release, Na&ProgGde 3-9 SystenAdmin 7-1
+changing in NIS, NeAdmin 9-31
+OSF_USR license, LicenseManage
+common, CommandShelGde 1-6
+2-2
+file, CommandShdlGde 5-1
+OSPF, TechOver 3-6 security tips, Security 2-3
+out-of-band data setting with enhanced security
+handling in the socket framework, enabled, Security 2-3
+NetProgGde 4-38 patches to operating system
+overlapping disk partitions lists of for operating system
+checking for, SystenAdmin 5-72 versions, DocOverview 5-2
+PATH environment variable,
+P CommandS1hG ede 7-23
+setting for System V habitat,
+CommandSheGlde 9-2
+PAAM, LicenseManage 1-6
+pathname, CommandShd!Gde 2-8
+current business policy,
+LicenseM anage 2-11 pathname conventions (UUCP),
+CommandShdlGde 14-1
+pac command, SystenAdmin 10-34
+pax command, SystenAdmin 9-5
+Index—37
+
+PC code page, setting file and directory,
+See also codeset conversion CommandShelGde 5-8
+locale, InternatProg 2-5 setting with octal numbers,
+CommandShdlGde 5-11
+PC-NFS daemon, NetAdmin 10-8
+Personal Application subpanel,
+PCIASA (DMCC) Alpha
+CDECompanion 3-4
+single-board computer,
+SysConfigSup 1-1 PFS, TechOver 4-10
+PCIASA Alpha 21264 pg command, CommandShd!Gde 3-5
+single-board computer, ping command, Ne&Admin 16-2
+SysConfigSup 1-1
+pipe character,
+PCMCIA card
+CommandShealGde 7-8
+configuring, SystenAdmin D-1
+pipeline
+PDF documentation, DocOverview using, CommandShdlGde 7-8
+1-5, InstallGde 8-1
+pixie,
+performance, Se profiling a program
+See also tuning
+point-to-multipoint,
+application, SystenAdmin 11-10,
+See connection
+SystenTune 11-4
+availability, SystenTune 1-14 point-to-point,
+characterizing a workload, See connection
+SystenTune 2-1
+Point-to-Point Protocol,
+configuration and tuning steps,
+See PPP
+SystenTune 4-1
+CPU, SystenTune 7-8 pointer size
+diagnosing problems, SystenTune conversion, ProgGdeA-1
+3-1
+POP, Ne&Admin 13-18, TechOver 3-10
+hardware, SystenTune 2-3, 2-9
+troubleshooting, NetAdmin 15-73
+improving, SystenTune 4-1
+port monitoring, Ne&Admin 10-16
+measuring, SystanTune 1-1
+memory operation, SystenTune 6-1 Portable Character Set (PCS),
+modifying the kernel, SystenTune InternatProg 1-5
+3-10
+porting applications to XTI,
+monitoring, SystemTune 3-1, 3-4,
+NetProgGde 3-33
+3-7
+network, SystenTune 10-1 portmap daemon
+system resources, SystenTune5-1 Prestoserve, Prestoserve 2-10
+performance history portmap network service,
+monitoring, SystenAdmin 11-13 OncRpcProgram 1-3
+permanent virtual circuit, POSIX shell, CommandShelGde
+See PVC 7-1, 8-1
+logout script, CommandShed|Gde
+permissions, CommandShd!Gde 5-1
+7-24
+changing, CommandShdlGde 5-4
+redirecting errors,
+setting default,
+CommandSheGde 6-4
+CommandShelGde 5-13
+Index—38
+
+POSIX signal functions, Realtime deleting, AsynchronousTM 4-4
+5-2 unbinding, AsynchronousTM 5-8
+POSIX standards PPP, NeAdmin 6-11
+application development See also connection, SLIP
+considerations, ProgGde 1-2 and gateways, Ne&Admin 6-26
+realtime, Realtime 1-17 configuring dial-in system,
+POSIX Threads exception NetAdmin 6-25
+package, POSI XThreads 5-1 configuring dial-out system,
+NetAdmin 6-19
+POSIX Threads Library,
+guidelines for running pppd,
+KerndModules 9-1,
+NetAdmin 6-23
+POSIXThreads 1-1
+Microsoft NT RAS server,
+condition variables,
+NetAdmin 6-23
+POSI XThreads 2-30,
+security, Ne&Admin 6-14
+4-3
+troubleshooting, N&Admin 15-62
+considerations for Tru64 UNIX
+systems, POSI XThreads A-1 pppd daemon, Ne&Admin 6-13
+error reporting, POSI XThreads 3-23 pragma
+exceptions, POSI XThreads 5-1 assert directive, ProgGde 3-2
+mutexes, POSI XThreads 2-26, 4-3 environment, ProgGde 3-6
+objects, POSI XThreads 2-1 extern_model directive, ProgGde 3-7
+operations, POSI XThreads 2-1 extern_prefix, ProgGde 3-11
+programming, POSI XThreads 3-1 function, ProgGde 3-14
+pthread routines, POSI XThreads inline, ProgGde 3-13
+pthread-1 intrinsic, ProgGde 3-14
+thread-safe libraries, linkage, ProgGde 3-16
+POSI XThreads 4-1 member_alignment, ProgGde 3-19
+tis routines, POSI XThreads tis-1 message, ProgGde 3-20
+optimize, ProgGde 3-25
+POSIX Threads Library
+debugger, POSI XThreads C-1 pack, ProgGde 3-27
+pointer_size, ProgGde 3-28
+Post Office Protocol,
+preprocessor directive, CLangRef
+See POP
+8-12
+postload file, | nstallGdeAdvTop 5-1 use linkage, ProgGde 3-29
+weak, ProgGde 3-30
+postreboot file, | nstallGdeAdvTop 5-1
+prdaily shell script, SystenAdmin
+pow routine, CPML B-15, CPML-52
+10-40
+power management,
+preinstall file, | nstallGdeAdvTop 5-1
+SystenAdmin 3-37
+preprocessing, CLangRef 2-24, 8-1
+PPA
+adding, AsynchronousTM 4-4 preprocessor directive, CLangRef
+binding to, AsynchronousTM 5-6 2-24, 8-1
+data structure, AsynchronousTM
+preserved message buffer
+2-35
+Index—39
+
+examining with dbx debugger, reference pages,
+Kernd Debug 2-10 CommandShd!Gde 1-9
+presto command, Prestoserve 3-3 priority
+realtime, Realtime 2-1
+prestoctl_svc daemon
+Prestoserve, Prestoserve 2-11 privileges,
+See DOP
+Prestoserve
+adding kernel! support, /proc File System,
+Prestoserve 2-4 See PFS
+creating generic control device,
+procedure descriptor,
+Prestoserve 2-9
+CallingStandard 8-1
+improving NFS server
+performance, Prestoserve 1-6 procedure invocation,
+installing dxpresto subset, CallingStandard 7-1
+Prestoserve 2-1 process, CommandShedlGde 6-1
+managing, Prestoserve 3-3
+initializing, SystemnAdmin 2-7
+monitoring, Prestoserve 3-3, 3-8
+process information,
+pseudodevice driver, Prestoserve
+CommandShd!Gde 6-14
+1-2, 3-1
+recovering from failures, processing text files,
+Prestoserve 4-1 See awk utility, m4 macro
+setting up, Prestoserve 2-6 preprocessor
+speeding up synchronous writes,
+Product Authorization
+Prestoserve 1-1
+Amendment,
+prestosetup command
+See PAAM
+setting up Prestoserve,
+Product Authorization Key,
+Prestoserve 2-6
+SeeLMF, PAK
+Print Manager
+accessing, CDECompanion 3-1 prof,
+Se profiling a program
+printed documentation,
+See Tru64 UNIX profile login script,
+CommandShelGde 7-16
+Documentation Kit
+modifying for System V habitat,
+printer, SystenAdmin 8-1
+CommandShdlGde 9-2
+device special file name,
+profile set, SharingSW 7-1
+SystenAdmin 8-29
+Ipc command, SystenAdmin 8-22 profiling a program, ProgGde 8-1
+setting up, SystenAdmin 8-12
+profiling an application,
+support for local languages,
+SystenTune 11-1
+InternatProg 6-19
+profiling the kernel, SystenTune 3-9
+troubleshooting, SystenAdmin 8-43
+using with LAT, NetAdmin 7-10 program number assignment,
+printf routine, KandModules 5-15 OncRpcProgram 1-5
+printing programming languages
+supported by Tru64 UNIX,
+internationalized, | nternatProg 6-19
+ProgGde 1-4
+Index—40
+
+protocol quorum disk, ClusTechOver 3-6
+selecting in sockets, Ne&tProgGde
+quota
+4-36
+AdvFS, AdvF SAdmin 2-1
+prototype, CLangRef 5-8 UFS, SystenAdmin 6-41
+providing boot disk redundancy, quoting conventions,
+StorageM anager 3-11 CommandShdlGde 7-11
+prtacct shell script, SystenAdmin
+10-40
+R
+pseudodevice driver
+Prestoserve, Prestoserve 1-2, 3-1
+RAID, SystenTune 1-7
+pseudoter minal, Ne&ProgGde 4-57 improving performance,
+and sockets, NetProgGde 4-57 SystenTune 8-28
+pthread routine, POSI XThreads mirroring, SystenTune 2-17
+pthread-1 parity, SystenTune 2-14
+striping, SystenTune 2-13
+punctuator, CLangRef 1-10
+random routine, CPML B-15,
+PVC
+CPML-53
+creating, AsynchronousTM 6-9
+RAPI, Ne&ProgGde 7-6
+debugging applications,
+Q NetProgGde 7-8
+routines, NetProgGde 7-7
+support for, NetProgGde 7-1
+QoS, NetAdmin 2-35, Ne&tProgGde 7-1
+testing applications, NetProgGde
+component operation, NetProgGde
+7-8
+7-3
+components, NetProgGde 7-2 raw RPC, OncRpcProgram 3-14
+modifying, AsynchronousTM 5-6
+rc directory structure,
+quality of service, SystenAdmin 3-9
+See QoS rc.config file
+queue IPv6 variables, NetAdmin 3-37
+convergence module guidelines, rcO script, SystenAdmin 3-3
+AsynchronousTM 8-3
+rc2 script, SystenAdmin 3-3
+device driver guidelines,
+AsynchronousTM 8-1 rc3 script, SystenAdmin 3-3
+Quick Setup utility, | nstallGde rcmgr command, SystenAdmin 3-3
+7-3, TechOver 2-8 rcn.d directory, SystenAdmin 3-3
+quickstart, TechOver 6-5
+RCS, ProgSupTools 6-1
+quit (q) command rdump command, SystenAdmin 9-5
+vi editor, CommandShealGdeA-4
+realtime, Realtime 1-1
+quorum, ClusTechOver 3-4
+asynchronous |/O, Realtime 7-1
+Index—41
+
+capabilities of the operating remote file, Ne&tAdmin 6-32
+system, Realtime 1-4, A-1
+remote host
+clocks, Realtime 6-1
+working on, CommandShd!|Gde
+environments, TechOver 6-9
+13-1
+memory locking, Realtim4e- 1
+message queues, Realtime 10-1 Remote Installation Services,
+messages, Realtime 10-1 See RIS
+performance tuning, Realtime 11-1 remote procedure call,
+POSIX standards, Realtime 1-17 See RPC
+preemptive kernel, Realtime 1-4
+remote system
+priorities, Realtime 2-1
+requesting connection to,
+scheduling, Realtime 2-1
+AsynchronousTM 5-5
+semaphores, Realtime 9-1
+shared memory, Realtime 3-1 removing a directory,
+signal handling, Realtime 5-1 CommandShadlGde 4-10,
+synchronized I/O, Realtime 8-2 4-11
+system tuning, Realtime 11-3 current directory,
+timers, Realtime 6-1 CommandShd1Gd4-e1 2
+realtime preemption removing a file,
+enabling after full installation, CommandSheGlde 3-26
+InstallGde 7-10
+removing LSM software,
+reboot StorageM anager 6-25
+enabling unattended reboots,
+renaming a directory,
+InstallGde 7-10
+CommandShd|Gde 4-9
+recovering objects
+renaming a file,
+failed boot disk, StorageVl anager
+CommandShdGde 3-21
+6-23
+replicated file system, Na&Admin
+redirecting input/output,
+B-9
+CommandShdlGde 6-2
+resource
+reference page,
+releasing, AsynchronousTM 5-4
+CommandShalGde 1-9
+reserving, AsynchronousTM 5-4
+in printed books, DocOverview 6-2
+overview of sections, DocOverview Resource ReSerVation Protocol,
+6-3 See RSVP
+processing a translated, restart completion
+InternatProg 6-35 reporting to CMM,
+reading on line, DocOverview 6-1 AsynchronousTM 4-4
+registerrpc routine, restart installation, | nstallGde 6-43
+OncRpcProgram 3-4
+restart nogui command,
+regular expression, ProgSupTools InstallGde 6-43
+1-1
+restore command, SystenAdmin 9-5
+remainder routine, CPML B-16,
+restore configuration
+CPML-54
+using config.cdf file,
+remote debugging, Kernd Debug 2-37 InstallGdeAdvTop 7-1
+Index—42
+
+restore procedure, SystenAdmin 9-1 using, CommandShalGde 13-1
+Restricted Bourne shell, root password
+CommandSheGlde 7-1, 7-4 setting during installation,
+InstallGde 6-18
+Revision Control System,
+SeeRCS root user
+tasks performed by,
+rint routine, CPML B-16, CPML-55
+CommandShalGde 5-18
+RIP, TechOver 3-5
+route
+RIS, SharingSW 1-1 adding for an onlink prefix,
+architecture, SharingSW 2-1 NetAdmin 3-36
+planning disk space, SharingSW 3-3 static, NetAdmin 2-10, 2-19
+product environment, SharingSW
+routed daemon, NetAdmin 2-7
+2-3
+configuring, NetAdmin 2-16
+setting up a LAN, SharingSW 3-4
+software sharing environment, router
+SharingSW 1-2 configuring for |Pv6, NetAdmin 3-30
+IPv6 configuration variables,
+RIS area, SharingSW 1-1
+NetAdmin 3-37
+existing area software
+installation, SharingSW routes file, NetAdmin 2-10, 2-19
+4-5
+routine
+mounting on NFS, SharingSW 4-10 commonly used by kernel
+new area software installation,
+modules, KernelM odules 5-1
+SharingSW 4-1
+data copying, KerndModules 5-7
+RIS client, SharingSW 1-1 kernel-related, Ke-rnd Modules 5-14
+booting, SharingSW 5-1 routing, Ne¢tAdmin 2-7, 2-8, 2-10,
+characteristics, SharingSW 2-4 2-19
+compatibility with server,
+Routing Information Protocol,
+SharingSW 3-1
+See RIP
+managing, SharingSW 6-1
+registering, SharingSW 2-5 routing protocols, TechOver 3-4
+RIS server, SharingSW 1-1 RPC, OncRpcProgram 1-1, 3-1
+compatibility with client, See also rpcgen protocol
+SharingSW 3-1 compiler
+installing from, InstallGdeAdvTop
+broadcast, OncRpcProgram 2-21,
+1-1
+3-17
+installing operating system on, debugging, OncRpcProgram 2-16
+SharingSW 3-3
+language, OncRpcProgram 2-22
+preparing, SharingSW 3-1
+layers, OncRpcProgram 3-1
+setting up, SharingSW 4-1 raw, OncRpcProgram 3-14
+RIS troubleshooting, SharingSW 8-1 registration, OncRpcProgram
+1-5, 1-6
+rlogin command,
+supported transports,
+CommandShdlGde 13-1
+OncRpcProgram 1-4
+Index—43
+
+S
+using TCP transport,
+OncRpcProgram 3-28
+RPC language, OncRpcProgram 1-1 -S compilation option,
+AsmLangGde 6-14
+RPC messages
+S files, AsmLangGde 6-14
+batching, OncRpcProgram 3-18
+RPC programming, sa command, SystenAdmin 10-26
+OncRpcProgram 3-1 SAS
+rpcgen protocol compiler, bootable tape, SystenAdmin 9-30
+OncRpcProgram 2-1 savecore command, SystenAdmin
+declarations, OncRpcProgram 2-24 14-3
+programming with,
+scalb routine, CPML B-16, CPML-56
+OncRpcProgram 2-17
+SCCS, ProgSupTools 6-1
+rrestore command, SystenAdmin
+9-5 sccs command, ProgSupTools 6-17
+—d option, ProgSupTools 6-8
+RSVP, Ne&tAdmin 2-35, Ne&ProgGde
+7-5, TechOver 3-10 scheduling
+application programming realtime, Realtime 2-1
+interface, NetProgGde 7-6 scope, CLangRef 2-3
+implementing in applications,
+SCSI, SystenTune 1-9
+NetProgGde 7-8
+device name, SystenAdmin 5-40
+system roles, NetProgGde 7-3
+standards supported,
+RSVP application programming SystemAdmin 5-54
+interface,
+searching for text with grep,
+See RAPI
+ProgSupTools 1-9
+rsvpd daemon, Ne&ProgGde 7-6
+security, Security 1-1, TechOver 9-1
+rsvpstat command, Ne&ProgGde 7-8 administering accounts, Security 9-1
+rt_post_callout routine, administering ACLs, Security 11-1
+SysConfigSup 2-27, 2-66 administering devices, Security 8-1
+and DHCP, Ne&Admin 5-19
+run level, SystenAdmin 2-17
+audit subsystem, Security 10-1
+defaults, SystenAdmin 3-5
+authentication database integrity,
+run-time library, supported, Security 12-1
+TechOver 6-6 C2 configuration, Security F-1
+CDE, Security 4-1
+runacct shell script, SystenAdmin
+connecting to other systems,
+10-35
+Security 3-1
+ruptime command,
+considerations,
+CommandShe!Gde 10-5 CommandShedlGde 5-21
+rvalue, CLangRef 2-23 DOP privileges, Security H-1
+group, CommandShdlGde 5-2
+rwhod daemon, NeAdmin 2-6
+logging in, Security 2-1
+configuring, NetAdmin 2-15
+policy, SystaenAdmin 3-24
+programming concerns with
+ACLs, Security 21-1
+Index—44
+
+programming concerns with specifying a language,
+discretionary access control, CDE Companion 8-8
+Security 21-1
+Session Manager
+programming with the
+customizing in CDE,
+authentication databases,
+CDECompanion 8-1
+Security 17-1
+security integration architecture setid utility, | nstallGde 9-1
+building a new kernel! after using,
+(SIA), Security 13-1
+InstallGde 9-13
+setting passwords, Security 2-3
+setup, Security 7-1 removing software, I nstallGde 9-6
+removing software from a cluster,
+system administration, Security
+InstallGde 9-6
+6-15
+syntax of, I nstallGde 9-4
+troubleshooting, Security 14-1
+user, CommandShdlGde 5-2 testing subsets with, ProdKitGde
+3-48
+using ACLs, Security 5-1
+security in a cluster, Security G-1 setting a locale,
+CommandShedGlde C-6
+select system call
+setup utilities, TechOver 2-8
+using on the server side,
+OncRpcProgram 3-16 shared library, ProgGde 4-1,
+TechOver 6-5
+semaphore
+and TLI, NetProgGde 3-6
+realtime, Realtime 9-1
+and XTI, Ne&tProgGde 3-6
+sendmail utility, Ne&Admin 13-38
+loading at run time, ProgGde 4-15
+Serial Line Internet Protocol, profiling, ProgGde 8-5, 8-26
+See SLIP quickstart, ProgGde 4-9
+server shared memory
+NFS daemons, Ne&tAdmin 10-4 realtime, Realtime 3-1
+programming of, OncRpcProgram testing with shmx, SystenAdmin
+2-21 11-27
+versions of, OncRpcProgram 3-25 sharing software on a local area
+server process, OncRpcProgram 1-1 network, SharingSW 1-1
+server/client interaction, shell, CommandShdGde 8-1
+NetProgGde 4-8 default shell, CommandShelGde
+7-1
+service typesin DLPI, Na&ProgGde
+2-4 shell script, CommandSheGlde 7-25
+compatibility with System V,
+service, quality of,
+CommandSheGlde 9-4
+See QoS
+internationalizing, InternatProg
+session 3-23
+ending, CDECompanion 2-9
+shmx exerciser, SystenAdmin 11-27
+pausing, CDE Companion 2-8
+restoring settings, shutdown, SystenAdmin 2-1
+CDECompanion 8-9
+Index—45
+
+shutdown command, slhosts file, N&Admin 6-7
+SystenAdmin 2-23
+SLIP, NeAdmin 6-1
+SIA (security integration Seealso connection, PPP
+architecture), Security 13-1 and gateways, NetAdmin 6-8
+signal configuring dial-in system,
+NetAdmin 6-8
+process groups and |Ds,
+NetProgGde 4-55 configuring dial-out system,
+NetAdmin 6-9
+signaling module
+modem guidelines, NetAdmin 6-3
+MMI, AsynchronousTM 7-7
+troubleshooting, NetAdmin 15-59
+registering with CMM,
+SMARTengine/Alpha 21264
+AsynchronousTM 4-2
+PCIASA single-board
+simple lock
+computer, SysConfigSup 1-1
+asserting exclusive access on
+resource, Kernd Modules 7-4 SMP, SystenAdmin 2-20, TechOver
+declaring data structure, 5-3
+rebooting failed processor,
+Kernd Modules 7-1
+initializing, Kernd Modules 7-2 SystenAdmin 2-20
+releasing previously asserted, unattended reboots,
+Kernd Modules 7-6 SystenAdmin 2-20
+terminating, KendModules 7-12 SMP environment, KerndModules
+trying to obtain, KendModules 7-9 6-1
+using spl routines, Kernd Modules locking, KerndModules 5-28, 6-4
+7-15 making kernel module safe
+using complex locks,
+simple lock routine,
+Kernd Modules 8-1
+Kernd Modules 7-1
+Simple Mail Transfer Protocol, SMP system
+debugging on, Kernd Debug 2-10
+See SMTP
+determining on which CPU a
+Simple Network Management panic occurred, Kernd Debug
+Protocol,
+4-9
+See SNMP
+SMTP, TechOver 3-9
+sin routine, CPML B-16, CPML-57
+SNMP, NetAdmin 14-1, TechOver 3-9
+sincos routine, CPML B-17, See also eSNMP
+CPML-58
+Host Resources MIB, NetAdmin G-1
+sincosd routine, CPML B-17, supported versions, Ne&ProgGde 6-4
+CPML-58
+SNMP agent, TechOver 3-28
+sind routine, CPML B-17, CPML-57
+sockaddr structure, Ne&ProgGde
+single-user boot, SystenAdmin 2-7 9-11
+sinh routine, CPML B-17, CPML-59 sockaddr_dl data structure,
+NetProgGdeE-6
+sinhcosh routine, CPML B-18,
+CPML-60 sockaddr_dl structure
+and the 802.2 substructure,
+size (object file tool), ProgGde 2-25
+NetProgGdeE-10
+Index—46
+
+and the Ethernet substructure, process groups and |Ds,
+NetProgGdeE-7 NetProgGde 4-55
+programming TCP socket buffer
+sockaddr_storage structure,
+sizes, NetProgGde C-1
+N etProgGde 9-11
+rewriting applications for XTI,
+socket interface NetProgGde 3-36
+supported types, NetProgGde 4-1 selecting protocols, NetProgGde 4-36
+sockets setting DLI options, NetProgGde
+advanced topics, NetProgGde 4-35 E-16
+and handling out-of-band data, setting socket options,
+NetProgGde 4-38 NetProgGde 4-25
+application programming shutting down, Ne&tProgGde 4-30
+interface, NetProgGd4e- 6 system calls, NetProgGd4e- 9
+binding in DLI, N&ProgGdeE-17 TCP-specific programming
+binding names to, NetProgGde 4-22 information, Ne&tProgGdeC-1
+BSD, NeProgGde 4-31 transferring data, NetProgGde 4-26
+calculating buffer size in DLI, sockets client
+NetProgGde E-20
+connection-oriented program,
+closing, NetProgGde 4-30
+NetProgGde B-6
+coexistence with STREAMS,
+connectionless program,
+NetProgGde 8-1 NetProgGde B-22
+common errors, NetProgGde 4-34
+sockets framework, Ne&ProgGde
+communication properties,
+1-3, 4-1
+NetProgGde 4-3
+components, Ne&tProgGde 4-2
+comparison with XTI, NetProgGde
+interaction with STREAMS,
+3-36
+NetProgGde 1-7
+creating, Ne&tProgGde 4-20
+relationship to XTI, TechOver 4-1
+creating in DLI, N&ProgGdeE-15
+deactivating in DLI, N&ProgGde sockets I/O
+E-21 interrupt driven, NeProgGde 4-55
+establishing client connections,
+sockets protocol stack
+NetProgGde 4-23
+bridging to STREAMS driver,
+establishing new server
+NetProgGde 8-2
+connections, NetProgGde 4-24
+filling the sockaddr_dl structure, sockets server
+NetProgGdeE-17 connection-oriented program,
+getting socket options, NetProgGde B-2
+connectionless program,
+NetProgGde 4-26
+NetProgGde B-18
+header files, NetProgGde 4-16
+1/0 multiplexing, NetProgGde 4-52 software
+increasing buffer size limit, base operating system subsets,
+NetProgGde C-2 InstallGde C-1
+library calls, NetProgGde 4-10 installing, InstallGde 6-20
+modes of communication, installing after an installation,
+NetProgGde 4-7 InstallGde 9-1
+Index—47
+
+listing files in asubset, I nstallGde standard input,
+9-5 CommandSheGlde 6-1
+listing installed, I nstallGde 9-5
+standard library, ANSI C,
+managing with setld utility,
+CLangRef 9-1
+InstallGde 9-1
+standard output,
+managing with SysMan Menu,
+InstallGde 9-1 CommandShelGde 6-1
+removing after an installation, standards,
+InstallGde 9-6 See also ANSI standards,
+removing from a cluster, POSIX standards, X/Open
+InstallGde 9-6
+standards
+worldwide language support,
+and XTI, Ne&tProgGde 3-1
+InstallGde C-20
+programming considerations,
+Software Product Description, ProgGde 1-2
+See SPD
+starting the ed editor,
+software subset CommandShdlGde B-2
+LSM, StorageM anager 3-3
+startppp command, N e&Admin 6-26
+sort (asort) utility, TechOver 10-7
+startslip command, Ne&Admin 6-5
+sorting file contents, startup, SystenAdmin 2-6
+CommandSheGlde 3-25
+Startup Documentation Kit,
+Source Code Control System, DocOverview 1-8
+See SCCS
+state
+source files comparing XTI and sockets,
+controlling access to, ProgGde 1-5 N e&ProgGde 3-39
+source line and instruction managing in XTI, NetProgGde 3-22
+profiling, ProgGde 8-11 statement
+source routing assembly language, AsmL angGde
+enabling, Ne&tProgGde D-1 2-5
+SPD, DocOverview 5-2 static route, NeAdmin 2-10, 2-19
+specifying default run shell, status enquiry
+CommandShdGlde 7-27 reporting to CMM,
+AsynchronousTM 4-4
+sqrt routine, CPML B-18, CPML-61
+stdump (object file tool), ProgGde
+srconfig command, Ne&Admin 2-32
+2-27
+stack limit, CallingStandard 6-1
+stopping a command,
+stack of user program CommandShdlGde 1-6
+examining in crash dump,
+Storage Administrator
+Kernd Debug 2-8
+managing disk groups,
+stack organization, AsmLangGde6-7 StorageM anager A-14
+managing disks, StorageM anager
+standard error,
+A-6
+CommandShelGde 6-1
+Index—48
+
+managing subdisks, bridging to BSD driver,
+StorageM anager A-21 NetProgGde 8-9
+managing volumes,
+string literal, CLangRef 1-12
+StorageM anager A-25
+string routine, KandM cdules 5-1
+storage class, CLangRef 2-13
+strlen routine, KendM ocdules 5-6
+strcmp routine, Kend Modules 5-2
+strncmp routine, KandM cdules 5-3
+strcpy routine, KendModules 5-4
+strncpy routine, KaendModules 5-5
+STREAMS
+application programming strong symbol, ProgGde 2-27
+interface, NetProgGde 5-6 structured exception handling,
+coexistence with sockets, ProgGde 11-5
+NetProgGde 8-1
+Style Manager, CDECompanion 4-1
+components, NetProgGde 5-2
+accessing, CDECompanion 3-1
+configuring drivers, NetProgGde
+customizing environment,
+5-20
+CDECompanion 4-6
+configuring modules, NetProgGde
+5-20 subagent
+device special files, NetProgGde5-25 implementing, NetProgGde 6-12
+driver and module processing subdirectory, CommandShd!Gde 2-7
+routines, Ne&tProgGde 5-15
+subnet mask, NetAdmin 2-5
+error logging, NetProgGde 5-26
+event logging, NetProgGde 5-26 subset control program,
+functions, NetProgGde 5-7 ProdKitGde 3-9
+header files, NetProgGde 5-6 substitution, global
+kernel-level functions, in vi editor, CommandShelGde
+NetProgGde 5-12 A-19
+message data structures,
+subsystem
+NetProgGde 5-14
+configuring, SystenAdmin 4-1
+messages, NetProgGde 5-5
+traffic control, NetProgGde 7-2
+module data structures,
+NetProgGde 5-13 superuser, CommandShd!Gde 5-17
+synchronization mechanism,
+superuser authority
+NetProgGde 5-19
+tasks, CommandShadl Gde 5-18
+STREAMS driver, Ne&ProgGde 8-3
+Supplementary Documentation,
+bridging to sockets protocol stack,
+DocOverview 5-1
+NetProgGde 8-2
+svc.conf file, Ne&Admin 9-19,
+STREAMS framework,
+TechOver 3-32
+NetProgGde 1-3, 5-1, TechOver
+svcsetup command, Ne&Admin 8-30
+3-24
+interaction with sockets, swap space
+NetProgGde 1-7 displaying with kdbx,
+Kernd Debug 2-31
+STREAMS protocol stack
+estimating, SystenAdmin 3-43
+Index—49
+
+swap space allocation system
+deferred mode, SystenAdmin 3-45 crash dump information created
+immediate mode, SystenAdmin during reboot, SystenAdmin
+3-45 14-3
+customizing environment,
+swap space planning,
+SystenAdmin 3-1
+InstallGdeAdvTop 4-1
+displaying information about
+swapping, SystenTune 6-13
+with kdbx, Kernel Debug 2-30
+symbol table initialization, SystenAdmin 2-18
+ANSI name space cleanup, initialization files, SystaenAdmin 3-2
+ProgGde 2-27 monitoring, SystenAdmin 11-1,
+11-10
+symmetric multiprocessing,
+monitoring utilities,
+See SMP
+SystenAdmin 11-4
+synchronization requesting connection to remote,
+hardware issues related to, AsynchronousTM 5-5
+Kernd Modules 6-1 security, SystemAdmin 3-24
+synchronization mechanism startup files, SystenAdmin 3-2
+testing, SystenAdmin 11-1
+in STREAMS, NetProgGde 5-19
+system administration
+synchronized I/O
+118N Configuration tool, TechOver
+realtime, Realtime 8-2
+10-9
+synchronous writes
+internationalization and,
+speeding up with Prestoserve,
+InternatProg 6-2
+Prestoserve 1-1
+methods, SystenAdmin 1-1
+sysconfig command, security considerations, Security
+SystenAdmin 4-7, SystenTune 6-15
+3-10 SysMan, SystenAdmin 1-1
+tools, SystenAdmin 1-1
+sysconfigdb command,
+tools and utilities, SystenAdmin
+SystenAdmin 4-15
+A-2
+syslogd daemon, SystenAdmin 12-2
+System and Network
+SysMan, SystenAdmin 1-1, 1-11
+Management Documentation
+utilities, SystemnAdmin A-6
+Kit, DocOverview 1-9
+SysMan applications,
+system call
+CDECompanion 5-9 and DLI, Ne&ProgGdeE-15
+accessing, CDE Companion 3-1
+sockets, NetProgGde 4-9
+SysMan Menu, SystenAdmin 1-18,
+system clock
+TechOver 2-14
+setting, SystenAdmin 2-21
+installing software using,
+System Communication
+InstallGde 9-1
+Architecture (SCA),
+SysMan Station, SystenAdmin
+SystenAdmin C-1
+1-1, 1-23
+system configuration
+using, SystenAdmin 1-25
+after full installation, InstallGde 7-1
+views, SystenAdmin 1-25
+Index—50
+
+dynamic, SystenAdmin 4-7, System V IPC, ProgGde1-7
+TechOver 2-26
+restoring with config.cdf file, T
+InstallGdeAdvTop 7-1
+static, SystenAdmin 4-19
+system crash tan routine, CPML B-18, CPML-62
+process of, KendDebug 1-5 tand routine, CPML B-18, CPML-62
+reasons for, KernelDebug 1-5
+tanh routine, CPML B-19, CPML-63
+using crashdc command to collect
+data from, Kernd Debug 2-44 tape
+using dbx to find the cause of, backup, SystenAdmin 9-1
+Kernd Debug 2-2 bootable, SystenAdmin 9-5
+using kdbx to find the cause of,
+tapex exerciser, SystenAdmin 11-34
+Kernd Debug 2-12
+tar command, SystenAdmin 9-5
+system event
+taso (truncated address support
+reporting, SystenAdmin 12-1
+option), ProgGdeA-2
+system exerciser, SystenAdmin
+TCP, TechOver 3-2, 3-8, 3-12
+11-23
+and RPC, OncRpcProgram 3-28
+system memory, SystenAdmin 11-26 programming information,
+system partition, SystenAdmin D-3 NetProgGdeC-1
+throughput, NetProgGde C-1
+system setup
+window size, NetProgGde C-1
+after full installation, InstallGd7e- 1
+tcpdump command, Ne&Admin 16-7
+System Setup utility, | nstallGde 7-1
+TELNET, TechOver 3-8
+system shutdown, SystenAdmin 2-1
+using, CommandShdlGde 13-3
+system startup, SystenAdmin 2-6
+terminal communications system
+system time testing with cmx, SystenAdmin
+working with, Kernd Modules 5-23 11-41
+System V habitat, terminal driver subsystem,
+CommandShdlGde 9-1 TechOver 10-6
+accessing, CommandShedGde 9-2
+terminal emulator,
+command summary,
+CDE Companion 9-2
+CommandShelGde 9-4
+location of, CommandShed!Gde 9-3 terminal interface
+modifying .cshrc file for, enhancements for Asian
+CommandShdGlde 9-2 languages, InternatProg 6-8
+modifying .login file for,
+termination handler
+CommandShdlGde 9-2 how to code, ProgGde 11-12
+modifying .profile file for,
+TERMINFO environment
+CommandShdGlde 9-2
+variable, SystenAdmin 3-8
+setting PATH for,
+CommandShdGlde 9-2
+Index—51
+
+testing kernel programs, timeout change, OncRpcProgram
+Kernd Debug 2-37 2-20
+testing subsets with the setid timeout routine, Kenda Modules 5-17
+utility, ProdKitGde 3-48
+timer
+testing the system, SystenAdmin realtime, Realtime 6-1
+11-1
+tip command, Ne&Admin 6-19, 6-28
+text editor, CommandShd!Gde 2-1
+tis routine, POSI XThreads tis-1
+accessing, CDECompanion 3-1
+tiuser.h file, NeProgGde 3-6
+TFTP, TechOver 3-9
+TLI
+Thai,
+and XTI, NetProgGde 3-1
+See Asian languages
+compatibility with XTI,
+Third Degree, ProgGde 7-1 NetProgGde 3-35
+contrast with XTI, NetProgGde 3-35
+Thread Independent Services,
+library and header files,
+ProgGde 12-6
+NetProgGde 3-6
+thread operation, POSI XThreads 2-1
+Token Ring
+thread-safe code configuring, NetAdmin 2-13
+how to write, ProgGde 12-5
+Token Ring driver
+thread-safe library, and canonical addresses,
+POSI XThreads 4-1 NetProgGde D-2
+thread-safe routine enabling source routing,
+characteristics, ProgGde 12-3 NetProgGde D-1
+threads, ProgGde 12-1 traceroute command, Ne&Admin
+See also POSIX Threads 16-4
+Library traffic control, Ne&Admin 2-36
+profiling multithreaded
+traffic control subsystem,
+applications, ProgGde
+NetProgGde 7-2
+8-29
+tasks, NetProgGde 7-5
+programming with,
+POSI XThreads 3-1 translation
+visual, TechOver 6-8 of message text, InternatProg 3-16
+tic command, SystenAdmin 3-8 Transmission Control Protocol,
+See TCP
+time
+setting, SystenAdmin 2-21 Transport Layer Interface,
+SeeTLI
+time value
+formatting rules in a locale, Transport-Level Protocols,
+InternatProg 7-22 TechOver 3-11
+time zone, SystenAdmin 3-20 Trash Can
+setting during full installation, accessing, CDE Companion 3-1
+InstallGde 6-14
+Trivial File Transfer Protocol,
+SVID, SystaenAdmin 3-20
+See TFTP
+Index—52
+
+troubleshooting memory, SystenTune 6-1
+ATM, Ne&Admin 15-23 namei cache, SystenTun9e- 1
+DHCP, Ne&tAdmin 15-34 networks, SystenTune 10-6
+DMS, SharingSW 13-1 NFS, SystenTune 9-40
+DNS dient, NeAdmin 15-39 realtime performance, Realtime
+DNS server, NetAdmin 15-37 11-1
+IMAP, NetAdmin 15-73 UBC, SystemTun9e- 1
+IPv6é, N&Admin 15-8 UFS, SystenTune 9-32
+LAT, NetAdmin 15-64 tunnel
+LSM, StorageM anager 6-1 creating, NeAdmin 3-35
+mail, NetAdmin 15-71, 15-73, F-1
+network, NetAdmin 15-1, 16-1 type conversion, CLangRef 6-27
+NFS dient, NetAdmin 15-50, D-1 typedef
+NFS server, NetAdmin 15-47, D-1 using with rpcgen,
+NIS dient, N&Admin 15-44 OncRpcProgram 2-23
+NIS server, NetAdmin 15-40
+NTP, NetAdmin 15-56
+POP, NetAdmin 15-73 U
+PPP, NetAdmin 15-62
+printer, SystemAdmin 8-43 UBC, TechOve 5-5
+RIS, SharingSW 8-1 least recently used page list,
+security, Security 14-1 TechOver 5-6
+SLIP, NetAdmin 15-59 tuning, SystenTune 9-1
+UUCP, NetAdmin 15-53, E-1
+UBR, AsynchronousTM 2-13
+Tru64 UNIX Documentation Kit,
+UCS-4 encoding format, TechOve
+DocOverview 1-8
+10-2
+trunc routine, CPML B-19, CPML-64 See also Unicode
+truncated address support option, UDP, TechOve 3-2, 3-8, 3-11
+See taso
+uerf command
+try...except statement using with system exercisers,
+use in exception handler, ProgGde SystenAdmin 11-25
+11-5
+UFS, SystenAdmin 6-1
+try...finally statement creating a file system,
+use in termination handler, SystenAdmin 6-1
+ProgGde 11-13 displaying, SystenTune 9-30
+tty subsystem, TechOver 10-6 improving performance,
+SystenTune 9-27
+tunefs command, SystenAdmin 6-49
+setting file system quotas,
+tuning SystenAdmin 6-41
+class schedul er, SystenAd min 3-24 tuni ng, SystemTu ne9-32
+Internet servers, SystemTune 4-3 ;
+largememory systems, UID, SystenAdmin 7-10
+SystemTune 4-3 UIL compiler, TechOver 10-10
+Index—53
+
+uiomove routine, Kend Modules uprofile,
+5-13 Se profiling a program
+umount command, SystenAdmin User Datagram Protocol,
+6-20 See UDP
+Unicode, | nternatProg 1-6, 2-5, user-defined character,
+TechOver 10-8 InternatProg 6-17
+Unified Buffer Cache, user environment,
+See UBC CommandSheGlde 7-12
+uninstalling LSM, user information
+StorageM anager 6-25 preserving data on during
+Universal Character Set, installation, |n stallGde 6-40
+InternatProg 1-6 User Interface Language compiler,
+UNIX File System, See UIL compiler
+See UFS user mask, CommandShadlGde 5-13
+UNIX shell, | nstallGdeAdvTop 3-1 user product kit, ProdKitGde 4-1
+UNIX-to-UNIX Copy Program, user-supplied file
+See UUCP customizing an installation,
+InstallGdeAdvTop 5-1
+unlimited license
+registering after installation or using commands,
+upgrade, License anage 2-2 CommandSheGde 1-4
+unordered routine, CPML B-19, using mailx utility,
+CPML-65 CommandShd1Gde F-1
+unspecified bit rate, using variables,
+SeeUBR CommandShe!Gde 7-18
+untimeout routine, Kend Modules UTF-8 encoding format, TechOve
+5-17 10-2
+See also Unicode
+updadmin utility, | nstallGde 3-24
+utilupdate utility, SharingSW C-1
+update installation, | nstallGde 2-1
+defined, InstallGde 1-2 uucico command, NetAdmin 11-15
+layered products, InstallGde 3-12
+UUCP, NetAdmin 11-1, TechOver 3-31
+procedures, InstallGde 3-1
+cleaning spooling directories,
+update paths, I nstallGde 2-3
+NetAdmin 11-18
+user-supplied files,
+cleaning system log files,
+InstallGdeAdvTop 5-1
+NetAdmin 11-22
+update installation cleanup configuring, NetAdmin 11-12
+utility, | nstallGde 3-24 error messages, NetAdmin E-1
+initiating calls to remote hosts,
+update_postload file,
+NetAdmin 11-24
+InstallGdeAdvTop 5-1
+limiting remote executions,
+update_preinstall file, NetAdmin 11-23
+InstallGdeAdvTop 5-1
+Index—54
+
+V
+monitoring the transfer queue,
+NetAdmin 11-16
+polling remote hosts, NetAdmin variable
+11-25 displaying with dbx debugger,
+required hardware, NetAdmin 11-2 Kernd Debug 2-6
+scheduling jobs, NetAdmin 11-23
+VAX C extension, CLangRef E-1
+transmitting files,
+CommandSh|G ede 14-20 vb interface,
+troubleshooting, NetAdmin 15-53 See vb network
+viewing log files, NetAdmin 11-21
+vb network
+uucpsetup command, Ne&Admin configuration, SysConfigSup 3-1
+11-12 driver, SysConfigSup 3-1
+Ethernet interface, SysConfigSup
+uudemon.admin script, Ne&Admin
+3-1
+11-17
+vc
+uudemon.cleanu script,
+activating, AsynchronousTM 4-2
+NetAdmin 11-20
+controlling aging of,
+uudemon.hour script, Ne&Admin AsynchronousTM 5-6
+11-23, 11-24 creating permanent,
+uudemon.poll script, NeAdmin AsynchronousTM 6-9
+11-25 creating signaling,
+AsynchronousTM 6-10
+uulog command,
+modifying parameters,
+CommandShe!Gde 14-28,
+AsynchronousTM 5-6
+NetAdmin 11-22
+modifying QoS parameters,
+uumonitor command, AsynchronousTM 5-6
+CommandShaeGlde 14-29 requesting status for,
+AsynchronousTM 4-5
+uusched command, NetAdmin 11-23
+restarting, AsynchronousTM 4-3
+uustat command,
+transmitting data on,
+CommandSheGlde 14-25,
+AsynchronousTM 5-6
+NetAdmin 11-17
+VC status
+uuto command
+reporting to CMM,
+usingwith uupick,
+AsynchronousTM 4-4
+CommandShelGde 14-23
+versioning,
+uutry command, Ne&Admin 16-7
+See shared library
+uux command
+vi editor, CommandShd!Gde 2-2, A-1
+run from remote host (UU CP),
+customizing your environment,
+CommandSheGlde 14-16
+CommandShed!GdeA-21
+editing text, CommandShd|Gde
+A-12
+ex line editor commands,
+CommandShe!GdeA-18
+Index—55
+
+global substitution, VM subsystem, TechOver 5-5
+CommandShdlGdeA-19 paging operation, TechOver 5-7
+moving within a file, swapping operation, TechOver 5-8
+CommandShelGdeA-6
+vmcore.n file, SystenAdmin 14-3
+opening text files,
+VMEbus
+CommandShdlGdeA-4
+quit (q) command, configuring, SysConfigSup 2-2, 2-28
+interrupt handling with
+CommandShel GdeA-4, A-15
+rt_post_callout,
+saving part of a file,
+SysConfigSup 2-27, 2-66
+CommandSGdhee A!- 2 0
+saving your customizations, master block transfers,
+SysConfigSup 2-24, 2-63
+CommandShe!GAd-e23
+networking over, SysConfigSup 3-1
+undo (u) command,
+operating system support,
+CommandShe!GdeA-14
+using advanced techniques, SysConfigSup 2-1
+slave block transfers,
+CommandShe!GdeA-15
+SysConfigSup 2-23, 2-63
+viewing documents,
+CDECompanion 5-7 VME bus backplane network,
+See vb network
+virtual address space, SystenTune
+6-5 vmunix.n file, SystenAdmin 14-3
+virtual circuit, voldiskadm menu
+See VC managing disk groups,
+StorageM anager C-12
+virtual memory subsystem,
+managing disks, StorageM anager
+See VM subsystem
+C-2
+virus, CommandShe!Gde 5-21 managing volumes,
+StorageM anager C-14
+visibility, CLangRef 2-6
+volume
+Visual Administrator,
+creating, StorageMianager 4-5
+StorageM anager D-1
+for secondary swap space,
+analysis, StorageM anager E-42
+StorageM anager 4-14
+disk group management,
+recovering, StorageVl anager 6-8
+StorageM anager E-36
+recovering a RAID 5 plex,
+disk management,
+StorageM anager 6-14
+StorageM anager E-27
+plex management,
+StorageM anager E-16 W
+projection analysis,
+StorageM anager E-40
+subdisk management, wakeup routine, Kand Modules 5-16
+StorageM anager E-21 wchar_t data type, TechOve 10-2
+UFS management,
+weak symbol, ProgGde 2-27
+StorageM anager E-45
+volume management, Web-Based Enterprise Services,
+StorageM anager E-1 See WEBES
+Visual Threads, ProgGde 8-29 WEBES, SystenAdmin 13-51
+Index—56
+
+what command, ProgSupTools 6-21 Worldwide Portability Interfaces
+(WPI), |nternatProg A-1
+who command, CommandShealGde
+10-1 WWW,
+See documentation on the
+whois command, NetAdmin 8-32
+World Wide Web
+wide character and
+wide-character string,
+InternatProg 1-5 X
+wildcard character
+removing multiple directories X client, CDECompanion 6-1,
+using, CommandShedlGd4-e1 1 TechOver 8-8
+window X client library, TechOver 8-3
+using, CDECompanion 2-3
+X server, CDECompanion 6-1,
+windowing environment, TechOver 8-3
+See CDE
+font-cache tuning, InternatProg 6-41
+Windows 2000 Single Sign-On, X server extensions, TechOver
+SystenAdmin 7-41 8-3, XWinSysE nv 3-1
+Windows NT for Alpha X window
+migrating to Tru64 UNIX, configuration, XWinSysE nv 1-1
+InstallGde 5-4 managing the environment,
+wired page list, TechOver 5-6 XWinSysE nv 1-1
+WLS X Window System,
+DMS dient setup for, SharingSW CDECompanion 6-1
+11-13 documentation for developers,
+DMS server setup for, SharingSW DocOverview 4-10
+11-12 X/Open standards
+installing, InstallGdeAdvTop 2-1 and internationalization,
+installing during full installation, InternatProg 1-1
+InstallGde 4-2 application development
+software subsets, InstallGde C-20 considerations, ProgGde 1-2
+working on a remote host, X/Open Transport Interface,
+CommandShealGde 13-1 See XTI
+workspace
+X11 shared libraries, TechOver 6-5
+accessing, CDECompanion 3-1
+X11R6 software
+World Wide Web,
+internationalization features in,
+See documentation on the
+InternatProg 5-1
+World Wide Web
+X11R 6.3
+worldwide language support, internationalization,
+See WLS InternatProg 5-7
+xdm utility, XWinSysE nv 1-6
+Index—57
+
+XDM-AUTHORIZATION-1 handling errors, NetProgGde 3-56
+Display Manager, TechOver 8-7 interoperability of XNS4.0 and
+XNS5.0, NetProgGde 3-43
+XDR library, OncRpcProgram A-5
+interoperability of XPG3 and
+XDR library primitive,
+XNS4.0, NetProgGde 3-43
+OncRpcProgram A-7, A-18
+library and header files,
+XDR routine, OncRpcProgram 2-9, NetProgGde 3-6
+A-1 phase-independent functions,
+enumerations, OncRpcProgram NetProgGde 3-32
+2-23 porting applications to,
+generating with rpcgen, NetProgGde 3-33
+OncRpcProgram 2-9 rewriting socket applications for,
+NetProgGde 3-36
+XDR stream, OncRpcProgram A-19
+sequencing functions,
+XDR structure, OncRpcProgram 2-25 NetProgGde 3-20
+XDR union, OncRpcProgram 2-26 service modes, NetProgGde 3-4
+synchronization of multiple
+xhost program
+processes, NetProgGde 3-19
+using to enable access to display,
+writing connection-oriented
+CDECompanion 5-2
+applications, NetProgGde 3-22
+xjoin command, NetAdmin 5-12
+XTI client
+xmodmap keymap format connection-oriented program,
+Display Manager, TechOver 8-6 NetProgGde B-14
+xntpd daemon, NeAdmin 12-1 connectionless program,
+NetProgGde B-29
+xntpdc command, Ne&Admin 12-9
+XTI event, Ne&ProgGde 3-10
+Xsession, CDECompanion 6-2
+map of, NetProgGde 3-16
+XTI, NetProgGde 3-1, ProgGde1-7, tracking, NetProgGde 3-14
+TechOver 3-22
+XTI functions, Ne&ProgGde 3-7
+and network programming
+map of, NetProgGde 3-16
+environment, NetProgGde 3-2
+XTI options, NeProgGde 3-43
+and standards, Ne&tProgGde 3-1
+and TLI, NetProgGde 3-1 XTI server
+application programming connection-oriented program,
+interface, NetProgGde 3-4 NetProgGde B-9
+code migration XNS4.0 to XNS5.0, connectionless program,
+NetProgGde 3-41 NetProgGde B-25
+code migration XPG3 to XNS4.0,
+XTI states, Ne&ProgGde 3-13
+NetProgGde 3-41
+management by transport
+configuring xtiso, NetProgGde 3-57
+providers, Ne&ProgGde 3-22
+contrast with TLI, NeProgGde 3-35
+map of, NetProgGde 3-16
+differences between XNS4.0 and
+XNS5.0, NetProgGde 3-39 xti.h header file, Ne&tProgGde 3-6
+differences between XPG3 and and t_errno variable, NetProgGde
+XNS4.0, NetProgGde 3-39 3-56
+execution modes, NetProgGde 3-4 xtiso option
+Index—58
+
+configuring, NetProgGde 3-57 SeeNIS
+yn routine, CPML B-20, CPML-12
+Y ypcat command, NeAdmin 9-31
+ypmatch command, Ne&Admin 9-31
+yO routine, CPML B-19, CPML-12 yppasswd command,
+yl routine, CPML B-20, CPML-12 CommandShelGde 1-6,
+NetAdmin 9-31
+yacc program, ProgSupTools 4-16
+ypwhich command, NeAdmin 9-31
+year
+setting, SystenAdmin 2-21
+Yellow Pages,
+Index—59
+
+How to Order Tru64 UNIX Documentation
+You can order documentation for the Tru64 UNIX operating system and related
+products at the following Web site:
+http: //www.businesslink.digital.com/
+If you need help deciding which documentation best meets your needs, see the
+Tru64 UNIX Documentation Overview or call 800-344-4825 in the United States
+and Canada. In Puerto Rico, call 787-781-0505. |n other countries, contact your
+local Compaq subsidiary.
+If you have access to Compaq’s intranet, you can place an order at the following
+Web site:
+http://asmorder.ngo.dec.com/
+The following table provides the order numbers for the Tru64 UNIX operating system
+documentation kits. For additional information about ordering this and related
+documentation, see the Documentation Overview or contact Compaq.
+Name Order Number
+Tru64 UNIX Documentation CD-ROM QA-6ADAA-G8
+Tru64 UNIX Documentation Kit QA-6ADAA-GZ
+End User Documentation Kit QA-6ADAB-GZ
+Startup Documentation Kit QA-6ADAC-GZ
+General User Documentation Kit QA-6ADAD-GZ
+System and Network Management Documentation Kit QA-6ADAE-GZ
+Developer’s Documentation Kit QA-6ADAG-GZ
+Reference Pages Documentation Kit QA-6ADA-FG Z
+
+Reader’s Comments
+Tru64 UNIX
+Master Index
+AA-RH94B-TE
+Compaq welcomes your comments and suggestions on this manual. Your input will help us to write
+documentation that meets your needs. Please send your suggestions using one of the following methods:
+e« This postage-paid form
+¢ — Internet electronic mail: readers_comment@zk3 .dec.com
+* Fax: (603) 884-0120, Attn: UBPG Publications, ZK 03-3/Y3 2
+If you are not using this form, please be sure you include the name of the document, the page number, and
+the product name and version.
+Please rate this manual:
+Excellent Good Fair Poor
+Accuracy (software works as manual says)
+Clarity (easy to understand)
+Organization (structure of subject matter)
+Figures (useful)
+Examples (useful)
+Index (ability to find topic)
+Usability (ability to access information quickly)
+Please list errors you have found in this manual:
+Page Description
+Additional comments or suggestions to improve this manual:
+What version of the software described by this manual are you using?
+Name, title, department
+Mailing address
+Electronic mail
+Telephone
+Date
+
+Do Not Cut or Tear - Fold Here and Tape ------ Sar GlanT als 1 iRentonteniententententantentententestestentententententestententeteteats
+COMPAQ
+NO POSTAGE
+NECESSARY IF
+MAILED IN THE
+UNITED STATES
+Stiri ree
+POSTAGE WILL BE PAID BY ADDRESSEE
+COMPAQ COMPUTER CORPORATION
+UBPG PUBLICATIONS MANAGER
+ZKO3-3/Y32
+110 SPIT BROOK RD
+NASHUA NH 03062-2698
+IoSUIoNuT DrY T,
