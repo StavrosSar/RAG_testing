@@ -53,5 +53,5 @@ data_processed/*.npz
 .ipynb_checkpoints/
 
 # Local notes / scratch data
-data_test_notes/
-notes for rag
+data_text/
+notes for rag.txt
