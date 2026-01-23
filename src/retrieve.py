@@ -1,3 +1,4 @@
+#TF-IDF retriever 
 import json
 from dataclasses import dataclass
 from pathlib import Path
@@ -42,6 +43,26 @@ class TfidfRetriever:
             raise RuntimeError("No valid chunks loaded. Check chunks.jsonl.")
         return out
 
+
+    @staticmethod
+    def load_chunks_from_records(records) -> List[Chunk]:
+        out: List[Chunk] = []
+        for obj in records:
+            text = (obj.get("text") or "").strip()
+            if len(text) < 50:
+                continue
+            out.append(
+                Chunk(
+                    doc_id=str(obj.get("doc_id", "")),
+                    chunk_id=str(obj.get("chunk_id", "")),
+                    text=text,
+                    source=obj.get("source"),
+                )
+            )
+        if not out:
+            raise RuntimeError("No valid chunks loaded from SQL.")
+        return out
+
     def search(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
         q = (query or "").strip()
         if not q:
@@ -63,6 +84,9 @@ class TfidfRetriever:
             )
         return results
 
+def build_retriever_from_records(records) -> TfidfRetriever:
+    chunks = TfidfRetriever.load_chunks_from_records(records)
+    return TfidfRetriever(chunks)
 
 def build_retriever(chunks_path: str) -> TfidfRetriever:
     path = Path(chunks_path)

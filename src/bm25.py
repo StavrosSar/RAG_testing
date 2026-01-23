@@ -1,3 +1,4 @@
+#BM25 retriever
 import json
 import math
 import re
@@ -11,14 +12,12 @@ TOKEN_RE = re.compile(r"[A-Za-zΑ-Ωα-ω0-9]+", re.UNICODE)
 def tokenize(text: str) -> List[str]:
     return [t.lower() for t in TOKEN_RE.findall(text)]
 
-
 @dataclass
 class Chunk:
     doc_id: str
     chunk_id: str
     text: str
     source: Optional[str] = None
-
 
 class BM25Retriever:
     """
@@ -83,6 +82,25 @@ class BM25Retriever:
             raise RuntimeError("No valid chunks loaded. Check chunks.jsonl.")
         return chunks
 
+    @staticmethod
+    def load_chunks_from_records(records) -> List[Chunk]:
+        chunks: List[Chunk] = []
+        for obj in records:
+            text = (obj.get("text") or "").strip()
+            if len(text) < 50:
+                continue
+            chunks.append(
+                Chunk(
+                    doc_id=str(obj.get("doc_id", "")),
+                    chunk_id=str(obj.get("chunk_id", "")),
+                    text=text,
+                    source=obj.get("source"),
+                )
+            )
+        if not chunks:
+            raise RuntimeError("No valid chunks loaded from SQL.")
+        return chunks
+
     def _idf(self, term: str) -> float:
         """
         BM25 idf with +1 smoothing.
@@ -127,6 +145,31 @@ class BM25Retriever:
             )
         return results
 
+
+def build_bm25_retriever_from_records(records, k1: float = 1.5, b: float = 0.75):
+    """
+    Build BM25 retriever from SQL-loaded records.
+    Each record must contain: doc_id, chunk_id, source, text
+    """
+    chunks = []
+    for obj in records:
+        text = (obj.get("text") or "").strip()
+        if len(text) < 50:
+            continue
+
+        chunks.append(
+            Chunk(
+                doc_id=str(obj.get("doc_id", "")),
+                chunk_id=str(obj.get("chunk_id", "")),
+                text=text,
+                source=obj.get("source"),
+            )
+        )
+
+    if not chunks:
+        raise RuntimeError("No valid chunks loaded from SQL records for BM25.")
+
+    return BM25Retriever(chunks, k1=k1, b=b)
 
 def build_bm25_retriever(chunks_path: str, k1: float = 1.5, b: float = 0.75) -> BM25Retriever:
     path = Path(chunks_path)

@@ -4,17 +4,19 @@
 {"qid":"q04","question":"What input devices are used to control the Archimedes desktop?","gold_chunk_ids":["Acorn Archimedes Guide_00007"]}
 {"qid":"q05","question":"When should you not move the Acorn Archimedes computer?","gold_chunk_ids":["Acorn Archimedes Guide_00012"]}
 {"qid":"q06","question":"How do you dismount the hard disk before switching off the Archimedes system?","gold_chunk_ids":["Acorn Archimedes Guide_00012"]}
-{"qid":"q07","question":"What precautions should be taken before disassembly of the Apricot system?","gold_chunk_ids":["ACT Apricot Service Manual_00006"]}
-{"qid":"q08","question":"What warnings are given about mixing screws during disassembly?","gold_chunk_ids":["ACT Apricot Service Manual_00006"]}
-{"qid":"q09","question":"How do you remove the base moulding on the Apricot system?","gold_chunk_ids":["ACT Apricot Service Manual_00008"]}
-{"qid":"q10","question":"How is the monitor assembly removed on the Apricot system?","gold_chunk_ids":["ACT Apricot Service Manual_00008"]}
-{"qid":"q11","question":"What warnings are given during assembly of the Apricot system?","gold_chunk_ids":["ACT Apricot Service Manual_00007"]}
-{"qid":"q12","question":"How do you install the disk drive during Apricot system assembly?","gold_chunk_ids":["ACT Apricot Service Manual_00007"]}
+
+{"qid":"q07","question":"What operating systems are supported by the Compaq AlphaServer DS10 systems?","gold_chunk_ids":["Compaq AlphaServer DS10 466 MHz AlphaStation DS10 466 MHz QuickSpecs (2001)_00002"]}
+{"qid":"q08","question":"What is the nominal AC voltage supported by the Compaq AlphaServer DS10 power supply?","gold_chunk_ids":["Compaq AlphaServer DS10 466 MHz AlphaStation DS10 466 MHz QuickSpecs (2001)_00029"]}
+{"qid":"q09","question":"What frequency ranges are supported by the Compaq AlphaServer DS10 power supply?","gold_chunk_ids":["Compaq AlphaServer DS10 466 MHz AlphaStation DS10 466 MHz QuickSpecs (2001)_00029"]}
+{"qid":"q10","question":"What is the nominal operating voltage of the Compaq AlphaServer DS20?","gold_chunk_ids":["Compaq AlphaServer DS20 QuickSpecs (2000)_00024"]}
+{"qid":"q11","question":"What voltage ranges are supported by the Compaq AlphaServer GS80 power supplies?","gold_chunk_ids":["Compaq AlphaServer GS80 Installation Guide (2000)_00012"]}
+{"qid":"q12","question":"What environmental conditions are specified for operating the Compaq AlphaServer GS80 system?","gold_chunk_ids":["Compaq AlphaServer GS80 Installation Guide (2000)_00014"]}
+
 {"qid":"q13","question":"What AC power voltage options are supported by the Compaq AlphaServer DS10?","gold_chunk_ids":["Compaq AlphaServer DS10 466 MHz AlphaStation DS10 466 MHz QuickSpecs (2001)_00029"]}
 {"qid":"q14","question":"What is the operating voltage range for the Compaq AlphaServer DS20?","gold_chunk_ids":["Compaq AlphaServer DS20 QuickSpecs (2000)_00024"]}
 {"qid":"q15","question":"What are the power supply voltage ranges for the Compaq AlphaServer GS80?","gold_chunk_ids":["Compaq AlphaServer GS80 Installation Guide (2000)_00012"]}
 {"qid":"q16","question":"What is the purpose of returning condition values in OpenVMS modular procedures?","gold_chunk_ids":["HP OpenVMS 8.3-1H1 Guide to Creating OpenVMS Modular Procedures OVMS_73_mod_proc (2001)_00034"]}
 {"qid":"q17","question":"When does Compaq recommend returning condition values instead of signaling errors in OpenVMS?","gold_chunk_ids":["HP OpenVMS 8.3-1H1 Guide to Creating OpenVMS Modular Procedures OVMS_73_mod_proc (2001)_00035"]}
 {"qid":"q18","question":"What information is provided by the OpenVMS System Messages Companion Guide?","gold_chunk_ids":["HP OpenVMS 8.3-1H1 OpenVMS System Messages Companion Guide for Help Message Users OVMS_73_SYS_MES (2001)_00001"]}
-{"qid":"q19","question":"What AC voltage range is supported by the Compaq Tru64 UNIX AlphaServer systems?","gold_chunk_ids":["Compaq Tru64 UNIX 5.1 AdvFS Administration ARH98TE (2000)_00018"]}
+{"qid":"q19","question":"What AC voltage range is supported by the Compaq Tru64 UNIX AlphaServer systems?","gold_chunk_ids":["Compaq Tru64 UNIX 5.1 AdvFS Administration ARH96BTE (2000)_00018"]}
 {"qid":"q20","question":"What environmental conditions are recommended for operating the AlphaServer DS10 system?","gold_chunk_ids":["Compaq AlphaServer DS10 466 MHz AlphaStation DS10 466 MHz QuickSpecs (2001)_00029"]}
