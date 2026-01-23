@@ -46,7 +46,7 @@ def is_junk_chunk(h) -> bool:
 
 class QueryIn(BaseModel):
     question: str
-    top_k: int = 5
+    top_k: int = 10
     retriever: str = "bm25"      # "bm25", "tfidf", "bm25_sql", "tfidf_sql"
     mode: str = "llm"            # "llm" or "extractive"
 
@@ -84,7 +84,7 @@ def query(q: QueryIn):
     citations = []
 
     if q.mode.lower() == "llm":
-        llm_hits = filtered_hits[:2]  # keep context small
+        llm_hits = filtered_hits[:5]  # keep context small
         llm_out = answer_with_llm(q.question, llm_hits)
 
         # answer_with_llm might return str OR dict; handle both safely

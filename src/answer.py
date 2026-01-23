@@ -29,6 +29,7 @@ HEADINGISH_RE = re.compile(
     )""",
     re.IGNORECASE | re.VERBOSE,
 )
+BULLET_RE = re.compile(r"^\s*(?:[-•*]|\\q|\\ec|¢|œ)\s+")
 
 FACT_PATTERNS = [
     r"\bwhat\b.*\b(range|voltage|frequency|size|capacity|version|limit)\b",
@@ -63,18 +64,26 @@ def is_headingish(line: str) -> bool:
     s = line.strip()
     if not s:
         return True
-    # obvious section/page artifacts
-    if HEADINGISH_RE.match(s):
+
+    # KEEP bullet / list items
+    if BULLET_RE.match(s):
+        return False
+
+    # Very short all-caps or title-like lines are headings
+    if len(s) <= 6:
+        return False
+
+    # Looks like a section title (few words, no punctuation)
+    if len(s.split()) <= 4 and not re.search(r"[.!?]", s):
         return True
-    # “Designing Modular Procedures” (Title Case short lines) are headings too
-    if len(s) < 60 and s == s.title():
-        return True
-    # too many digits/punct relative to letters
-    letters = sum(ch.isalpha() for ch in s)
-    digits = sum(ch.isdigit() for ch in s)
-    if letters < 8 and digits >= 2:
-        return True
+
     return False
+
+
+    # IMPORTANT: keep bullets/list items
+    if BULLET_RE.match(s):
+        return False
+
 
 
 def fact_signal_score(sentence: str) -> int:
@@ -92,18 +101,42 @@ def fact_signal_score(sentence: str) -> int:
         score += 1  # table-like specs
     return score
 
-
 def split_sentences(text: str) -> List[str]:
-    # 1) break into lines, drop heading-ish lines
-    lines = [ln.strip() for ln in text.splitlines() if ln.strip()]
-    lines = [ln for ln in lines if not is_headingish(ln)]
+    # 1) keep lines, preserve list items
+    raw_lines = [ln.rstrip() for ln in text.splitlines() if ln.strip()]
 
-    # 2) re-join and sentence split
-    cleaned = " ".join(lines)
-    sents = re.split(r"(?<=[.!?])\s+", cleaned)
+    kept_lines: List[str] = []
+    bullet_items: List[str] = []
 
-    # keep substantial sentences only
-    return [s.strip() for s in sents if len(s.strip()) >= 60]
+    for ln in raw_lines:
+        s = ln.strip()
+
+        # keep bullet/list items as standalone candidates
+        if BULLET_RE.match(s):
+            bullet_items.append(BULLET_RE.sub("", s).strip())
+            continue
+
+        # drop headings/artifacts
+        if is_headingish(s):
+            continue
+
+        kept_lines.append(s)
+
+    # 2) sentence split for normal prose
+    cleaned = " ".join(kept_lines)
+    sents = re.split(r"(?<=[.!?])\s+", cleaned) if cleaned else []
+
+    out: List[str] = []
+
+    # 3) include bullet items (short is OK)
+    out.extend([b for b in bullet_items if len(b) >= 3])
+
+    # 4) include shorter prose sentences (60 is too strict for manuals)
+    out.extend([s.strip() for s in sents if len(s.strip()) >= 25])
+
+    return out
+
+
 
 
 def looks_like_noise(text: str) -> bool:

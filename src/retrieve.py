@@ -2,10 +2,13 @@
 import json
 from dataclasses import dataclass
 from pathlib import Path
+import re
 from typing import List, Dict, Any, Optional
-
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
+from nltk.stem import PorterStemmer
+
+stemmer = PorterStemmer()
 
 
 @dataclass
@@ -19,7 +22,11 @@ class Chunk:
 class TfidfRetriever:
     def __init__(self, chunks: List[Chunk], ngram_range=(1, 2), max_features: int = 200_000):
         self.chunks = chunks
-        self.vectorizer = TfidfVectorizer(ngram_range=ngram_range, max_features=max_features)
+        self.vectorizer = TfidfVectorizer(
+            analyzer=stem_analyzer,
+            ngram_range=ngram_range,
+            max_features=max_features)
+
         self.matrix = self.vectorizer.fit_transform([c.text for c in chunks])
 
     @staticmethod
@@ -92,3 +99,8 @@ def build_retriever(chunks_path: str) -> TfidfRetriever:
     path = Path(chunks_path)
     chunks = TfidfRetriever.load_chunks_jsonl(path)
     return TfidfRetriever(chunks)
+
+
+def stem_analyzer(text: str):
+    tokens = re.findall(r"[A-Za-z0-9]+", text.lower())
+    return [stemmer.stem(t) for t in tokens]
