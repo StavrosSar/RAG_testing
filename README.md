@@ -87,4 +87,7 @@ Outputs written to eval/:
 
 
 ## UI of the LLM
+```powershell
+& "C:\Users\ssar\AppData\Local\anaconda3\python.exe" -m streamlit run src\chat_ui.py 
+```
 http://localhost:8501/
