@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../data_processed"
+		},
+		{
+			"path": "../data_raw"
+		},
+		{
+			"path": "../data_text"
+		},
+		{
+			"path": "../eval"
+		},
+		{
+			"path": "../screenshots"
+		},
+		{
+			"path": "../scripts"
+		},
+		{
+			"path": "."
+		}
+	]
+}

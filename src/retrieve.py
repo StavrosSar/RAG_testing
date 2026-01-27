@@ -7,6 +7,7 @@ from typing import List, Dict, Any, Optional
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 from nltk.stem import PorterStemmer
+from .query_utils import normalize_and_expand_query
 
 stemmer = PorterStemmer()
 
@@ -22,10 +23,14 @@ class Chunk:
 class TfidfRetriever:
     def __init__(self, chunks: List[Chunk], ngram_range=(1, 2), max_features: int = 200_000):
         self.chunks = chunks
+        # Use tokenizer (not analyzer) so sklearn can apply ngram_range.
         self.vectorizer = TfidfVectorizer(
-            analyzer=stem_analyzer,
+            tokenizer=stem_analyzer,
+            preprocessor=lambda x: x,
+            token_pattern=None,
             ngram_range=ngram_range,
-            max_features=max_features)
+            max_features=max_features,
+        )
 
         self.matrix = self.vectorizer.fit_transform([c.text for c in chunks])
 
@@ -71,7 +76,7 @@ class TfidfRetriever:
         return out
 
     def search(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
-        q = (query or "").strip()
+        q = normalize_and_expand_query(query)
         if not q:
             return []
         qv = self.vectorizer.transform([q])

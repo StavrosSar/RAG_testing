@@ -6,6 +6,7 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, List, Any, Optional, Tuple
 from collections import Counter, defaultdict
+from .query_utils import normalize_and_expand_query
 
 TOKEN_RE = re.compile(r"[A-Za-zΑ-Ωα-ω0-9]+", re.UNICODE)
 
@@ -110,6 +111,7 @@ class BM25Retriever:
         return math.log(1 + (self.N - df + 0.5) / (df + 0.5))
 
     def search(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
+        query = normalize_and_expand_query(query)
         q_terms = tokenize(query)
         if not q_terms:
             return []
