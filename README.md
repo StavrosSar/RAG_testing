@@ -79,6 +79,15 @@ Optional sanity check:
 python -c "import os,pyodbc; pyodbc.connect(os.environ['MSSQL_CONN_STR']); print('MSSQL connection OK')"
 ```
 
+### Ingest chunks into MSSQL (idempotent)
+
+```bash
+python src/ingest_mssql.py data_processed/chunks.jsonl
+```
+
+If you run ingestion again on the same DB, it is **safe**: the script uses **MERGE upsert by `chunk_id`** (insert if missing / update if exists).
+If you *want* to force an error on duplicates (debugging), run with `--insert-only`.
+
 ---
 
 ## env.example (for submission)
@@ -230,3 +239,8 @@ This repository demonstrates:
 - Reproducible evaluation
 - FastAPI backend
 - Streamlit demo UI
+
+
+### Tests
+- Fast tests: `pytest -q`
+- Slow / integration tests: `pytest -q -m slow` (requires MSSQL connection)
